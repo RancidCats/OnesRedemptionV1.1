@@ -53,7 +53,11 @@ public class PlayerMovement : MonoBehaviour
             float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref smoothVelocity, smoothTime);
             transform.rotation = Quaternion.Euler(0, angle, 0);
-            myRb.MovePosition(myRb.position + dir * moveSpeed * Time.deltaTime);
+            myRb.MovePosition(myRb.position + 
+                                    dir 
+                                    * moveSpeed * Time.deltaTime);
+            //anim.SetFloat("velX", inputVector.x);
+            //anim.SetFloat("velY", inputVector.z);
         }
         else
         {
