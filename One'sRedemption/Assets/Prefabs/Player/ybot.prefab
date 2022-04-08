@@ -1539,11 +1539,11 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 5
   moving: 0
-  canAttack: 0
+  canAttack: 1
   isGrounded: 0
-  canJump: 0
+  canJump: 1
   canCombo: 0
-  canMove: 0
+  canMove: 1
 --- !u!1 &6494044226695652438
 GameObject:
   m_ObjectHideFlags: 0
