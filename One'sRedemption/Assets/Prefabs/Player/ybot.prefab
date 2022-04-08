@@ -388,8 +388,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5577132062685346833}
-  - component: {fileID: 450679854926435639}
   - component: {fileID: 7936681217470946097}
+  - component: {fileID: 439458733076808132}
   m_Layer: 0
   m_Name: feets
   m_TagString: Untagged
@@ -411,20 +411,6 @@ Transform:
   m_Father: {fileID: 5949469722726587831}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &450679854926435639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680663170119126737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729ace71eec4adc42be0f2ed683dddd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contactCount: 0
-  player: {fileID: 1943345684}
 --- !u!136 &7936681217470946097
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -439,6 +425,18 @@ CapsuleCollider:
   m_Height: 0.50642985
   m_Direction: 1
   m_Center: {x: 0, y: 0.23207381, z: 0}
+--- !u!114 &439458733076808132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680663170119126737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729ace71eec4adc42be0f2ed683dddd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1754353363232540346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,7 +1441,7 @@ GameObject:
   - component: {fileID: 320019338028550093}
   - component: {fileID: 1943345685}
   - component: {fileID: 1943345683}
-  - component: {fileID: 1943345684}
+  - component: {fileID: 2159467960097107722}
   m_Layer: 0
   m_Name: ybot
   m_TagString: Untagged
@@ -1524,7 +1522,7 @@ CapsuleCollider:
   m_Height: 1.8155491
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &1943345684
+--- !u!114 &2159467960097107722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1533,18 +1531,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6474790451818727181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55dab7d98fe0cb248bea414e4d1ff5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 16355ec9abb8c824f95ed7a6a7cf7fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRb: {fileID: 1943345685}
+  rb: {fileID: 1943345685}
   anim: {fileID: 320019338028550093}
   moveSpeed: 5
-  rotationSpeed: 180
-  jumpSpeed: 4
-  smoothTime: 0.1
-  smoothVelocity: 0
-  canJump: 1
-  canMove: 1
+  jumpForce: 5
+  moving: 0
+  canAttack: 0
+  isGrounded: 0
+  canJump: 0
+  canCombo: 0
+  canMove: 0
 --- !u!1 &6494044226695652438
 GameObject:
   m_ObjectHideFlags: 0

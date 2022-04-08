@@ -5,14 +5,14 @@ using UnityEngine;
 public class CameraFollowPlayer : MonoBehaviour
 {
     public Transform player;
-    Vector3 _position;
+    [Tooltip("Posicion relativa de la camara con el personaje.")]
+    public Vector3 relativePositionToPlayer;
     public void Start()
     {
-         _position = new Vector3 (0,25,-50);
     }
     void Update()
     {
-        transform.position = player.position + _position ;
+        transform.position = player.position + relativePositionToPlayer ;
         
         
     }

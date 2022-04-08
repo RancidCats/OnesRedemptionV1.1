@@ -4,37 +4,21 @@ using UnityEngine;
 
 public class FeetsLogic : MonoBehaviour
 {
-    public float contactCount;
-    public PlayerMovement player;
-
-    void Start()
+    int _contactCount;
+    public void OnTriggerEnter(Collider other)
     {
+        _contactCount++;
+        if (_contactCount >= 1)
+        
+            Player.instance.isGrounded = true;
+              
         
     }
-
-
-    void Update()
+    public void OnTriggerExit(Collider other)
     {
-        
+        _contactCount--;
+        if (_contactCount == 0)       
+            Player.instance.isGrounded = false;        
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        contactCount++;
-        if (contactCount == 1)
-        {
-            player.canJump = true;
-            player.canMove = false;
 
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        contactCount--;
-        if (contactCount == 0)
-        {
-            player.canJump = false;
-            player.canMove = true;
-
-        }
-    }
 }
