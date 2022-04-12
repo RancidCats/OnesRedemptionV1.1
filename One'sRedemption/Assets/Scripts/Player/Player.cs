@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     public        Animator   anim;
 
     public        float      moveSpeed,
-                             jumpForce;
+                             jumpForce,
+                             dashForce;
 
     public bool              moving,
                              canAttack,

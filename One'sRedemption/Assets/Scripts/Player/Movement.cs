@@ -44,5 +44,8 @@ public class Movement
     {                                 
         _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);                  
     }
-   
+   public void Dash()
+    {
+        _rb.AddForce(_transform.forward * Player.instance.dashForce,ForceMode.VelocityChange);
+    }
 }

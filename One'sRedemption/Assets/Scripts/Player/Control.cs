@@ -39,6 +39,11 @@ public class Control
         {
             _animations.Attack();
         }       
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            _animations.Dash();
+            _movement.Dash();
+        }
     }
 }
 

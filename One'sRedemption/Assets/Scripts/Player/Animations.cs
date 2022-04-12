@@ -35,6 +35,9 @@ public class Animations
         }
         
     }
-
+    public void Dash()
+    {
+        _anim.SetTrigger("dash");
+    }
 
 }
