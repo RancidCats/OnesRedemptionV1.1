@@ -20599,22 +20599,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
-      propertyPath: canJump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
-      propertyPath: canMove
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
-      propertyPath: canAttack
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
-      propertyPath: dashForce
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 5949469722726587831, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -20671,7 +20655,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18948
+  m_Name: pb_Mesh18964
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20930,7 +20914,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 675663897503718197, guid: a999d7caea572cb4882ce8f2dc8de628, type: 3}
-      propertyPath: player
+      propertyPath: target
       value: 
       objectReference: {fileID: 492616180}
     - target: {fileID: 2495707102784478921, guid: a999d7caea572cb4882ce8f2dc8de628, type: 3}

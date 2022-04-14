@@ -1538,7 +1538,7 @@ MonoBehaviour:
   anim: {fileID: 320019338028550093}
   moveSpeed: 10
   jumpForce: 5
-  dashForce: 500
+  dashForce: 250
   moving: 0
   canAttack: 1
   isGrounded: 0

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CameraFollowPlayer : MonoBehaviour
 {
-    public Transform player;
+    public Transform target;
     [Tooltip("Posicion relativa de la camara con el personaje.")]
-    public Vector3 relativePositionToPlayer;
-    public void Start()
+    public Vector3 offset;
+    public float smoothSpeed;
+   
+    void FixedUpdate()
     {
-    }
-    void Update()
-    {
-        transform.position = player.position + relativePositionToPlayer ;
+        Vector3 desiredPos = target.position + offset;
+        Vector3 smoothedPos = Vector3.Lerp(transform.position, desiredPos, smoothSpeed * Time.deltaTime);
+        
+        transform.position =  smoothedPos;
         
         
     }
