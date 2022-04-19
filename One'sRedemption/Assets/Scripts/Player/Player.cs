@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
 
     public        float      moveSpeed,
                              jumpForce,
-                             dashForce;
+                             dashSpeed,
+                             dashLenght;
 
     public bool              moving,
                              canAttack,
