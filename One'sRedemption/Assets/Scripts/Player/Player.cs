@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Player    instance;
-   
-    public        Rigidbody  rb;
-    public        Animator   anim;
+    public static Player instance;
 
-    public        float      moveSpeed,
+
+    public LayerMask layerMask;
+    public Rigidbody rb;
+    public Animator anim;
+
+    public float maxLife,
+                             life,
+                             moveSpeed,
                              jumpForce,
                              dashSpeed,
                              dashLenght;
 
-    public bool              moving,
+    public bool moving,
                              canAttack,
                              isGrounded,
                              canJump,
@@ -22,17 +26,22 @@ public class Player : MonoBehaviour
                              canMove;
     //------------------------------------------------------------------------------------------------------------------------------------//
 
-    Animations  _animations;
+    Animations _animations;
     Movement    _movement;
     Control     _control;
-    void Start()
+    public void Awake()
     {
         instance = this;
+        life = 10;
+
+    }
+    void Start()
+    {
 
 
 
         _animations = new Animations(anim);
-        _movement = new Movement(transform,rb,moveSpeed,jumpForce);
+        _movement = new Movement(transform,rb,moveSpeed,jumpForce,layerMask);
         _control = new Control(_movement,_animations);
 
         canMove = true;
@@ -44,6 +53,19 @@ public class Player : MonoBehaviour
     {    
         _control.ArtificialUpdate();
         _animations.ArtificialUpdate();
+        Death();
+
     }
-    
+    public void Death()
+    {
+        if (life <= 0)
+        {
+            Destroy(this);
+        }
+    }
+    public void TakeDamage(float damageTaken)
+    {
+        life -= damageTaken;
+    }
+   
 }

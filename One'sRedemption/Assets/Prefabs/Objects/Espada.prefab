@@ -90,6 +90,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8723205367375374570}
+  - component: {fileID: 3793775858989325995}
+  - component: {fileID: 5454217354240011291}
   m_Layer: 0
   m_Name: Espada
   m_TagString: Untagged
@@ -112,3 +114,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 175.56, y: 27.501007, z: -8.809021}
+--- !u!65 &3793775858989325995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233949822349013584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 3.3943431, y: 2.9259999, z: 45.95518}
+  m_Center: {x: 0.00030373974, y: 0.79189956, z: -15.234995}
+--- !u!114 &5454217354240011291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233949822349013584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2b6c49b80a0ba43833335b20b7cf7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSwordCollider: {fileID: 3793775858989325995}
