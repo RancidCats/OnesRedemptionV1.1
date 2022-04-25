@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21146,7 +21146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949469722726587831, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.96
+      value: 69.22
       objectReference: {fileID: 0}
     - target: {fileID: 5949469722726587831, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21154,7 +21154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949469722726587831, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.89
+      value: 69.48
       objectReference: {fileID: 0}
     - target: {fileID: 5949469722726587831, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21187,6 +21187,10 @@ PrefabInstance:
     - target: {fileID: 6474790451818727181, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: m_Name
       value: ybot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474790451818727181, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8098562978678743459, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: m_Enabled
@@ -21235,7 +21239,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19950
+  m_Name: pb_Mesh19984
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22149,12 +22153,13 @@ MonoBehaviour:
   - {fileID: 1835095719}
   indexPoints: 0
   target: {fileID: 492616180}
-  speed: 5.71
+  speed: 4.99
   rangeVision: 4.45
   inRange: 0
   layerPlayer:
     serializedVersion: 2
     m_Bits: 64
+  anim: {fileID: 1673529084}
 --- !u!95 &1673529084
 Animator:
   serializedVersion: 3
@@ -22170,13 +22175,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-    'mixamorig:RightHandRing2'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
-    'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tand
-    more ...\n\tFrom animation clip 'mixamo.com'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -22191,8 +22190,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4554528
-  m_Center: {x: 0, y: 0.9554528, z: 0}
+  m_Radius: 1.15
+  m_Center: {x: 0, y: 0.88957024, z: -0.060634613}
 --- !u!1 &1835095718
 GameObject:
   m_ObjectHideFlags: 0
