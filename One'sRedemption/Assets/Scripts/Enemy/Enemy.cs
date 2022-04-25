@@ -12,9 +12,15 @@ public class Enemy : MonoBehaviour
     public bool inRange;
     public LayerMask layerPlayer;
 
+    private void Start()
+    {
+        inRange = false;
+    }
+
     public void Update()
     {
         inRange = Physics.CheckSphere(transform.position, rangeVision, layerPlayer);
+
 
         if (inRange == true)
         {
@@ -25,6 +31,8 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, points[indexPoints].position, speed * Time.deltaTime);
             float distance = Vector3.Distance(transform.position, points[indexPoints].position);
+            transform.LookAt(new Vector3(points[indexPoints].position.x, transform.position.y, points[indexPoints].position.z));
+
 
             if (distance <= 0.1)
             {
