@@ -1442,7 +1442,6 @@ GameObject:
   - component: {fileID: 1943345685}
   - component: {fileID: 1943345683}
   - component: {fileID: 2159467960097107722}
-  - component: {fileID: 8819386720558924731}
   m_Layer: 6
   m_Name: ybot
   m_TagString: Untagged
@@ -1552,19 +1551,6 @@ MonoBehaviour:
   canJump: 1
   canCombo: 0
   canMove: 1
---- !u!114 &8819386720558924731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6474790451818727181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2b6c49b80a0ba43833335b20b7cf7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 8098562978678743459}
 --- !u!1 &6494044226695652438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,10 +2604,5 @@ PrefabInstance:
 --- !u!4 &4452615297734858722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8723205367375374570, guid: 9f6c0ff9a165abb4082faa0eb2e4304c, type: 3}
-  m_PrefabInstance: {fileID: 4955599055893069576}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &8098562978678743459 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3793775858989325995, guid: 9f6c0ff9a165abb4082faa0eb2e4304c, type: 3}
   m_PrefabInstance: {fileID: 4955599055893069576}
   m_PrefabAsset: {fileID: 0}
