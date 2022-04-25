@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     {
         instance = this;
         life = 10;
-
+        
     }
     void Start()
     {
@@ -67,5 +67,6 @@ public class Player : MonoBehaviour
     {
         life -= damageTaken;
     }
+
    
 }
