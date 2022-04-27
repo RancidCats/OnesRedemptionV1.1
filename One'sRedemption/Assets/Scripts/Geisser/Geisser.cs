@@ -4,54 +4,22 @@ using UnityEngine;
 
 public class Geisser : MonoBehaviour
 {
-    public float     timer;
-    [SerializeField]
-    float             lavaTime;
-    public GameObject lava;
-    public bool startGeisser;
-
-   
-
-    public void Start()
-    {
-        lava.SetActive(false);
-        startGeisser = false;
-    }
-    public void Update()
-    {
-        if (startGeisser)
-        {
-            StartCoroutine(Geiser(true));
-
-        }
-        
-    }
+    public Animator anim;  
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerFeets"))
         {
+            anim.SetTrigger("active");
             Debug.Log("EstalloElgeisser");
-            startGeisser = true;
         }
-    }
-   public IEnumerator Geiser(bool start)
-    {
-        if (start)
-        {
-            lavaTime += Time.deltaTime;
-            if (lavaTime<= timer)
-            {
-                lava.SetActive(true);
-            }
-            else
-            {
-                lavaTime = 0;
+    }  
+   public void OnTriggerExit(Collider other)
+   {
+       if (other.CompareTag("PlayerFeets"))
+       {
+           Debug.Log("SeApagoElgeisser");
+            anim.SetTrigger("end");
 
-                lava.SetActive(false);
-                yield return startGeisser=false;
-
-            }
-        }
-
-    }
+       }
+   }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1160002376401971187}
   - component: {fileID: 1160002376401971186}
   - component: {fileID: 1160002376401971189}
+  - component: {fileID: 349431467789304491}
   m_Layer: 0
   m_Name: geisser
   m_TagString: Untagged
@@ -113,6 +114,25 @@ MonoBehaviour:
   lavaTime: 0
   lava: {fileID: 1160002375099029256}
   startGeisser: 0
+--- !u!95 &349431467789304491
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160002376401971188}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ee5e4a08256be04284936bf6a114e2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3878689737910037336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124,9 +144,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 2723261361260313680, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723261361260313681, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -134,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 4.48
       objectReference: {fileID: 0}
     - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
       propertyPath: m_LocalPosition.z
