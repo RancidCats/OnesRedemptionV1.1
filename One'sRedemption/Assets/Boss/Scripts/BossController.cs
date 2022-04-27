@@ -211,18 +211,30 @@ public class BossController : MonoBehaviour
         switch (type)
         {
             case 0:
-                StartCoroutine(JumpAttack());
+                StopAllCoroutines();
                 break;
         }
     }
+
+    void FinishCoroutine(int type)
+    {
+        switch (type)
+        {
+            case 0:
+                StopCoroutine(JumpAttack());
+                break;
+        }
+    }
+
     IEnumerator JumpAttack()
     {
         float time = 0;
         time += Time.fixedDeltaTime;
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse);
+        Vector3 playerPos = new Vector3(PlayerTarget.position.x, transform.position.y, PlayerTarget.position.z);
         while (Sistemas.GetDistanceXZ(transform.position, PlayerTarget.position) > 1)
         {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(PlayerTarget.position.x, transform.position.y, PlayerTarget.position.z), time);
+            transform.position = Vector3.Lerp(transform.position, playerPos, time);
             yield return new WaitForSeconds(0.02f);
         }
     }
@@ -241,7 +253,7 @@ public class BossController : MonoBehaviour
     {
         if (currentHp <= 0)
         {
-            transform.parent.gameObject.SetActive(false);
+            //transform.parent.gameObject.SetActive(false);
         }
         if (currentHp > maxHp)
         {
