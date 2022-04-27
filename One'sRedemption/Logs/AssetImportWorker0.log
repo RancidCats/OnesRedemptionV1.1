@@ -1,123 +1,123 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'es' Physical Memory: 8116 MB
+OS: 'Windows 10  (10.0.19043) 64bit ProfessionalN' Language: 'es' Physical Memory: 16276 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Editor\2020.3.25f1\Editor\Unity.exe
+C:\Program Files\Unity 2020.3.25f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption
+C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56285
-Successfully changed project path to: D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption
-D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption
+58861
+Successfully changed project path to: C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
+C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 61.52 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 30.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
     Vendor:   
-    VRAM:     8079 MB
+    VRAM:     8031 MB
     Driver:   30.0.15.1179
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Mono path[0] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007841 seconds.
+Register platform support module: C:/Program Files/Unity 2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001268 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 39.99 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 30.36 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.659 seconds
+- Completed reload, in  0.422 seconds
 Domain Reload Profiling:
-	ReloadAssembly (659ms)
-		BeginReloadAssembly (60ms)
+	ReloadAssembly (422ms)
+		BeginReloadAssembly (37ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (516ms)
-			LoadAssemblies (57ms)
+		EndReloadAssembly (332ms)
+			LoadAssemblies (36ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (208ms)
+			SetupTypeCache (111ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (172ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (126ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (40ms)
-				BeforeProcessingInitializeOnLoad (21ms)
-				ProcessInitializeOnLoadAttributes (78ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				RefreshPlugins (30ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (59ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.062645 seconds.
+Registered in 0.001909 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.362 seconds
+- Completed reload, in  0.744 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1363ms)
-		BeginReloadAssembly (173ms)
+	ReloadAssembly (745ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1115ms)
-			LoadAssemblies (328ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (596ms)
+			LoadAssemblies (61ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (301ms)
+			SetupTypeCache (201ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (358ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (233ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (93ms)
-				ProcessInitializeOnLoadAttributes (240ms)
-				ProcessInitializeOnLoadMethodAttributes (12ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (154ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1907 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.1 MB.
-System memory in use after: 99.2 MB.
+Unloading 1909 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.4 MB.
+System memory in use after: 98.5 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2364.
-Total: 2.850300 ms (FindLiveObjects: 0.157700 ms CreateObjectMapping: 0.073600 ms MarkObjects: 2.512500 ms  DeleteObjects: 0.105500 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2366.
+Total: 2.035300 ms (FindLiveObjects: 0.120600 ms CreateObjectMapping: 0.058500 ms MarkObjects: 1.769600 ms  DeleteObjects: 0.086100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,241 +131,297 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/Audio
-  artifactKey: Guid(60e0469e8efe24a4bb78c1d3df628704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Audio using Guid(60e0469e8efe24a4bb78c1d3df628704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6807a548d0a508164f80f266aa54aa') in 0.009238 seconds 
-  Import took 0.027174 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002879 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.945 seconds
-Domain Reload Profiling:
-	ReloadAssembly (945ms)
-		BeginReloadAssembly (113ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (770ms)
-			LoadAssemblies (93ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (263ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (288ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (188ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1875 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.2 MB.
-System memory in use after: 96.3 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2368.
-Total: 2.676900 ms (FindLiveObjects: 0.132500 ms CreateObjectMapping: 0.060400 ms MarkObjects: 2.468300 ms  DeleteObjects: 0.014500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 123.521137 seconds.
-  path: Assets/Scripts/Audio/AudioManager.cs
-  artifactKey: Guid(48c2bb023b649994abb5c8f60939296a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Audio/AudioManager.cs using Guid(48c2bb023b649994abb5c8f60939296a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '544cdc644916a6283ef0872890ae2fb7') in 0.060382 seconds 
-  Import took 0.077386 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.387028 seconds.
-  path: Assets/Scenes/FirstLevel.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/FirstLevel.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3422addd55f3c55ad85df7ec1167a006') in 0.022153 seconds 
-  Import took 0.025071 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.222608 seconds.
-  path: Assets/Scenes/PlayerTesting.unity
-  artifactKey: Guid(faff0e5d00c733741aa629e78ea07aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/PlayerTesting.unity using Guid(faff0e5d00c733741aa629e78ea07aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a39083e24cc2eb014f5ee1bdbdb86d6') in 0.007296 seconds 
-  Import took 0.010033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.536647 seconds.
   path: Assets/Sounds/Player
   artifactKey: Guid(5d752cd3acb61d54ea454830e37dec83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player using Guid(5d752cd3acb61d54ea454830e37dec83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6adaa7c075b53af8607c36bd7def0c0e') in 0.009165 seconds 
-  Import took 0.012433 seconds .
+Start importing Assets/Sounds/Player using Guid(5d752cd3acb61d54ea454830e37dec83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5a85d9ff1023bcf96b39180e727cc3d') in 0.005763 seconds 
+  Import took 0.007804 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.053881 seconds.
-  path: Assets/Sounds/Player/Sonido espada al aire 1.mp3
-  artifactKey: Guid(c46d822e7ff3983409bac8b5a8bc6ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido espada al aire 1.mp3 using Guid(c46d822e7ff3983409bac8b5a8bc6ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd122c0dd32a9b89a6686bcdc1c75cc87') in 0.111042 seconds 
-  Import took 0.113807 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Sounds/Player/Sonido grito hombre 1.mp3
-  artifactKey: Guid(bd3f92166b90ed04bb47e5f4933951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido grito hombre 1.mp3 using Guid(bd3f92166b90ed04bb47e5f4933951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a1116aabf87451bde6e3f21d7426ef') in 0.027782 seconds 
-  Import took 0.030786 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000266 seconds.
+  Time since last request: 2.994400 seconds.
   path: Assets/Sounds/Player/Sonido espada ataque 4.mp3
   artifactKey: Guid(519ab20c1fecd7141a8ca418cfc388d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido espada ataque 4.mp3 using Guid(519ab20c1fecd7141a8ca418cfc388d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1a0bbe0d3d24c203417efccbbf2201e') in 0.024610 seconds 
-  Import took 0.027388 seconds .
+Start importing Assets/Sounds/Player/Sonido espada ataque 4.mp3 using Guid(519ab20c1fecd7141a8ca418cfc388d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcfd3bb83542e876ac453ccc38d01b9d') in 0.072832 seconds 
+  Import took 0.075121 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/Sounds/Player/Sonido pisada cemento 3.mp3
-  artifactKey: Guid(096ff6b5a5cfa494f9da7268fe7669fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido pisada cemento 3.mp3 using Guid(096ff6b5a5cfa494f9da7268fe7669fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e28c708b3773a437f199fa4f626c790') in 0.023373 seconds 
-  Import took 0.025987 seconds .
+  Time since last request: 6.787848 seconds.
+  path: Assets/Sounds/Player/Sonido espada ataque hit 4.mp3
+  artifactKey: Guid(519ab20c1fecd7141a8ca418cfc388d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido espada ataque hit 4.mp3 using Guid(519ab20c1fecd7141a8ca418cfc388d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b8d62eba814767b12e1ae6ec0402180') in 0.010976 seconds 
+  Import took 0.013566 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Sounds/Player/Sonido espada al aire 2.mp3
-  artifactKey: Guid(9425eca8266e998409db2c778fa028cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido espada al aire 2.mp3 using Guid(9425eca8266e998409db2c778fa028cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '333c0dc7a64c559877f212f213828f22') in 0.019869 seconds 
-  Import took 0.022944 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Sounds/Player/Sonido pisada cemento 1.mp3
-  artifactKey: Guid(457cc06d1adba0043a95609877e5e415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido pisada cemento 1.mp3 using Guid(457cc06d1adba0043a95609877e5e415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53bb2648e66dc129c78c0d841bb2b77e') in 0.023735 seconds 
-  Import took 0.026875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/Sounds/Player/Sonido espada desenvainar.mp3
-  artifactKey: Guid(a7d7a1677bcb9c349a24cbc9499b341a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido espada desenvainar.mp3 using Guid(a7d7a1677bcb9c349a24cbc9499b341a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f02ea70e3348455b38b8f3193c31a72') in 0.011941 seconds 
-  Import took 0.014675 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Sounds/Player/Sonido pisada cemento 4.mp3
-  artifactKey: Guid(dcc41b447d53fa144a610d5d30130834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido pisada cemento 4.mp3 using Guid(dcc41b447d53fa144a610d5d30130834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24eb99a4b73030f4e793db02202c87b9') in 0.012216 seconds 
-  Import took 0.015436 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000316 seconds.
-  path: Assets/Sounds/Player/Sonido espada ataque 2.mp3
-  artifactKey: Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido espada ataque 2.mp3 using Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '621a0fbd5b581f3d9e6d8a2c9f53f3f6') in 0.011278 seconds 
-  Import took 0.014284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
+  Time since last request: 0.012267 seconds.
   path: Assets/Sounds/Player/Sonido espada ataque 3.mp3
   artifactKey: Guid(6531c40e674ce794c84832c0cfc9d9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido espada ataque 3.mp3 using Guid(6531c40e674ce794c84832c0cfc9d9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ecb298a771c33521a880c3d83acbda4') in 0.023972 seconds 
-  Import took 0.026903 seconds .
+Start importing Assets/Sounds/Player/Sonido espada ataque 3.mp3 using Guid(6531c40e674ce794c84832c0cfc9d9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf48d0982eb485a2106805510d1d91e9') in 0.007696 seconds 
+  Import took 0.010055 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000229 seconds.
-  path: Assets/Sounds/Player/Sonido pisada cemento 2.mp3
-  artifactKey: Guid(7b8775cdf5711c140a38747c03dcf597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sounds/Player/Sonido pisada cemento 2.mp3 using Guid(7b8775cdf5711c140a38747c03dcf597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8fdd6ea0ea61260096083d6c456e33c') in 0.028403 seconds 
-  Import took 0.031395 seconds .
+  Time since last request: 5.485334 seconds.
+  path: Assets/Sounds/Player/Sonido espada ataque hit 3.mp3
+  artifactKey: Guid(6531c40e674ce794c84832c0cfc9d9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido espada ataque hit 3.mp3 using Guid(6531c40e674ce794c84832c0cfc9d9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '101b51eae0a36c1305e6da2827cbc905') in 0.009694 seconds 
+  Import took 0.011981 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002885 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.941 seconds
-Domain Reload Profiling:
-	ReloadAssembly (942ms)
-		BeginReloadAssembly (113ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (769ms)
-			LoadAssemblies (90ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (267ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (284ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (76ms)
-				ProcessInitializeOnLoadAttributes (186ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1875 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.7 MB.
+Received Import Request.
+  Time since last request: 0.502748 seconds.
+  path: Assets/Sounds/Player/Sonido espada ataque 2.mp3
+  artifactKey: Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido espada ataque 2.mp3 using Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d57bea4a6ae252e310f850c57efca0b') in 0.009212 seconds 
+  Import took 0.011526 seconds .
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2379.
-Total: 2.477600 ms (FindLiveObjects: 0.141200 ms CreateObjectMapping: 0.059100 ms MarkObjects: 2.263300 ms  DeleteObjects: 0.013100 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 7.991007 seconds.
+  path: Assets/Sounds/Player/Sonido espada ataque hit 2.mp3
+  artifactKey: Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido espada ataque hit 2.mp3 using Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5cc63f76dd74c69751cdf0550f84fb2') in 0.012475 seconds 
+  Import took 0.014788 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3.066099 seconds.
+  path: Assets/Sounds/Player/Sonido espada al aire 2.mp3
+  artifactKey: Guid(9425eca8266e998409db2c778fa028cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido espada al aire 2.mp3 using Guid(9425eca8266e998409db2c778fa028cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f225cdbf31e2dbd2da3fbc32718772') in 0.008204 seconds 
+  Import took 0.010543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.509492 seconds.
+  path: Assets/Sounds/Player/Sonido espada al aire 1.mp3
+  artifactKey: Guid(c46d822e7ff3983409bac8b5a8bc6ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido espada al aire 1.mp3 using Guid(c46d822e7ff3983409bac8b5a8bc6ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b3ff891fa5958e54d0f2cbe874bddf0') in 0.007161 seconds 
+  Import took 0.009510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.610302 seconds.
+  path: Assets/Sounds/Player/Sonido espada desenvainar.mp3
+  artifactKey: Guid(a7d7a1677bcb9c349a24cbc9499b341a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido espada desenvainar.mp3 using Guid(a7d7a1677bcb9c349a24cbc9499b341a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3c64ebfcd5ddc2e197da7f01f0e0a37') in 0.007818 seconds 
+  Import took 0.010290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.508519 seconds.
+  path: Assets/Sounds/Player/Sonido grito hombre 1.mp3
+  artifactKey: Guid(bd3f92166b90ed04bb47e5f4933951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido grito hombre 1.mp3 using Guid(bd3f92166b90ed04bb47e5f4933951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4e9e5404207101f821b30e6f5c8da5a') in 0.007638 seconds 
+  Import took 0.009958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.820679 seconds.
+  path: Assets/Sounds/Player/Sonido pisada cemento 1.mp3
+  artifactKey: Guid(457cc06d1adba0043a95609877e5e415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido pisada cemento 1.mp3 using Guid(457cc06d1adba0043a95609877e5e415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46aac76df1712eb5a7ef86de3eb99939') in 0.007714 seconds 
+  Import took 0.010068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.847082 seconds.
+  path: Assets/Sounds/Player/Sonido pisada cemento 2.mp3
+  artifactKey: Guid(7b8775cdf5711c140a38747c03dcf597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido pisada cemento 2.mp3 using Guid(7b8775cdf5711c140a38747c03dcf597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b0095f7231578ffb800bca2932011bb') in 0.007962 seconds 
+  Import took 0.010279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.900070 seconds.
+  path: Assets/Sounds/Player/Sonido pisada cemento 3.mp3
+  artifactKey: Guid(096ff6b5a5cfa494f9da7268fe7669fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido pisada cemento 3.mp3 using Guid(096ff6b5a5cfa494f9da7268fe7669fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b435ea912c794a56ea7c83b7885b1ed0') in 0.008176 seconds 
+  Import took 0.010472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.784182 seconds.
+  path: Assets/Sounds/Player/Sonido pisada cemento 4.mp3
+  artifactKey: Guid(dcc41b447d53fa144a610d5d30130834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sonido pisada cemento 4.mp3 using Guid(dcc41b447d53fa144a610d5d30130834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4280c9d79e6f378f2fbb1940dbfd1b1') in 0.006886 seconds 
+  Import took 0.009212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 434.280091 seconds.
+  path: Assets/Sounds/Enemy Patrol
+  artifactKey: Guid(a21f9da7ea31980498fa74fa6b5e6392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol using Guid(a21f9da7ea31980498fa74fa6b5e6392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2009c7f02fb41c915b4e1bd8a7153230') in 0.004271 seconds 
+  Import took 0.007035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 749.573373 seconds.
+  path: Assets/Sounds/Enemy Patrol/Orco ataque.mp3
+  artifactKey: Guid(101c5523ed57a334ca4c16d5b25d7021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Orco ataque.mp3 using Guid(101c5523ed57a334ca4c16d5b25d7021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9400adfe009435815bf3ea238b04fee9') in 0.008662 seconds 
+  Import took 0.011411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.005270 seconds.
+  path: Assets/Sounds/Enemy Patrol/Short scream.mp3
+  artifactKey: Guid(101c5523ed57a334ca4c16d5b25d7021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Short scream.mp3 using Guid(101c5523ed57a334ca4c16d5b25d7021) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6361b6c5a3c9d545410bff963e8a4a24') in 0.015677 seconds 
+  Import took 0.017975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.294248 seconds.
+  path: Assets/Sounds/Enemy Patrol/Orco Persecucion.mp3
+  artifactKey: Guid(de16e06ab215c694aaf466b7869f4faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Orco Persecucion.mp3 using Guid(de16e06ab215c694aaf466b7869f4faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad3a3a87c1f46fdc6cbcd979646eb4d') in 0.013995 seconds 
+  Import took 0.016288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.077090 seconds.
+  path: Assets/Sounds/Enemy Patrol/Short scream 2.mp3
+  artifactKey: Guid(de16e06ab215c694aaf466b7869f4faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Short scream 2.mp3 using Guid(de16e06ab215c694aaf466b7869f4faf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b741064a15aa68e3f2d75f25c2179b33') in 0.010710 seconds 
+  Import took 0.013029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.650251 seconds.
+  path: Assets/Sounds/Enemy Patrol/Orco muerto.mp3
+  artifactKey: Guid(7603a6018492c1a4f80e6ad6cedc9cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Orco muerto.mp3 using Guid(7603a6018492c1a4f80e6ad6cedc9cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e638dc4b052090e61e2285a5bcf9330') in 0.007829 seconds 
+  Import took 0.010146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.452375 seconds.
+  path: Assets/Sounds/Enemy Patrol/Short scream 3.mp3
+  artifactKey: Guid(7603a6018492c1a4f80e6ad6cedc9cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Short scream 3.mp3 using Guid(7603a6018492c1a4f80e6ad6cedc9cbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '695320fbd554b5819654c75d0e8d4a8a') in 0.007251 seconds 
+  Import took 0.010015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.640303 seconds.
+  path: Assets/Sounds/Player/Sword attack.mp3
+  artifactKey: Guid(c46d822e7ff3983409bac8b5a8bc6ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sword attack.mp3 using Guid(c46d822e7ff3983409bac8b5a8bc6ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fdad273f6ca938efc2c53488d621778') in 0.011126 seconds 
+  Import took 0.013426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.803044 seconds.
+  path: Assets/Sounds/Player/Sword attack 2.mp3
+  artifactKey: Guid(9425eca8266e998409db2c778fa028cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sword attack 2.mp3 using Guid(9425eca8266e998409db2c778fa028cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5177a5c1a8631182cd50889802b7d450') in 0.008196 seconds 
+  Import took 0.011022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.676442 seconds.
+  path: Assets/Sounds/Player/Sword hit.mp3
+  artifactKey: Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sword hit.mp3 using Guid(3bb712b2a8118ef4aadd0964d40e9d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e30b0149c9fddad8f8873d23075baaea') in 0.009194 seconds 
+  Import took 0.011489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.579172 seconds.
+  path: Assets/Sounds/Player/Sword hit 2.mp3
+  artifactKey: Guid(6531c40e674ce794c84832c0cfc9d9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sword hit 2.mp3 using Guid(6531c40e674ce794c84832c0cfc9d9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58af3f11b5a8f0c65c1b8d143cf9b6d5') in 0.008663 seconds 
+  Import took 0.010979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.870484 seconds.
+  path: Assets/Sounds/Player/Sword hit 3.mp3
+  artifactKey: Guid(519ab20c1fecd7141a8ca418cfc388d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sword hit 3.mp3 using Guid(519ab20c1fecd7141a8ca418cfc388d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18ad04528bc646271b40ce775fa19db9') in 0.007919 seconds 
+  Import took 0.010275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.271853 seconds.
+  path: Assets/Sounds/Player/Scream men.mp3
+  artifactKey: Guid(bd3f92166b90ed04bb47e5f4933951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Scream men.mp3 using Guid(bd3f92166b90ed04bb47e5f4933951a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0dd17482c8172218d9ed548f313d9ef') in 0.008266 seconds 
+  Import took 0.010670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.474345 seconds.
+  path: Assets/Sounds/Player/Step.mp3
+  artifactKey: Guid(457cc06d1adba0043a95609877e5e415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Step.mp3 using Guid(457cc06d1adba0043a95609877e5e415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31f0de9d70a84b061874e4bbf09a5fe0') in 0.007206 seconds 
+  Import took 0.009624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.080614 seconds.
+  path: Assets/Sounds/Player/Step 2.mp3
+  artifactKey: Guid(7b8775cdf5711c140a38747c03dcf597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Step 2.mp3 using Guid(7b8775cdf5711c140a38747c03dcf597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeb22fea9c7f8db6e8ccf61230ab4aa3') in 0.009503 seconds 
+  Import took 0.011800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.501265 seconds.
+  path: Assets/Sounds/Player/Step 3.mp3
+  artifactKey: Guid(096ff6b5a5cfa494f9da7268fe7669fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Step 3.mp3 using Guid(096ff6b5a5cfa494f9da7268fe7669fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e4802cdd7dc13aee8df6469cbc3c94f') in 0.021227 seconds 
+  Import took 0.023521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.195452 seconds.
+  path: Assets/Sounds/Player/Step 4.mp3
+  artifactKey: Guid(dcc41b447d53fa144a610d5d30130834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Step 4.mp3 using Guid(dcc41b447d53fa144a610d5d30130834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451f1b2b843c31c0f8edd9ad8fb8204a') in 0.008551 seconds 
+  Import took 0.010865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.726043 seconds.
+  path: Assets/Sounds/Player/Sword unsheathe.mp3
+  artifactKey: Guid(a7d7a1677bcb9c349a24cbc9499b341a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Player/Sword unsheathe.mp3 using Guid(a7d7a1677bcb9c349a24cbc9499b341a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac612989279d112d11e5e0252aadb674') in 0.007354 seconds 
+  Import took 0.009745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 195.365945 seconds.
+  path: Assets/Sounds/Enemy Patrol/Orco.mp3
+  artifactKey: Guid(0ffc54cceed4eb04a86003593a20d1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Orco.mp3 using Guid(0ffc54cceed4eb04a86003593a20d1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69fdc7bf562039f735fc4dd301263070') in 0.010186 seconds 
+  Import took 0.012968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.719564 seconds.
+  path: Assets/Sounds/Enemy Patrol/Short scream.mp3
+  artifactKey: Guid(0ffc54cceed4eb04a86003593a20d1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Short scream.mp3 using Guid(0ffc54cceed4eb04a86003593a20d1b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e851b44ef0cdd79a42caa8f0866e8e50') in 0.007632 seconds 
+  Import took 0.009996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 550.130934 seconds.
+  path: Assets/Sounds/Enemy Patrol/Monstruo.mp3
+  artifactKey: Guid(d7e1cd2d91310a84ab682f6ce1522896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Monstruo.mp3 using Guid(d7e1cd2d91310a84ab682f6ce1522896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f6a26d89d10f3fade73ada65b157c1e') in 0.008720 seconds 
+  Import took 0.011506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.205652 seconds.
+  path: Assets/Sounds/Enemy Patrol/Short scream 1.mp3
+  artifactKey: Guid(d7e1cd2d91310a84ab682f6ce1522896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Enemy Patrol/Short scream 1.mp3 using Guid(d7e1cd2d91310a84ab682f6ce1522896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f22ff5f124a822a5d5e1890e08696752') in 0.007892 seconds 
+  Import took 0.010206 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
