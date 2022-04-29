@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     public Animator anim;
 
     public float maxLife,
-                             life,
                              moveSpeed,
                              jumpForce,
                              dashSpeed,
@@ -25,24 +24,25 @@ public class Player : MonoBehaviour
                              canCombo,
                              canMove;
     //------------------------------------------------------------------------------------------------------------------------------------//
-
-    Animations _animations;
+    [SerializeField]
+    float       _life;
+    Animations  _animations;
     Movement    _movement;
     Control     _control;
     public void Awake()
     {
         instance = this;
-        life = 10;
-        
+
+
     }
     void Start()
     {
 
 
-
+        _life = maxLife;
         _animations = new Animations(anim);
-        _movement = new Movement(transform,rb,moveSpeed,jumpForce,layerMask);
-        _control = new Control(_movement,_animations);
+        _movement = new Movement(transform, rb, moveSpeed, jumpForce, layerMask);
+        _control = new Control(_movement, _animations);
 
         canMove = true;
         canJump = true;
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {    
+    {
         _control.ArtificialUpdate();
         _animations.ArtificialUpdate();
         Death();
@@ -58,15 +58,29 @@ public class Player : MonoBehaviour
     }
     public void Death()
     {
-        if (life <= 0)
+        if (_life <= 0)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
     public void TakeDamage(float damageTaken)
     {
-        life -= damageTaken;
+        health -= damageTaken;
     }
+    public float health
+    {
+        get
+        {
+            return _life;
+        }
+        set
+        {
+            _life -= value;
+        }
+
+    }
+
+
 
    
 }
