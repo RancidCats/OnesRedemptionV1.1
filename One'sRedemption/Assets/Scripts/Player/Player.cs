@@ -11,34 +11,36 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public Animator anim;
 
-    public float maxLife,
+    public float             damage,    
+                             maxLife,
                              moveSpeed,
                              jumpForce,
                              dashSpeed,
                              dashLenght;
-
     public bool moving,
                              canAttack,
                              isGrounded,
                              canJump,
                              canCombo,
                              canMove;
+    
     //------------------------------------------------------------------------------------------------------------------------------------//
     [SerializeField]
     float       _life;
+    [SerializeField]
+    int         _hitCounter;
+    float       _firstDamage;
     Animations  _animations;
     Movement    _movement;
     Control     _control;
     public void Awake()
     {
         instance = this;
-
-
     }
     void Start()
     {
 
-
+        _firstDamage = damage;
         _life = maxLife;
         _animations = new Animations(anim);
         _movement = new Movement(transform, rb, moveSpeed, jumpForce, layerMask);
@@ -63,11 +65,24 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void TakeDamage(float damageTaken)
+    public void ResetHitCounter()
     {
-        health -= damageTaken;
+        _hitCounter = 0;
+        damage = _firstDamage;
     }
-    public float health
+    public int HitCounter()
+    {
+        _hitCounter++;
+        IncreaseDamage();
+        return _hitCounter;
+    }
+    public void IncreaseDamage()
+    {
+        damage = damage + (damage *_hitCounter * 0.125f);
+        Debug.Log("Maken: " + damage);
+    }
+
+    public float decreaseHealth
     {
         get
         {
@@ -77,7 +92,18 @@ public class Player : MonoBehaviour
         {
             _life -= value;
         }
+    }
+    public float increaseHealth
+    {
+        get
+        {
+            return _life;
 
+        }
+        set
+        {
+            _life += value;
+        }
     }
 
 
