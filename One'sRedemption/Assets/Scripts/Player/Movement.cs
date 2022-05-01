@@ -49,6 +49,8 @@ public class Movement
    public void Dash()
     {
          new Dash(_rb,_transform,_layerMask);
+        Player.instance.startDashCD = true;
+
     }
 
  

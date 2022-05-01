@@ -27770,11 +27770,19 @@ PrefabInstance:
       value: PlayerFeets
       objectReference: {fileID: 0}
     - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
+      propertyPath: canDash
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: maxLife
       value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
       propertyPath: _burningCD
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159467960097107722, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}
+      propertyPath: dashDeadTime
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5949469722726587831, guid: f7cc17a07fb34024ab6ee6dc8dd9e324, type: 3}

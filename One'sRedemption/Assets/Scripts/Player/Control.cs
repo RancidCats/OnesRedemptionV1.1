@@ -39,7 +39,7 @@ public class Control
         {
             _animations.Attack();
         }       
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Player.instance.canDash)
         {
             _animations.Dash();
             _movement.Dash();

@@ -15,10 +15,14 @@ public class Player : MonoBehaviour
                              moveSpeed,
                              jumpForce,
                              dashSpeed,
-                             dashLenght;
-    public bool burningOn;
+                             dashLenght,
+                             dashTimer,
+                             dashDeadTime;
+    public bool              burningOn;
 
-    public bool moving,
+    public bool              moving,
+                             canDash,
+                             startDashCD,
                              canAttack,
                              isGrounded,
                              canJump,
@@ -65,6 +69,10 @@ public class Player : MonoBehaviour
         {
             BurningTimer();
         }
+        if (startDashCD)
+        {
+            DashTimer();
+        }
     }
     public void Death()
     {
@@ -89,7 +97,21 @@ public class Player : MonoBehaviour
         damage = damage + (damage *_hitCounter * 0.125f);
         Debug.Log("Maken: " + damage);
     }
+    private void DashTimer()
+    {
+        dashTimer += Time.deltaTime;
+        if (dashTimer <= dashDeadTime)
+        {
+            canDash = false;
+        }
+        else
+        {
+            canDash = true;
+            dashTimer = 0;
+            startDashCD = false;
+        }
 
+    }
     public float decreaseHealth
     {
         get
