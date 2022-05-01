@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Geisser : MonoBehaviour
 {
-    public Animator anim;  
+    public Animator anim;
+    public float damage;
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerFeets"))

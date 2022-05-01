@@ -101,6 +101,13 @@ public class Player : MonoBehaviour
             _life -= value;
         }
     }
+    public float health
+    {
+        get
+        {
+            return _life;
+        }
+    }
     public float increaseHealth
     {
         get
@@ -119,10 +126,9 @@ public class Player : MonoBehaviour
         {
             _burningTimer+=Time.deltaTime;
             float rest = _burningTimer % 1;
-            Debug.Log("Resto: " + rest);
             if (rest <= 0.01f)
             {
-                Debug.Log("Lo Estoy Quemando");
+
                 decreaseHealth = 1;
 
             }

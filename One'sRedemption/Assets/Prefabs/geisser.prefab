@@ -110,10 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f23539ebea9185488a5d4680ade84bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 3
-  lavaTime: 0
-  lava: {fileID: 1160002375099029256}
-  startGeisser: 0
+  anim: {fileID: 349431467789304491}
+  damage: 10
 --- !u!95 &349431467789304491
 Animator:
   serializedVersion: 3
@@ -144,21 +142,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
-    - target: {fileID: 2723261361260313680, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723261361260313681, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -200,13 +186,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4167990337620138815, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
+      propertyPath: fatherGeisser
+      value: 
+      objectReference: {fileID: 1160002376401971189}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
---- !u!1 &1160002375099029256 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2723261361260313680, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
-  m_PrefabInstance: {fileID: 3878689737910037336}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1160002375099029300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2723261361260313708, guid: d23f1aa8228737c44bcfc5e038520f8b, type: 3}
