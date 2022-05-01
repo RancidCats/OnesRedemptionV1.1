@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,28 +10,34 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public Animator anim;
 
-    public float             damage,    
+    public float damage,
                              maxLife,
                              moveSpeed,
                              jumpForce,
                              dashSpeed,
                              dashLenght;
+    public bool burningOn;
+
     public bool moving,
                              canAttack,
                              isGrounded,
                              canJump,
                              canCombo,
                              canMove;
-    
+
     //------------------------------------------------------------------------------------------------------------------------------------//
     [SerializeField]
-    float       _life;
+    float           _life;
     [SerializeField]
-    int         _hitCounter;
-    float       _firstDamage;
-    Animations  _animations;
-    Movement    _movement;
-    Control     _control;
+    int             _hitCounter;
+    float           _firstDamage;
+    Animations      _animations;
+    Movement        _movement;
+    Control         _control;
+    [SerializeField ]
+    float _burningCD;
+    [SerializeField]
+    float _burningTimer;
     public void Awake()
     {
         instance = this;
@@ -56,7 +61,10 @@ public class Player : MonoBehaviour
         _control.ArtificialUpdate();
         _animations.ArtificialUpdate();
         Death();
-
+        if (burningOn == true)
+        {
+            BurningTimer();
+        }
     }
     public void Death()
     {
@@ -105,6 +113,31 @@ public class Player : MonoBehaviour
             _life += value;
         }
     }
+    private void BurningTimer()
+    {
+        if (_burningTimer <= _burningCD)
+        {
+            _burningTimer+=Time.deltaTime;
+            float rest = _burningTimer % 1;
+            Debug.Log("Resto: " + rest);
+            if (rest <= 0.01f)
+            {
+                Debug.Log("Lo Estoy Quemando");
+                decreaseHealth = 1;
+
+            }
+        }
+        else
+        {
+            _burningTimer = 0;
+            burningOn = false;
+
+        }
+
+    }
+    
+        
+    
 
 
 
