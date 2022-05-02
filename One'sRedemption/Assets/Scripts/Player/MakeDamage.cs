@@ -8,7 +8,7 @@ public class MakeDamage : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            //other.GetComponent<Enemy>().decreaseHealth = Player.instance.damage;
+            other.GetComponent<Enemy>().decreaseHealth = Player.instance.damage;
         }
     }
 }

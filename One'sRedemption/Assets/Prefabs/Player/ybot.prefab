@@ -1539,18 +1539,27 @@ MonoBehaviour:
     m_Bits: 8
   rb: {fileID: 1943345685}
   anim: {fileID: 320019338028550093}
-  maxLife: 0
-  life: 10
+  damage: 20
+  maxLife: 1000
   moveSpeed: 10
   jumpForce: 5
   dashSpeed: 1
   dashLenght: 6
+  dashTimer: 0
+  dashDeadTime: 1.5
+  burningOn: 0
   moving: 0
+  canDash: 1
+  startDashCD: 0
   canAttack: 1
   isGrounded: 0
   canJump: 1
   canCombo: 0
   canMove: 1
+  _life: 0
+  _hitCounter: 0
+  _burningCD: 0
+  _burningTimer: 0
 --- !u!1 &6494044226695652438
 GameObject:
   m_ObjectHideFlags: 0
