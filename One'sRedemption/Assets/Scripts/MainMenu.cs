@@ -10,4 +10,10 @@ public class MainMenu : MonoBehaviour
         //print("Hola mundo");
         SceneManager.LoadScene(sceneIndex);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
