@@ -12,6 +12,7 @@ public class Movement
                  _jumpForce,
                  _smoothVelocity,
                  _smoothTime;
+    bool _walkPlaying;
 
     public Movement(Transform t, Rigidbody rb, float s, float jf,LayerMask _layerMask)
     {
@@ -28,6 +29,7 @@ public class Movement
         if (inputVector.x !=0 || inputVector.z != 0)
         {
             Player.instance.moving = true; //Pj en movimiento
+            
 
             Vector3 dir = new Vector3(inputVector.x, 0, inputVector.z).normalized;
             float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
@@ -38,6 +40,17 @@ public class Movement
         else
         {
             Player.instance.moving = false;
+        }
+        if (Player.instance.moving && !_walkPlaying)
+        {
+            AudioManager.instance.Play("Player_Walk");
+
+            _walkPlaying = true;
+        }
+        else if (!Player.instance.moving && _walkPlaying)
+        {
+            AudioManager.instance.Stop("Player_Walk");
+            _walkPlaying = false;
         }
 
     }

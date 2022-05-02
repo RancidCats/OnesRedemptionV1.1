@@ -164,7 +164,10 @@ public class Player : MonoBehaviour
 
     }
     
-        
+    public void MakeASlashAudio()
+    {
+        AudioManager.instance.Play("Sword_Attack");
+    }
     
 
 
