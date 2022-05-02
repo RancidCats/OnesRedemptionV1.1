@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+        if (!Player.instance)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         //If protagonist is dead timer stops and shows defeat screen
         
         //if (Player.instance)
