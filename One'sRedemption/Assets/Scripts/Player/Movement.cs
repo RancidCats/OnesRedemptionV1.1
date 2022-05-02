@@ -43,13 +43,13 @@ public class Movement
         }
         if (Player.instance.moving && !_walkPlaying)
         {
-            AudioManager.instance.Play("Player_Walk");
+            AudioManager.instance.Play("Player_Step_1");
 
             _walkPlaying = true;
         }
         else if (!Player.instance.moving && _walkPlaying)
         {
-            AudioManager.instance.Stop("Player_Walk");
+            AudioManager.instance.Stop("Player_Step_1");
             _walkPlaying = false;
         }
 

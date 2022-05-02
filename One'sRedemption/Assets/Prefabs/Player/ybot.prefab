@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 439458733076808132}
   m_Layer: 6
   m_Name: feets
-  m_TagString: Untagged
+  m_TagString: PlayerFeets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1444,7 +1444,7 @@ GameObject:
   - component: {fileID: 2159467960097107722}
   m_Layer: 6
   m_Name: ybot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1542,7 +1542,7 @@ MonoBehaviour:
   damage: 20
   maxLife: 1000
   moveSpeed: 10
-  jumpForce: 5
+  jumpForce: 15
   dashSpeed: 1
   dashLenght: 6
   dashTimer: 0
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   canMove: 1
   _life: 0
   _hitCounter: 0
-  _burningCD: 0
+  _burningCD: 5
   _burningTimer: 0
 --- !u!1 &6494044226695652438
 GameObject:
