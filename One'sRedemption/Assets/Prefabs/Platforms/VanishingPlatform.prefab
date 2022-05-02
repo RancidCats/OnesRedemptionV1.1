@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1625998628554047933}
   - component: {fileID: 5368344853392782487}
   - component: {fileID: 1625998628554047921}
-  - component: {fileID: 423727151}
   m_Layer: 3
   m_Name: VanishingPlatform
   m_TagString: Untagged
@@ -349,18 +348,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &423727151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625998628554047931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0369626f6ebfdcf4b859e1690976920e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _disappearTime: 3
-  _canReset: 0
-  _resetTime: 0

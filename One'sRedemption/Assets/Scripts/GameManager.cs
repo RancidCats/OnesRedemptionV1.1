@@ -11,9 +11,9 @@ public class GameManager : MonoBehaviour
     //
     //public GameObject VictoryScreen, DefeatScreen;
 
-    public float timer, startTime;
+    //public float timer, startTime;
 
-    public bool victoryflag = true;
+    //public bool victoryflag = true;
 
     //public List<GameObject> enemies = new List<GameObject>();
 
