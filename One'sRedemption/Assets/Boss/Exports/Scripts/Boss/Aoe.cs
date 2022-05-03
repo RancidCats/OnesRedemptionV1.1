@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Aoe
 {
-
     public void CreateRay(int rayType) //testing
     {
         switch (rayType)

@@ -76,6 +76,7 @@ public class BossController : MonoBehaviour
     private void Start()
     {
         canUseSpell1 = true;
+        AoeReference = new Aoe();
     }
     private void FixedUpdate()
     {
@@ -240,12 +241,10 @@ public class BossController : MonoBehaviour
     {
         Vector3 dir = PlayerTarget.position - transform.position;//saco direccion
         Vector3 attackPos = transform.position + transform.forward * 3; //a ojo, posicion del area de efecto del ataque, si no le agrego transform.forward * 3 se instancia justo abajo del boss
-        print(attackPos);
         GameObject go = AoeReference.CreateAreaOfEffect(attackPos, attackType, transform); // creo la area de efecto (sin collider) en tal posicion
         yield return new WaitForSecondsRealtime(1.36f); // 1 segundo, 30 frames ==> 11 frames = 0.36
         Destroy(go);
         GameObject go2 = AoeReference.CreateAoeCollider(attackPos, attackType, transform); // creo la area de efecto con collider en tal posicion
-        print(attackPos);
         yield return new WaitForSecondsRealtime(0.3f);
         Destroy(go2);
     }
