@@ -29,7 +29,7 @@ public class Control
         }
        
         //Salto
-        if (Input.GetKeyUp(KeyCode.Space) &&  Player.instance.isGrounded && Player.instance.canJump)
+        if (Input.GetKeyDown(KeyCode.Space) &&  Player.instance.isGrounded && Player.instance.canJump)
         {
             _movement.Jump();
 
