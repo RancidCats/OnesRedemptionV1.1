@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3714506617044265327}
   - component: {fileID: 8368504932510131022}
   - component: {fileID: 911398483800091005}
+  - component: {fileID: -7240494753228404908}
   m_Layer: 0
   m_Name: Aoe50
   m_TagString: Untagged
@@ -82,6 +83,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-7240494753228404908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624747343126491239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c75f7f07b3a9847a126536ee1424aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boss: {fileID: 0}
 --- !u!1 &8668621284787485173
 GameObject:
   m_ObjectHideFlags: 0

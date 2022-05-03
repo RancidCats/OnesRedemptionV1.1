@@ -97,7 +97,7 @@ public class Aoe
         }
         var asset = Resources.Load(path); //Resources es una carpeta dentro de Assets, load lo carga en memoria sin instanciarlo en la escena, para posterior uso.
         GameObject aoeObject = GameObject.Instantiate(asset as GameObject, position, parent.rotation); // rotacion relativa al parent
-        aoeObject.tag = "BossAttackCollider"; // para el ontriggerenter del player
+       // aoeObject.tag = "BossAttackCollider"; // para el ontriggerenter del player
         return aoeObject;
     }
     public GameObject CreateAoeCollider(Vector3 position, int type) // crear una area de efecto con collider en base a una posicion y un tipo.
@@ -117,7 +117,7 @@ public class Aoe
         }
         var asset = Resources.Load(path); //Resources es una carpeta dentro de Assets, load lo carga en memoria sin instanciarlo en la escena, para posterior uso.
         GameObject aoeObject = GameObject.Instantiate(asset as GameObject, position, Quaternion.identity);
-        aoeObject.tag = "BossAttackCollider"; // para el ontriggerenter del player
+       // aoeObject.tag = "BossAttackCollider"; // para el ontriggerenter del player
         return aoeObject;
     }
     //crear el area de efecto, rotarla acorde

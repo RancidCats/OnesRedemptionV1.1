@@ -10,10 +10,12 @@ public class BossController : MonoBehaviour
     public Animator ani;
     public Transform leftHand;
     public Aoe AoeReference; //despues habria que hacer un namespace, por ahora esto cumple
-
+    public static BossController instance;
 
     [Header("Stats")]
+    [SerializeField]
     private int currentHp;
+    [SerializeField]
     private int maxHp;
     public int health
     {
@@ -23,11 +25,7 @@ public class BossController : MonoBehaviour
         }
         set
         {
-            if (value < 0)
-            {
-                TakeDamage(value);
-            }
-            else currentHp = value;
+           currentHp = value;
         }
     } //por donde se pasa la vida
 
@@ -72,9 +70,13 @@ public class BossController : MonoBehaviour
     public GameObject fireball;
 
 
-
+    void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
+        currentHp = maxHp;
         canUseSpell1 = true;
         AoeReference = new Aoe();
     }
@@ -83,29 +85,34 @@ public class BossController : MonoBehaviour
         Attack();
         MoveBehaviour();
         SpellBehaviour();
+        HealthBehaviour();
+
     }
+    
 
 
     //------ATAQUES--------//
     void Attack()
     {
-        if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 2.9f && !canUseSpell1) //devuelve la posicion sin tener en cuenta el eje Y
-        {
-            canAttack = true;
-        }
-        else canAttack = false;
-        if (canAttack)
-        {
-            ani.SetTrigger("Attack");
+        
+            if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 2.9f && !canUseSpell1) //devuelve la posicion sin tener en cuenta el eje Y
+            {
+                canAttack = true;
+            }
+            else canAttack = false;
+            if (canAttack)
+            {
+                ani.SetTrigger("Attack");
 
-        }
-        else ani.ResetTrigger("Attack"); // para que no quede colgado algun trigger
+            }
+            else ani.ResetTrigger("Attack"); // para que no quede colgado algun trigger
 
-        if (Sistemas.IsAnimationPlaying(ani, "BossSwipe2"))
-        {
-            isAttacking = true;
-        }
-        else isAttacking = false;
+            if (Sistemas.IsAnimationPlaying(ani, "BossSwipe2"))
+            {
+                isAttacking = true;
+            }
+            else isAttacking = false;
+        
     }
 
     //-----MOVIMIENTO------//
@@ -202,7 +209,8 @@ public class BossController : MonoBehaviour
     {
         Vector3 targetPos = PlayerTarget.position; //posicion instantanea del player
         float timer = 0;
-        GameObject go = AoeReference.CreateAreaOfEffect(AoeReference.GetYPointFromTransform(PlayerTarget), 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
+        Vector3 attackPos = AoeReference.GetYPointFromTransform(PlayerTarget); 
+        GameObject go = AoeReference.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse); //dar impulso para sensacion de salto
         bool animFinished = false; // para que no loopee el if de abajo
         if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1) //si no esta cerca
@@ -228,7 +236,7 @@ public class BossController : MonoBehaviour
             ani.SetTrigger("JumpAttackFinish");
         }
         Destroy(go);
-        GameObject go2 = AoeReference.CreateAoeCollider(AoeReference.GetYPointFromTransform(PlayerTarget), 2); //crear area de efecto con collider en la posicion del player
+        GameObject go2 = AoeReference.CreateAoeCollider(attackPos, 2); //crear area de efecto con collider en la posicion del player
         GameObject shockwave = Instantiate(this.shockwave, go.transform.position + Vector3.up * 0.3f, Quaternion.identity); //particle system de shockwave
         yield return new WaitForSecondsRealtime(0.25f); 
         Destroy(go2);
@@ -265,13 +273,13 @@ public class BossController : MonoBehaviour
     {
         if (currentHp <= 0)
         {
-            transform.parent.gameObject.SetActive(false);
+            transform.gameObject.SetActive(false);
         }
         if (currentHp > maxHp)
         {
             currentHp = maxHp;
         }
-        hpBar.fillAmount = currentHp / maxHp;
+       // hpBar.fillAmount = currentHp / maxHp;
 
     }
     private void TakeDamage(int value)

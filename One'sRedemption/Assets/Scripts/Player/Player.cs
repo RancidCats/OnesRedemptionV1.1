@@ -41,7 +41,9 @@ public class Player : MonoBehaviour
     [SerializeField ]
     float _burningCD;
     [SerializeField]
-    float _burningTimer;
+    float   _burningTimer,
+            _smoothVelocity,
+            _smoothTime;
     public void Awake()
     {
         instance = this;
@@ -54,6 +56,7 @@ public class Player : MonoBehaviour
         _animations = new Animations(anim);
         _movement = new Movement(transform, rb, moveSpeed, jumpForce, layerMask);
         _control = new Control(_movement, _animations);
+        _smoothTime = 0.05f;
 
         canMove = true;
         canJump = true;
@@ -94,8 +97,8 @@ public class Player : MonoBehaviour
     }
     public void IncreaseDamage()
     {
-        damage = damage + (damage *_hitCounter * 0.125f);
-        Debug.Log("Maken: " + damage);
+        damage = Mathf.Round(damage + (damage *_hitCounter * 0.125f)) ;
+      
     }
     private void DashTimer()
     {
@@ -163,9 +166,18 @@ public class Player : MonoBehaviour
         }
 
     }
-    
+ 
     public void MakeASlashAudio()
     {
         AudioManager.instance.Play("Sword_Attack_1");
-    }    
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+     
+        if (other.CompareTag("BossAttackCollider"))
+        {
+
+            decreaseHealth = BossController.instance.damage;
+        }           
+    }  
 }

@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Indicator : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("estalactita"))
+        if (other.CompareTag("estalactita"))
         {
             Destroy(gameObject);
         }
+        
     }
+    
+    
 }

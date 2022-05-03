@@ -10,5 +10,11 @@ public class MakeDamage : MonoBehaviour
         {
             other.GetComponent<Enemy>().decreaseHealth = Player.instance.damage;
         }
+
+        if (other.CompareTag("Boss"))
+        {
+          
+            other.GetComponentInParent<BossController>().health -= (int) Player.instance.damage;
+        }
     }
 }

@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 5876225011602187392}
   - component: {fileID: 4651866015930309301}
   - component: {fileID: 2006789464392339453}
+  - component: {fileID: 5221643627782552604}
   m_Layer: 0
   m_Name: Arch360
-  m_TagString: Untagged
+  m_TagString: BossAttackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3159,9 +3160,23 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4074049403388236235}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!136 &5221643627782552604
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074049403388236235}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 4.9802866
+  m_Height: 9.9802685
+  m_Direction: 1
+  m_Center: {x: -4.980286, y: 0.000000008363544, z: 0.1}

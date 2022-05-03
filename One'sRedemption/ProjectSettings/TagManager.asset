@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - estalactita
   - BossAttackCollider
+  - Boss
   layers:
   - Default
   - TransparentFX
