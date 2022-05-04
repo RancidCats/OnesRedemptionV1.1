@@ -1557,7 +1557,7 @@ MonoBehaviour:
   rb: {fileID: 1943345685}
   anim: {fileID: 320019338028550093}
   damage: 20
-  maxLife: 1000
+  maxLife: 100
   moveSpeed: 10
   jumpForce: 13
   dashSpeed: 1
