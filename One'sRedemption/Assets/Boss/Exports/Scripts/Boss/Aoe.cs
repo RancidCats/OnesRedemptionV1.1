@@ -40,7 +40,7 @@ public class Aoe
         return hitPoint;
     }
 
-    public GameObject CreateAreaOfEffect(Vector3 position, int type, Transform parent)// crear una area de efecto en base a una posicion y un tipo.
+    public GameObject CreateAreaOfEffect(Vector3 position, int type, Quaternion rotation)// crear una area de efecto en base a una posicion y un tipo.
     {
         string path = "";
         switch (type)
@@ -56,7 +56,7 @@ public class Aoe
                 break;
         }
         var asset2 = Resources.Load(path); //Resources es una carpeta dentro de Assets, load lo carga en memoria sin instanciarlo en la escena, para posterior uso.
-        GameObject aoeObject2 = GameObject.Instantiate(asset2 as GameObject, position, parent.rotation);
+        GameObject aoeObject2 = GameObject.Instantiate(asset2 as GameObject, position, rotation);
         //aoeObject2.transform.LookAt(-parent.position); //posibles errores
         return aoeObject2;
     }
@@ -80,7 +80,7 @@ public class Aoe
         
         return aoeObject;
     }
-    public GameObject CreateAoeCollider(Vector3 position, int type, Transform parent) // crear una area de efecto con collider en base a una posicion y un tipo.
+    public GameObject CreateAoeCollider(Vector3 position, int type, Quaternion rotation) // crear una area de efecto con collider en base a una posicion y un tipo.
     {
         string path = "";
         switch (type)
@@ -96,7 +96,7 @@ public class Aoe
                 break;
         }
         var asset = Resources.Load(path); //Resources es una carpeta dentro de Assets, load lo carga en memoria sin instanciarlo en la escena, para posterior uso.
-        GameObject aoeObject = GameObject.Instantiate(asset as GameObject, position, parent.rotation); // rotacion relativa al parent
+        GameObject aoeObject = GameObject.Instantiate(asset as GameObject, position, rotation); // rotacion relativa al parent
        // aoeObject.tag = "BossAttackCollider"; // para el ontriggerenter del player
         return aoeObject;
     }
