@@ -1,478 +1,123 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'es' Physical Memory: 16344 MB
+OS: 'Windows 10  (10.0.19043) 64bit ProfessionalN' Language: 'es' Physical Memory: 16276 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe
+C:\Program Files\Unity 2020.3.25f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/USUARIO/Documents/GitHub/OnesRedemptionV1.1/One'sRedemption
+C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64381
-Successfully changed project path to: C:/Users/USUARIO/Documents/GitHub/OnesRedemptionV1.1/One'sRedemption
-C:/Users/USUARIO/Documents/GitHub/OnesRedemptionV1.1/One'sRedemption
+62242
+Successfully changed project path to: C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
+C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 76.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 32.51 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/USUARIO/Documents/GitHub/OnesRedemptionV1.1/One'sRedemption/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 560 Series (ID=0x67ef)
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
     Vendor:   
-    VRAM:     4074 MB
-    Driver:   30.0.15019.1005
+    VRAM:     8031 MB
+    Driver:   30.0.15.1179
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56812
+Mono path[0] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56660
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004104 seconds.
+Register platform support module: C:/Program Files/Unity 2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001266 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 65.58 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 31.03 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.214 seconds
+- Completed reload, in  0.425 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1214ms)
-		BeginReloadAssembly (204ms)
+	ReloadAssembly (425ms)
+		BeginReloadAssembly (38ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (830ms)
-			LoadAssemblies (200ms)
+		EndReloadAssembly (335ms)
+			LoadAssemblies (36ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (294ms)
+			SetupTypeCache (111ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (55ms)
-			SetupLoadedEditorAssemblies (303ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (129ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (66ms)
-				BeforeProcessingInitializeOnLoad (27ms)
-				ProcessInitializeOnLoadAttributes (139ms)
-				ProcessInitializeOnLoadMethodAttributes (64ms)
+				RefreshPlugins (31ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (61ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005800 seconds.
+Registered in 0.001878 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000259FEBD9010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258214EE030 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FF1B96B0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FF1B96B0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEBC3020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258209ECA30 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821F26C50 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821FDE060 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820BE6B70 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820BC2830 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820E4B020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820BC2830 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821298020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258212C0630 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821F5F040 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820B82230 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820E6A430 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820E9F020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821F26C50 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820E9F020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820FC0830 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258212D5040 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820E6A430 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821DA0E40 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEBF93D0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.979 seconds
+- Completed reload, in  0.765 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1980ms)
-		BeginReloadAssembly (277ms)
+	ReloadAssembly (765ms)
+		BeginReloadAssembly (108ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (1536ms)
-			LoadAssemblies (201ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (613ms)
+			LoadAssemblies (63ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (548ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (81ms)
-			SetupLoadedEditorAssemblies (559ms)
+			SetupTypeCache (205ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (241ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (150ms)
-				ProcessInitializeOnLoadAttributes (371ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (13ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (159ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 1.11 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1931 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.5 MB.
-System memory in use after: 99.6 MB.
+System memory in use before: 99.4 MB.
+System memory in use after: 99.5 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2393.
-Total: 5.394000 ms (FindLiveObjects: 0.375200 ms CreateObjectMapping: 0.097100 ms MarkObjects: 4.714900 ms  DeleteObjects: 0.204600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/New Terrain 1.asset
-  artifactKey: Guid(22c7c559a4e6b9c48a634cc0c91e9a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Terrain 1.asset using Guid(22c7c559a4e6b9c48a634cc0c91e9a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7dc93c5b6ace75ae096a1b821deb83e') in 0.193590 seconds 
-  Import took 0.198637 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 71.667141 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(b81cc5cf772e0c448bc817ab388afee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(b81cc5cf772e0c448bc817ab388afee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7802a56562fbc4536598b2b58d1bc605') in 0.048597 seconds 
-  Import took 0.055556 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Prefabs/geisser.prefab
-  artifactKey: Guid(4586c048cc0058343993ecc1218b1935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/geisser.prefab using Guid(4586c048cc0058343993ecc1218b1935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e1549ace0461a44eaaee7fd3883bb0e') in 0.198747 seconds 
-  Import took 0.204282 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/Prefabs/Main Camera.prefab
-  artifactKey: Guid(a999d7caea572cb4882ce8f2dc8de628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Main Camera.prefab using Guid(a999d7caea572cb4882ce8f2dc8de628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21275b52c32ec6ad15fd852bb048681e') in 0.019040 seconds 
-  Import took 0.028330 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/Prefabs/Cube.prefab
-  artifactKey: Guid(d23f1aa8228737c44bcfc5e038520f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Cube.prefab using Guid(d23f1aa8228737c44bcfc5e038520f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b56961bb17a132ba6521e647dd14c068') in 0.041237 seconds 
-  Import took 0.046503 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.819733 seconds.
-  path: Assets/Boss/Exports/Animations
-  artifactKey: Guid(9c600c0ec6eb5834280eb161ec508ec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Animations using Guid(9c600c0ec6eb5834280eb161ec508ec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ac54b97de9cc56c310e845e75dcda1f') in 0.016396 seconds 
-  Import took 0.022739 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.066607 seconds.
-  path: Assets/Boss/Exports/Materials
-  artifactKey: Guid(35bb891e13414954eac29f0a21ae7785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Materials using Guid(35bb891e13414954eac29f0a21ae7785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59e47c7ba235cd5f9addd45343f341c5') in 0.011624 seconds 
-  Import took 0.018065 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.057072 seconds.
-  path: Assets/Boss/Exports/Materials/AoeColliderMaterial.mat
-  artifactKey: Guid(6c61b867d14cd4d4ea694e1ab053c093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Materials/AoeColliderMaterial.mat using Guid(6c61b867d14cd4d4ea694e1ab053c093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5273e51e28454701b9cab8311ba570') in 0.243690 seconds 
-  Import took 0.249471 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/Boss/Exports/Materials/Shockwave.mat
-  artifactKey: Guid(43d2b07c6c4a92e4088e0e13b910ea94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Materials/Shockwave.mat using Guid(43d2b07c6c4a92e4088e0e13b910ea94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ea14427f66725587049fbd4b9aa5ebf') in 0.204696 seconds 
-  Import took 0.210042 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/Boss/Exports/Materials/shockwaveSprite.png
-  artifactKey: Guid(bf7f698885835dd4a81ee3b7ee80fa71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Materials/shockwaveSprite.png using Guid(bf7f698885835dd4a81ee3b7ee80fa71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b21182b123aa64b6fd3a488d75f1907') in 0.253283 seconds 
-  Import took 0.258113 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000414 seconds.
-  path: Assets/Boss/Exports/Materials/AoeMaterial.mat
-  artifactKey: Guid(303491e0263861d4d97a36b67c948bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Materials/AoeMaterial.mat using Guid(303491e0263861d4d97a36b67c948bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '565f8bd66753274a6e0b73e4abd9fe72') in 0.052685 seconds 
-  Import took 0.058652 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Boss/Exports/Materials/shockwaveMap.png
-  artifactKey: Guid(8b0844bc71c4c5e42858e1613cd35fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Materials/shockwaveMap.png using Guid(8b0844bc71c4c5e42858e1613cd35fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c0c4db58d163955a00926fdc5d6c969') in 0.056411 seconds 
-  Import took 0.061895 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.056158 seconds.
-  path: Assets/Boss/Exports/Models
-  artifactKey: Guid(048cd3f48c1b9d843aa47eb2be005550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Models using Guid(048cd3f48c1b9d843aa47eb2be005550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00b7d1836ce9a074e1185666bfb8f113') in 0.013240 seconds 
-  Import took 0.018955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.050627 seconds.
-  path: Assets/Boss/Exports/Models/TestIra@Mutant Breathing Idle.fbx
-  artifactKey: Guid(9ef0018a203fa1c42938be76c3bdfef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Models/TestIra@Mutant Breathing Idle.fbx using Guid(9ef0018a203fa1c42938be76c3bdfef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3364375ffe5ae4fdff4b995f3550a84f') in 0.319080 seconds 
-  Import took 0.325696 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.635488 seconds.
-  path: Assets/Boss/Exports/Scripts
-  artifactKey: Guid(4ad1bbd27c09b274f8a73cd5d2664979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Scripts using Guid(4ad1bbd27c09b274f8a73cd5d2664979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e772646ca303a20e3876a8b8981b95c') in 0.012163 seconds 
-  Import took 0.018184 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.155755 seconds.
-  path: Assets/Boss/Exports/Scripts/Boss
-  artifactKey: Guid(2336f007370069a4cb7c151b5bf97ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Boss/Exports/Scripts/Boss using Guid(2336f007370069a4cb7c151b5bf97ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b281563ea6d9d065042bad3a450fd8e3') in 0.012129 seconds 
-  Import took 0.018593 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.424665 seconds.
-  path: Assets/Prefabs/Managers
-  artifactKey: Guid(78d542858aa44a046b46df0ad58191d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Managers using Guid(78d542858aa44a046b46df0ad58191d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc086739b642515f73a1b95702dc5425') in 0.016276 seconds 
-  Import took 0.023353 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.044540 seconds.
-  path: Assets/Prefabs/Managers/AudioManager.prefab
-  artifactKey: Guid(8f195c80499326245b597ba6792ae582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Managers/AudioManager.prefab using Guid(8f195c80499326245b597ba6792ae582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fb520688688941664f37c294cdc5a5') in 0.021315 seconds 
-  Import took 0.026401 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000344 seconds.
-  path: Assets/Prefabs/Managers/GameManager.prefab
-  artifactKey: Guid(577a806937098954d8d3ba7ab8c34345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Managers/GameManager.prefab using Guid(577a806937098954d8d3ba7ab8c34345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '450f0d265e548c16565835c8d959987f') in 0.018411 seconds 
-  Import took 0.026613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.549037 seconds.
-  path: Assets/Prefabs/Nivel 1/Level 1.prefab
-  artifactKey: Guid(8fd54330768f2f744ac18d57885eb02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Nivel 1/Level 1.prefab using Guid(8fd54330768f2f744ac18d57885eb02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c5cdef7649841968866706da90edeb') in 0.193212 seconds 
-  Import took 0.201109 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.323597 seconds.
-  path: Assets/Prefabs/Platforms
-  artifactKey: Guid(1bebcf2776b17dd4aa34842405eba180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms using Guid(1bebcf2776b17dd4aa34842405eba180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353d1277e80c6f4b491182c8e9f53619') in 0.034032 seconds 
-  Import took 0.039101 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.032025 seconds.
-  path: Assets/Prefabs/Platforms/MovingPlatform.prefab
-  artifactKey: Guid(177c5a5dd56963d45b2baca16b529b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/MovingPlatform.prefab using Guid(177c5a5dd56963d45b2baca16b529b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bcceb3a4813b31eb4b213b8b585da04') in 0.014516 seconds 
-  Import took 0.020457 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Prefabs/Platforms/VanishingPlatform.prefab
-  artifactKey: Guid(c6a57e6977f0c9f40b7397e364e488f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/VanishingPlatform.prefab using Guid(c6a57e6977f0c9f40b7397e364e488f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '044b88f33b93df87c775d3f4510f0a6a') in 0.017487 seconds 
-  Import took 0.024914 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.191166 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(89cebd28d53c42540a781929977f9b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(89cebd28d53c42540a781929977f9b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab46b50e7bc7d9bed6ed17a9c642c164') in 0.288538 seconds 
-  Import took 0.299555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Prefabs/Player/ybot.prefab
-  artifactKey: Guid(f7cc17a07fb34024ab6ee6dc8dd9e324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/ybot.prefab using Guid(f7cc17a07fb34024ab6ee6dc8dd9e324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b26cb0e3820301a93d095945d8620dcf') in 0.281178 seconds 
-  Import took 0.288633 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006085 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000259FEE5C270 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB5E800 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEC13010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259D5D83B30 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821D8BE40 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FF190010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258214EE030 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FD7C5CF0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FF1C6780 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB641B0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821298020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821F4F030 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820BA8020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB641B0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEE5C270 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820530080 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258209E4020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258227AC020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002582060B870 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820EF3020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB5E800 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820F2FA10 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821A8B010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258214F6520 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FED15010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.695 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1695ms)
-		BeginReloadAssembly (183ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (57ms)
-		EndReloadAssembly (1391ms)
-			LoadAssemblies (147ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (522ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (70ms)
-			SetupLoadedEditorAssemblies (493ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (133ms)
-				ProcessInitializeOnLoadAttributes (322ms)
-				ProcessInitializeOnLoadMethodAttributes (14ms)
-				AfterProcessingInitializeOnLoad (13ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1897 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.8 MB.
-System memory in use after: 113.9 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2445.
-Total: 4.602900 ms (FindLiveObjects: 0.356100 ms CreateObjectMapping: 0.126000 ms MarkObjects: 4.079900 ms  DeleteObjects: 0.038300 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2391.
+Total: 2.073800 ms (FindLiveObjects: 0.118900 ms CreateObjectMapping: 0.058900 ms MarkObjects: 1.818900 ms  DeleteObjects: 0.076300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -485,109 +130,74 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005602 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002582576D070 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB5E800 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEC13010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259D5D83B30 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821CD5050 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FECB5020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258251D8020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821FDF730 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821C2F020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821BBA030 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821298020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FECB5020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820BA8020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB641B0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002582576D070 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821F4F030 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821EA4010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258227AC020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821A71C30 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025820EF3020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB5E800 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FEB5E800 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000025821A8B010 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000259FF1291B0 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000258224B0020 doesn't match image C:\Users\USUARIO\Documents\GitHub\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.785 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1786ms)
-		BeginReloadAssembly (213ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (17ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (55ms)
-		EndReloadAssembly (1424ms)
-			LoadAssemblies (169ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (543ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (81ms)
-			SetupLoadedEditorAssemblies (488ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (129ms)
-				ProcessInitializeOnLoadAttributes (323ms)
-				ProcessInitializeOnLoadMethodAttributes (14ms)
-				AfterProcessingInitializeOnLoad (12ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1897 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.9 MB.
-System memory in use after: 114.0 MB.
+Received Import Request.
+  path: Assets/Prefabs/Objects/Rocas.prefab
+  artifactKey: Guid(9743d1a57a02a6140971572a75c6c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Rocas.prefab using Guid(9743d1a57a02a6140971572a75c6c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c91f2d3adf941daf94e9c9ed8358b1') in 0.076541 seconds 
+  Import took 0.079124 seconds .
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2447.
-Total: 5.496900 ms (FindLiveObjects: 0.328200 ms CreateObjectMapping: 0.087800 ms MarkObjects: 5.039300 ms  DeleteObjects: 0.039200 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 2.190891 seconds.
+  path: Assets/Prefabs/Objects/Rocas.fbx
+  artifactKey: Guid(100e5a8695603334785b0fac28d04135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Rocas.fbx using Guid(100e5a8695603334785b0fac28d04135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebdec0ab2ede17f4dcb6ac7700820779') in 0.112681 seconds 
+  Import took 0.115110 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 137.626768 seconds.
+  path: Assets/Prefabs/Objects/Rocas.fbx
+  artifactKey: Guid(100e5a8695603334785b0fac28d04135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Rocas.fbx using Guid(100e5a8695603334785b0fac28d04135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f5cb9cc7fe598dc628461a643de3fce') in 0.080153 seconds 
+  Import took 0.082836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.549366 seconds.
+  path: Assets/Prefabs/Objects/Rocas.obj
+  artifactKey: Guid(16ee899d730fcec4e9d5282ce31c193c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Rocas.obj using Guid(16ee899d730fcec4e9d5282ce31c193c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd17ee9b51a85a7a3ae287cca468c94a1') in 0.065164 seconds 
+  Import took 0.067584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.307346 seconds.
+  path: Assets/Prefabs/Objects/Rocas.prefab
+  artifactKey: Guid(9743d1a57a02a6140971572a75c6c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Rocas.prefab using Guid(9743d1a57a02a6140971572a75c6c33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '726b5ba7e7d5c762adbc3c11eadac707') in 0.011058 seconds 
+  Import took 0.013519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.956504 seconds.
+  path: Assets/Prefabs/Objects/Rocas.obj
+  artifactKey: Guid(16ee899d730fcec4e9d5282ce31c193c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Objects/Rocas.obj using Guid(16ee899d730fcec4e9d5282ce31c193c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb92e145c60c47b9f4c4476d319f99d') in 0.064478 seconds 
+  Import took 0.067448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.726520 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(2e4d6520ccc63f2429c4413b47e6b5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(2e4d6520ccc63f2429c4413b47e6b5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8be0d50eaa693b1911a7d02dc65fe46d') in 0.005762 seconds 
+  Import took 0.008168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.821002 seconds.
+  path: Assets/Scenes/FirstLevel.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/FirstLevel.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cca477570d536176140b4538cf9e4657') in 0.004760 seconds 
+  Import took 0.007154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.137490 seconds.
+  path: Assets/Scenes/PlayerTesting.unity
+  artifactKey: Guid(faff0e5d00c733741aa629e78ea07aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PlayerTesting.unity using Guid(faff0e5d00c733741aa629e78ea07aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bfe156a29e85f994b74cc7e943e1f67') in 0.005589 seconds 
+  Import took 0.007981 seconds .
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
