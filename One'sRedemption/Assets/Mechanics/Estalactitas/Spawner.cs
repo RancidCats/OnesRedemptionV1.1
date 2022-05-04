@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     public float alturaIndicator;
     public float timer;
     public float cooldown;
+    public float cantEstalactitas;
 
     void Update()
     {
@@ -21,9 +22,9 @@ public class Spawner : MonoBehaviour
 
     void SpawnCubes()
     {
-        for (int x = 0; x < 9; x++)
+        for (int x = 0; x < cantEstalactitas; x++)
         {
-            Vector3 randomSpawnPosition = transform.position + new Vector3(Random.Range(-10, 11), alturaIndicator, Random.Range(-10, 11));
+            Vector3 randomSpawnPosition = transform.position + new Vector3(Random.Range(-15, 16), alturaIndicator, Random.Range(-15, 16));
             Instantiate(cubePrefab, randomSpawnPosition, Quaternion.identity);
         }
     }
