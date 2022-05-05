@@ -10,8 +10,7 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public Animator anim;
 
-    public float damage,
-                             maxLife,
+    public float             damage,                            
                              moveSpeed,
                              jumpForce,
                              dashSpeed,
@@ -31,19 +30,24 @@ public class Player : MonoBehaviour
 
     //------------------------------------------------------------------------------------------------------------------------------------//
     [SerializeField]
+    float           _maxLife;
     float           _life;
+   
     [SerializeField]
     int             _hitCounter;
     float           _firstDamage;
-    Animations      _animations;
+    AnimationsManager      _animations;
     Movement        _movement;
     Control         _control;
     [SerializeField ]
     float _burningCD;
     [SerializeField]
-    float   _burningTimer,
-            _smoothVelocity,
-            _smoothTime;
+    float _burningTimer;
+            
+    [Header("UI")]
+    [SerializeField]
+    SlideBar _lifeBarUI;
+    
     public void Awake()
     {
         instance = this;
@@ -52,11 +56,11 @@ public class Player : MonoBehaviour
     {
 
         _firstDamage = damage;
-        _life = maxLife;
-        _animations = new Animations(anim);
+        _life = _maxLife;
+        _animations = new AnimationsManager(anim);
         _movement = new Movement(transform, rb, moveSpeed, jumpForce, layerMask);
         _control = new Control(_movement, _animations);
-        _smoothTime = 0.05f;
+   
 
         canMove = true;
         canJump = true;
@@ -67,7 +71,6 @@ public class Player : MonoBehaviour
     {
         _control.ArtificialUpdate();
         _animations.ArtificialUpdate();
-        Death();
         if (burningOn == true)
         {
             BurningTimer();
@@ -75,13 +78,6 @@ public class Player : MonoBehaviour
         if (startDashCD)
         {
             DashTimer();
-        }
-    }
-    public void Death()
-    {
-        if (_life <= 0)
-        {
-            Destroy(gameObject);
         }
     }
     public void ResetHitCounter()
@@ -115,17 +111,16 @@ public class Player : MonoBehaviour
         }
 
     }
-    public float decreaseHealth
+    public void TakeDamage(float _damageTaken)
     {
-        get
+        _life -= _damageTaken;
+        _lifeBarUI.RefreshBar(_life, _maxLife);
+        if (_life <= 0)
         {
-            return _life;
-        }
-        set
-        {
-            _life -= value;
+            Destroy(gameObject);
         }
     }
+   
     public float health
     {
         get
@@ -133,18 +128,7 @@ public class Player : MonoBehaviour
             return _life;
         }
     }
-    public float increaseHealth
-    {
-        get
-        {
-            return _life;
-
-        }
-        set
-        {
-            _life += value;
-        }
-    }
+  
     private void BurningTimer()
     {
         if (_burningTimer <= _burningCD)
@@ -154,7 +138,7 @@ public class Player : MonoBehaviour
             if (rest <= 0.01f)
             {
 
-                decreaseHealth = 1;
+                TakeDamage(1f);
 
             }
         }
@@ -166,6 +150,8 @@ public class Player : MonoBehaviour
         }
 
     }
+   
+    
  
     public void MakeASlashAudio()
     {
@@ -177,7 +163,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("BossAttackCollider"))
         {
 
-            decreaseHealth = BossController.instance.damage;
+             TakeDamage(BossController.instance.damage);
         }           
     }  
 }

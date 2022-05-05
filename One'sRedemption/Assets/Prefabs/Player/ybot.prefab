@@ -1557,7 +1557,6 @@ MonoBehaviour:
   rb: {fileID: 1943345685}
   anim: {fileID: 320019338028550093}
   damage: 20
-  maxLife: 100
   moveSpeed: 10
   jumpForce: 13
   dashSpeed: 1
@@ -1567,18 +1566,18 @@ MonoBehaviour:
   burningOn: 0
   moving: 0
   canDash: 1
+  canRotate: 1
   startDashCD: 0
   canAttack: 1
   isGrounded: 0
   canJump: 1
   canCombo: 0
   canMove: 1
-  _life: 0
+  _maxLife: 1000
   _hitCounter: 0
   _burningCD: 5
   _burningTimer: 0
-  _smoothVelocity: 0
-  _smoothTime: 0
+  _lifeBarUI: {fileID: 0}
 --- !u!1 &6494044226695652438
 GameObject:
   m_ObjectHideFlags: 0
