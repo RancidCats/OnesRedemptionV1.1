@@ -4,51 +4,62 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMove
 {
     float _distance;
     int _indexPoint;
-    public NavMeshAgent agent;
-    public Transform[] waypoints;
-    public LayerMask playerMask;
-    public float range;
-    public bool vision;
-    public Transform player;
+    protected NavMeshAgent agent;
+    protected Transform[] waypoints;
+    protected LayerMask playerMask;
+    protected float range;
+    protected bool vision;
+    protected Transform target;
 
-    void Update()
+    public EnemyMove(float range, Transform target, NavMeshAgent agent)
     {
-        vision = Physics.CheckSphere(transform.position, range, playerMask);
+        this.range = range;
+        this.target = target;
+        this.agent = agent;
+    }
 
-        if (vision == true)
+    public void EnemyBehaviour(Transform entityTransform, bool canMove)
+    {
+        vision = Physics.CheckSphere(entityTransform.position, range);
+
+        if (vision == true && canMove)
         {
             MoveToTarget();
         }
-        if (vision == false)
-        {
-            _distance = Vector3.Distance(transform.position, waypoints[_indexPoint].position);
-            Patrol();
-        }
-        if (_distance <= 0.7)
-        {
-            _indexPoint++;
-
-        }
-        if (_indexPoint >= waypoints.Length)
-        {
-            _indexPoint = 0;
-        }
+        //if (vision == false)
+        //{
+        //    _distance = Vector3.Distance(transform.position, waypoints[_indexPoint].position);
+        //    Patrol();
+        //}
+        //if (_distance <= 0.7)
+        //{
+        //    _indexPoint++;
+        //
+        //}
+        //if (_indexPoint >= waypoints.Length)
+        //{
+        //    _indexPoint = 0;
+        //}
     }
 
-    public void Patrol()
-    {
-        agent.SetDestination(waypoints[_indexPoint].position);
-    }
+    //public void Patrol()
+    //{
+    //    agent.SetDestination(waypoints[_indexPoint].position);
+    //}
     public void MoveToTarget()
     {
-        agent.SetDestination(player.position);
+        if (agent != null)
+        {
+            agent.SetDestination(target.position);
+        }
+        else Debug.Log("asd");
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.DrawWireSphere(transform.position, range);
+    //}
 }

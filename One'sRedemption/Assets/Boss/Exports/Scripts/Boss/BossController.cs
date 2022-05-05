@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.AI;
 
-public class BossController : MonoBehaviour
+public class BossController : Entity
 {
     [Header("Physics & Parts")]
     public Rigidbody rb;
@@ -12,29 +13,12 @@ public class BossController : MonoBehaviour
     public Transform leftHand;
     public Aoe AoeReference; //despues habria que hacer un namespace, por ahora esto cumple
     public static BossController instance;
-
-    [Header("Stats")]
-    [SerializeField]
-    private int currentHp;
-    [SerializeField]
-    private int maxHp;
-    public int health
-    {
-        get
-        {
-            return currentHp;
-        }
-        set
-        {
-           currentHp = value;
-        }
-    } //por donde se pasa la vida
+    private EnemyMove enemyMove;
 
     
-
+    [Header("Stats")]
     public int damage;
     public int walkSpeed;
-    public Image hpBar;
 
     [Header("Animations")] //sin usar al 2/05
     public bool isAttacking;
@@ -74,20 +58,25 @@ public class BossController : MonoBehaviour
 
     void Awake()
     {
+        PlayerTarget = GameObject.Find("ybot").transform;
         instance = this;
+        enemyMove = new EnemyMove(430, PlayerTarget, GetComponent<NavMeshAgent>());
     }
     private void Start()
     {
-        currentHp = maxHp;
+        maxHp = 1500;
+        
+        currHp = maxHp;
         canUseSpell1 = true;
         AoeReference = new Aoe();
     }
     private void FixedUpdate()
     {
-        MoveBehaviour();
+        enemyMove.EnemyBehaviour(transform, canMove);
         SpellBehaviour();
         Attack();
         HealthBehaviour();
+        MoveBehaviour();
 
     }
     
@@ -104,9 +93,8 @@ public class BossController : MonoBehaviour
         {
             isAttacking = false;
         }
-        if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 2.9f && !canUseSpell1 && playerAtCorrectAngle) //devuelve la posicion sin tener en cuenta el eje Y
+        if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 3f && !canUseSpell1 && playerAtCorrectAngle) //devuelve la posicion sin tener en cuenta el eje Y
         {
-            
             canAttack = true;
         }
         else canAttack = false;
@@ -117,12 +105,6 @@ public class BossController : MonoBehaviour
         }
         else ani.ResetTrigger("Attack"); // para que no quede colgado algun trigger
 
-        
-    }
-
-    //-----MOVIMIENTO------//
-    void MoveBehaviour()
-    {
         Vector3 lookPos = PlayerTarget.transform.position - transform.position; //sacar vector de direccion
         lookPos.y = 0; //remover y
         Quaternion rotation = Quaternion.LookRotation(lookPos); //crear una rotacion que mire a ese vector
@@ -130,16 +112,29 @@ public class BossController : MonoBehaviour
         {
             playerAtCorrectAngle = true;
         }
-        else playerAtCorrectAngle = false;
-        if (!isAttacking && !isUsingSpell1 && !playerAtCorrectAngle && playerAtMoveRange)
+        else
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 9); //que rote de forma suavizada hacia tal rotacion
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
+            playerAtCorrectAngle = false;
         }
+            
+    }
+
+    //-----MOVIMIENTO------//
+    void MoveBehaviour()
+    {
+        //Vector3 lookPos = PlayerTarget.transform.position - transform.position; //sacar vector de direccion
+        //lookPos.y = 0; //remover y
+        //Quaternion rotation = Quaternion.LookRotation(lookPos); //crear una rotacion que mire a ese vector
+        //if (transform.rotation == rotation)
+        //{
+        //    playerAtCorrectAngle = true;
+        //}
+        //else playerAtCorrectAngle = false;
             
 
         if (isAttacking || Sistemas.IsAnimationPlaying(ani, "BossJumpStart") ||
-            Sistemas.IsAnimationPlaying(ani, "BossJumpIdle") || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish")
-            || Sistemas.GetDistanceXZ(transform.position, PlayerTarget.position) > 30) // si se esta ejecutando alguna de estas animaciones, que no se pueda mover
+            Sistemas.IsAnimationPlaying(ani, "BossJumpIdle") || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish")) // si se esta ejecutando alguna de estas animaciones, que no se pueda mover
         {
             canMove = false;
             playerAtMoveRange = false;
@@ -150,11 +145,11 @@ public class BossController : MonoBehaviour
             playerAtMoveRange = true;
         }
 
-        if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 30 && canMove == true && 
-            Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) > 2.5f) 
-        {
-           transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime); //movimiento a reemplazar por navmeshagent             
-        }
+        //if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 30 && canMove == true && 
+        //    Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) > 2.5f) 
+        //{
+        //   transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime); //movimiento a reemplazar por navmeshagent             
+        //}
 
         if (canMove)
         {
@@ -171,11 +166,11 @@ public class BossController : MonoBehaviour
 
     void SpellBehaviour() // falta incorporar uso de fases
     {
-        if (currentHp <= 1500 && currentHp > 1000)
+        if (currHp <= 1500 && currHp > 1000)
         {
             bossPhase = 0;
         }
-        else if (currentHp < 1000 && currentHp > 500)
+        else if (currHp < 1000 && currHp > 500)
         {
             bossPhase = 1;
         }
@@ -235,14 +230,14 @@ public class BossController : MonoBehaviour
         GameObject go = AoeReference.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
         bool animFinished = false;
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse); //dar impulso para sensacion de salto
-        if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.5f) //si no esta cerca
+        if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.51f) //si no esta cerca
         {
             while (Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.5f)
             {
                 timer += Time.fixedDeltaTime;
                 transform.position = Vector3.Lerp(transform.position, targetPos, timer / 10); //mover linealmente desde la posicion actual del player hacia la posicion del target, dividido por 10 porque es rapidisimo sino
 
-                if(Sistemas.GetDistanceXZ(transform.position, targetPos) < 1.5f && !animFinished)
+                if(Sistemas.GetDistanceXZ(transform.position, targetPos) < 1.49999f && !animFinished)
                 {
                     animFinished = true;
                     ani.SetTrigger("JumpAttackFinish");
@@ -293,20 +288,15 @@ public class BossController : MonoBehaviour
 
     void HealthBehaviour()
     {
-        if (currentHp <= 0)
+        if (currHp <= 0)
         {
             transform.gameObject.SetActive(false);
         }
-        if (currentHp > maxHp)
+        if (currHp > maxHp)
         {
-            currentHp = maxHp;
+            currHp = maxHp;
         }
        // hpBar.fillAmount = currentHp / maxHp;
 
-    }
-    private void TakeDamage(int value)
-    {
-        this.currentHp -= value;
-        //reproducir sonido, etc
     }
 }

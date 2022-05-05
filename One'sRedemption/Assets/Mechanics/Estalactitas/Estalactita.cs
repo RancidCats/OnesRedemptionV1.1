@@ -30,7 +30,7 @@ public class Estalactita : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player.instance.decreaseHealth = damage;
+            Player.instance.ModifyHealth(0, (int)damage);
         }
         StartCoroutine(Break());
     }

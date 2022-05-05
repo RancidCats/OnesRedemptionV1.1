@@ -59,7 +59,7 @@ public class GeisserCollider : MonoBehaviour
 
     private void MakeDamage()
     {
-        Player.instance.decreaseHealth = fatherGeisser.damage;
+        Player.instance.ModifyHealth(0, (int)fatherGeisser.damage);
         Player.instance.burningOn = true;
     }
 }

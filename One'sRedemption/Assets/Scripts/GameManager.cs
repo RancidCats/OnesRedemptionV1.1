@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        if (!Player.instance)
+        if (!Player.instance.gameObject.activeSelf)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
