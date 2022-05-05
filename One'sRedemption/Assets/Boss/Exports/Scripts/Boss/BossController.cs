@@ -64,9 +64,9 @@ public class BossController : Entity
     }
     private void Start()
     {
-        maxHp = 1500;
+        _maxHp = 1500;
         
-        currHp = maxHp;
+        _currHp = _maxHp;
         canUseSpell1 = true;
         AoeReference = new Aoe();
     }
@@ -166,11 +166,11 @@ public class BossController : Entity
 
     void SpellBehaviour() // falta incorporar uso de fases
     {
-        if (currHp <= 1500 && currHp > 1000)
+        if (_currHp <= 1500 && _currHp > 1000)
         {
             bossPhase = 0;
         }
-        else if (currHp < 1000 && currHp > 500)
+        else if (_currHp < 1000 && _currHp > 500)
         {
             bossPhase = 1;
         }
@@ -288,13 +288,13 @@ public class BossController : Entity
 
     void HealthBehaviour()
     {
-        if (currHp <= 0)
+        if (_currHp <= 0)
         {
             transform.gameObject.SetActive(false);
         }
-        if (currHp > maxHp)
+        if (_currHp > _maxHp)
         {
-            currHp = maxHp;
+            _currHp = _maxHp;
         }
        // hpBar.fillAmount = currentHp / maxHp;
 

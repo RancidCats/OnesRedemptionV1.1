@@ -31,11 +31,11 @@ public class Control
         }
        
         //Salto
-        if (Input.GetKeyDown(KeyCode.Space) &&  Player.instance.isGrounded && Player.instance.canJump)
-        {
-            _movement.Jump();
-
-        }
+       // if (Input.GetKeyDown(KeyCode.Space) &&  Player.instance.isGrounded && Player.instance.canJump)
+       // {
+       //     _movement.Jump();
+       //
+       // }
 
         if (Input.GetKeyDown(KeyCode.Return))
         {           

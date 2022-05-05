@@ -14,12 +14,11 @@ public class Movement
     bool _walkPlaying;
     float _smoothVelocity;
     float _smoothTime;
-    public Movement(Transform t, Rigidbody rb, float s, float jf,LayerMask _layerMask)
+    public Movement(Transform t, Rigidbody rb, float s,LayerMask _layerMask)
     {
         _transform = t;
         _rb = rb;
         _moveSpeed = s;
-        _jumpForce = jf;
         _smoothVelocity = 45;
         _smoothTime = 0.05f;
 
@@ -64,10 +63,10 @@ public class Movement
 
     }
    
-    public void Jump()
-    {                                 
-        _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);                  
-    }
+   //public void Jump()
+   //{                                 
+   //    _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);                  
+   //}
     public void Attack()
     {
 
@@ -79,7 +78,4 @@ public class Movement
 
     }
 
- 
-
-   
 }

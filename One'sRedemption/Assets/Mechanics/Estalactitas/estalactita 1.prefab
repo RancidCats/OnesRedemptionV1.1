@@ -4989,5 +4989,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 160219887827413373, guid: d1102f639d2b09d45ac3fc9eaaf37aa7, type: 3}
-  damage: 50
+  damage: 5
   maxLenghtRay: 200

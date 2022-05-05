@@ -1,18 +1,18 @@
 using System.Collections;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
     public static Player instance;
 
-
+    [Header("Guarda la layer en la que trabaja el RayCast")]
     public LayerMask layerMask;
+
     public Rigidbody rb;
     public Animator anim;
 
     public float             damage,                            
                              moveSpeed,
-                             jumpForce,
                              dashSpeed,
                              dashLenght,
                              dashTimer,
@@ -24,46 +24,36 @@ public class Player : MonoBehaviour
                              startDashCD,
                              canAttack,
                              isGrounded,
-                             canJump,
                              canCombo,
                              canMove;
 
-    //------------------------------------------------------------------------------------------------------------------------------------//
+    //------------------------------------------------------------------------------------------------------------------------------------// 
+
     [SerializeField]
-    float           _maxLife;
-    float           _life;
-   
-    [SerializeField]
-    int             _hitCounter;
-    float           _firstDamage;
-    AnimationsManager      _animations;
-    Movement        _movement;
-    Control         _control;
+    int                   _hitCounter;
+    float                 _firstDamage;
+    AnimationsManager     _animations;
+    Movement              _movement;
+    Control               _control;
     [SerializeField ]
-    float _burningCD;
+    float                 _burningCD;
     [SerializeField]
-    float _burningTimer;
-            
-    [Header("UI")]
-    [SerializeField]
-    SlideBar _lifeBarUI;
-    
+    float                 _burningTimer;               
     public void Awake()
     {
+
         instance = this;
     }
     void Start()
     {
-
         _firstDamage = damage;
-        _life = _maxLife;
+        _currHp = _maxHp;
         _animations = new AnimationsManager(anim);
-        _movement = new Movement(transform, rb, moveSpeed, jumpForce, layerMask);
+        _movement = new Movement(transform, rb, moveSpeed,layerMask);
         _control = new Control(_movement, _animations);
    
 
         canMove = true;
-        canJump = true;
     }
 
     // Update is called once per frame
@@ -111,24 +101,6 @@ public class Player : MonoBehaviour
         }
 
     }
-    public void TakeDamage(float _damageTaken)
-    {
-        _life -= _damageTaken;
-        _lifeBarUI.RefreshBar(_life, _maxLife);
-        if (_life <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-   
-    public float health
-    {
-        get
-        {
-            return _life;
-        }
-    }
-  
     private void BurningTimer()
     {
         if (_burningTimer <= _burningCD)
@@ -138,7 +110,7 @@ public class Player : MonoBehaviour
             if (rest <= 0.01f)
             {
 
-                TakeDamage(1f);
+                ModifyHealth(0, 1) ;
 
             }
         }
@@ -163,7 +135,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("BossAttackCollider"))
         {
 
-             TakeDamage(BossController.instance.damage);
+             ModifyHealth(0,BossController.instance.damage);
         }           
     }  
 }

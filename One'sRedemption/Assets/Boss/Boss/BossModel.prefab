@@ -2210,6 +2210,7 @@ GameObject:
   - component: {fileID: 8263876150689887032}
   - component: {fileID: 1355031817247475356}
   - component: {fileID: 7813065378128172583}
+  - component: {fileID: 1815586081}
   m_Layer: 2
   m_Name: BossModel
   m_TagString: Boss
@@ -2287,14 +2288,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef874ab6abbaff642826aba08fb42370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currHp: 0
+  _maxHp: 0
+  _hpBar: {fileID: 0}
   rb: {fileID: 8263876150689887032}
   ani: {fileID: 1355031817247475356}
   leftHand: {fileID: 0}
-  currentHp: 0
-  maxHp: 1000
   damage: 30
   walkSpeed: 5
-  hpBar: {fileID: 0}
   isAttacking: 0
   isMoving: 0
   isIdle: 0
@@ -2302,7 +2303,7 @@ MonoBehaviour:
   canMove: 0
   invulnerable: 0
   playerAtCorrectAngle: 0
-  playerAtAttackRange: 0
+  playerAtMoveRange: 0
   bossPhase: 0
   PlayerTarget: {fileID: 0}
   spell1timer: 0
@@ -2310,6 +2311,28 @@ MonoBehaviour:
   isUsingSpell1: 0
   shockwave: {fileID: 3938817009890637471, guid: 6457b2799337b3944aca66cd606704ab, type: 3}
   fireball: {fileID: 0}
+--- !u!195 &1815586081
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6482166277116901534}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 6
+  m_Acceleration: 20
+  avoidancePriority: 50
+  m_AngularSpeed: 0
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &6497693493600126843
 GameObject:
   m_ObjectHideFlags: 0

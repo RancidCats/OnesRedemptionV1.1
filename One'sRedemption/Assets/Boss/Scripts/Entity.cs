@@ -6,22 +6,24 @@ using UnityEngine.UI;
 public class Entity : MonoBehaviour
 {
     [SerializeField]
-    protected int currHp;
+    protected int   _currHp;
     [SerializeField]
-    protected int maxHp;
-    protected Image hpBar;
+    protected int   _maxHp;
+    [Header("UI")]
+    [SerializeField]
+    protected SlideBar _hpBar;
     public int health
     {
         get
         {
-            return currHp;
+            return _currHp;
         }
     }
     public int maxHealth
     {
         get
         {
-            return maxHp;
+            return _maxHp;
         }
     }
 
@@ -30,23 +32,22 @@ public class Entity : MonoBehaviour
         switch (type)
         {
             case 0:
-                currHp -= value;
-
-                if (currHp <= 0)
+                _currHp -= value;
+                _hpBar.RefreshBar(_currHp, _maxHp);
+                if (_currHp <= 0)
                 {
                     gameObject.SetActive(false);
                     //play sounds etc
                 }
                 break;
             case 1:
-                currHp += value;
-
-                if(currHp > maxHp)
+                _currHp += value;
+                _hpBar.RefreshBar(_currHp, _maxHp);
+                if (_currHp > _maxHp)
                 {
-                    currHp = maxHp;
+                    _currHp = _maxHp;
                 }
                 break;
         }
-        hpBar.fillAmount = currHp / maxHp;
     }
 }

@@ -1458,7 +1458,7 @@ GameObject:
   - component: {fileID: 320019338028550093}
   - component: {fileID: 1943345685}
   - component: {fileID: 1943345683}
-  - component: {fileID: 2159467960097107722}
+  - component: {fileID: 2389753307907900214}
   m_Layer: 6
   m_Name: ybot
   m_TagString: Player
@@ -1539,7 +1539,7 @@ CapsuleCollider:
   m_Height: 1.8155491
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &2159467960097107722
+--- !u!114 &2389753307907900214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1551,14 +1551,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16355ec9abb8c824f95ed7a6a7cf7fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currHp: 0
+  _maxHp: 100
+  _hpBar: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 8
   rb: {fileID: 1943345685}
   anim: {fileID: 320019338028550093}
   damage: 20
-  moveSpeed: 10
-  jumpForce: 13
+  moveSpeed: 7
+  jumpForce: 15
   dashSpeed: 1
   dashLenght: 6
   dashTimer: 0
@@ -1566,18 +1569,15 @@ MonoBehaviour:
   burningOn: 0
   moving: 0
   canDash: 1
-  canRotate: 1
   startDashCD: 0
   canAttack: 1
   isGrounded: 0
-  canJump: 1
+  canJump: 0
   canCombo: 0
   canMove: 1
-  _maxLife: 1000
   _hitCounter: 0
-  _burningCD: 5
+  _burningCD: 0
   _burningTimer: 0
-  _lifeBarUI: {fileID: 0}
 --- !u!1 &6494044226695652438
 GameObject:
   m_ObjectHideFlags: 0
