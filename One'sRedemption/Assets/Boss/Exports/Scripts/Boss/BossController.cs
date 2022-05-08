@@ -60,7 +60,7 @@ public class BossController : Entity
     {
         PlayerTarget = GameObject.Find("ybot").transform;
         instance = this;
-        enemyMove = new EnemyMove(430, PlayerTarget, GetComponent<NavMeshAgent>());
+        enemyMove = new EnemyMove(30, PlayerTarget, GetComponent<NavMeshAgent>());
     }
     private void Start()
     {
@@ -252,6 +252,7 @@ public class BossController : Entity
 
             ani.SetTrigger("JumpAttackFinish");
         }
+        //ani.SetTrigger("JumpAttackFinish");
         Destroy(go);
         GameObject go2 = AoeReference.CreateAoeCollider(attackPos, 2); //crear area de efecto con collider en la posicion del player
         GameObject shockwave = Instantiate(this.shockwave, go.transform.position + Vector3.up * 0.3f, Quaternion.identity); //particle system de shockwave
