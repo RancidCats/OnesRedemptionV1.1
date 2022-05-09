@@ -49,6 +49,10 @@ public class BossController : Entity
     [SerializeField]
     private bool isUsingSpell1;
     private bool isUsingSpell2;
+    [SerializeField]
+    private int range;
+    [SerializeField]
+    private LayerMask playerLayer;
 
     //spells
     [Header("Spells")]
@@ -60,7 +64,7 @@ public class BossController : Entity
     {
         PlayerTarget = GameObject.Find("ybot").transform;
         instance = this;
-        enemyMove = new EnemyMove(30, PlayerTarget, GetComponent<NavMeshAgent>());
+        enemyMove = new EnemyMove(PlayerTarget, GetComponent<NavMeshAgent>());
     }
     private void Start()
     {
@@ -105,18 +109,7 @@ public class BossController : Entity
         }
         else ani.ResetTrigger("Attack"); // para que no quede colgado algun trigger
 
-        Vector3 lookPos = PlayerTarget.transform.position - transform.position; //sacar vector de direccion
-        lookPos.y = 0; //remover y
-        Quaternion rotation = Quaternion.LookRotation(lookPos); //crear una rotacion que mire a ese vector
-        if (transform.rotation == rotation)
-        {
-            playerAtCorrectAngle = true;
-        }
-        else
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
-            playerAtCorrectAngle = false;
-        }
+        
             
     }
 
@@ -131,25 +124,36 @@ public class BossController : Entity
         //    playerAtCorrectAngle = true;
         //}
         //else playerAtCorrectAngle = false;
-            
-
-        if (isAttacking || Sistemas.IsAnimationPlaying(ani, "BossJumpStart") ||
-            Sistemas.IsAnimationPlaying(ani, "BossJumpIdle") || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish")) // si se esta ejecutando alguna de estas animaciones, que no se pueda mover
-        {
-            canMove = false;
-            playerAtMoveRange = false;
-        }
-        else
-        {
-            canMove = true;
-            playerAtMoveRange = true;
-        }
 
         //if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 30 && canMove == true && 
         //    Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) > 2.5f) 
         //{
         //   transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime); //movimiento a reemplazar por navmeshagent             
-        //}
+        //}    
+        Vector3 lookPos = PlayerTarget.transform.position - transform.position; //sacar vector de direccion
+        lookPos.y = 0; //remover y
+        Quaternion rotation = Quaternion.LookRotation(lookPos); //crear una rotacion que mire a ese vector
+        if (transform.rotation == rotation)
+        {
+            playerAtCorrectAngle = true;
+        }
+        else 
+        {
+            playerAtCorrectAngle = false;
+        }
+        if(!playerAtCorrectAngle && canMove) transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
+
+        if (isAttacking || Sistemas.IsAnimationPlaying(ani, "BossJumpStart") ||
+            Sistemas.IsAnimationPlaying(ani, "BossJumpIdle") || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") || 
+            Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) > range) // si se esta ejecutando alguna de estas animaciones, que no se pueda mover
+        {
+            canMove = false;
+        }
+        else
+        {
+            canMove = true;
+        }
+        
 
         if (canMove)
         {
@@ -230,14 +234,14 @@ public class BossController : Entity
         GameObject go = AoeReference.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
         bool animFinished = false;
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse); //dar impulso para sensacion de salto
-        if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.51f) //si no esta cerca
+        if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1) //si no esta cerca
         {
-            while (Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.5f)
+            while (Sistemas.GetDistanceXZ(transform.position, targetPos) >= 1)
             {
                 timer += Time.fixedDeltaTime;
                 transform.position = Vector3.Lerp(transform.position, targetPos, timer / 10); //mover linealmente desde la posicion actual del player hacia la posicion del target, dividido por 10 porque es rapidisimo sino
 
-                if(Sistemas.GetDistanceXZ(transform.position, targetPos) < 1.49999f && !animFinished)
+                if(Sistemas.GetDistanceXZ(transform.position, targetPos) < 1 && !animFinished)
                 {
                     animFinished = true;
                     ani.SetTrigger("JumpAttackFinish");
