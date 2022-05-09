@@ -12,12 +12,15 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= cooldown)
+        if (BossController.instance && (BossController.instance.health <= BossController.instance.maxHealth/2))
         {
-            SpawnCubes();
-            timer = 0;
-        }
+            timer += Time.deltaTime;
+            if (timer >= cooldown)
+            {
+                SpawnCubes();
+                timer = 0;
+            }
+        }   
     }
 
     void SpawnCubes()
