@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 1588869719}
   - component: {fileID: 1588869721}
   - component: {fileID: 1588869720}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1588869719
 Transform:
   m_ObjectHideFlags: 0
@@ -7369,7 +7369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7557979405098722673, guid: 9f6c0ff9a165abb4082faa0eb2e4304c, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7981974479793660816, guid: 9f6c0ff9a165abb4082faa0eb2e4304c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7381,7 +7381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8233949822349013584, guid: 9f6c0ff9a165abb4082faa0eb2e4304c, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8723205367375374570, guid: 9f6c0ff9a165abb4082faa0eb2e4304c, type: 3}
       propertyPath: m_RootOrder
