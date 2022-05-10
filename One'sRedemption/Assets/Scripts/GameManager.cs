@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene(0);
+
         if (!Player.instance.gameObject.activeSelf)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
