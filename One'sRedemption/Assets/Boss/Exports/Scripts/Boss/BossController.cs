@@ -232,27 +232,30 @@ public class BossController : Entity
         float timer = 0;
         Vector3 attackPos = AoeReference.GetYPointFromTransform(PlayerTarget); 
         GameObject go = AoeReference.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
-        bool animFinished = false;
+        
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse); //dar impulso para sensacion de salto
-        if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1) //si no esta cerca
+        if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.2f) //si no esta cerca
         {
-            while (Sistemas.GetDistanceXZ(transform.position, targetPos) >= 1)
+            while (Sistemas.GetDistanceXZ(transform.position, targetPos) >= 1.2f)
             {
                 timer += Time.fixedDeltaTime;
                 transform.position = Vector3.Lerp(transform.position, targetPos, timer / 10); //mover linealmente desde la posicion actual del player hacia la posicion del target, dividido por 10 porque es rapidisimo sino
 
-                if(Sistemas.GetDistanceXZ(transform.position, targetPos) < 1 && !animFinished)
+                if(Sistemas.GetDistanceXZ(transform.position, targetPos) < 1.2f && !ani.GetBool("JumpAttackFinish"))
                 {
-                    animFinished = true;
                     ani.SetTrigger("JumpAttackFinish");
                 }
 
                 yield return new WaitForFixedUpdate();//esperar los frames de fixedDeltaTime
             }
+            if (!ani.GetBool("JumpAttackFinish") && Sistemas.GetDistanceXZ(transform.position, targetPos) < 1.2f)
+            {
+                ani.SetTrigger("JumpAttackFinish");
+            }
         }
         else // si no esta cerca, esperar sin mover
         {
-            yield return new WaitForSecondsRealtime(0.74f); //duracion de la animacion en la que deberia c
+            yield return new WaitForSecondsRealtime(0.6f); //duracion de la animacion en la que deberia c
 
             ani.SetTrigger("JumpAttackFinish");
         }
@@ -268,8 +271,8 @@ public class BossController : Entity
 
     IEnumerator BasicAttack(int attackType)
     {
-        Vector3 dir = PlayerTarget.position - transform.position;//saco direccion
-        Vector3 attackPos = transform.position + transform.forward * 3; //a ojo, posicion del area de efecto del ataque, si no le agrego transform.forward * 3 se instancia justo abajo del boss
+        Vector3 attackPos = transform.position + transform.forward * 3.5f; //a ojo, posicion del area de efecto del ataque, si no le agrego transform.forward * 3 se instancia justo abajo del boss
+        transform.LookAt(attackPos);
         Quaternion attackRota = transform.rotation;
         GameObject go = AoeReference.CreateAreaOfEffect(attackPos, attackType, attackRota); // creo la area de efecto (sin collider) en tal posicion
         yield return new WaitForSecondsRealtime(1.36f); // 1 segundo, 30 frames ==> 11 frames = 0.36
