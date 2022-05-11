@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [SerializeField] Transform _start;
+    [SerializeField] Transform _checkpoint;
+
     //public GameObject protagonist;
     //
     //public GameObject VictoryScreen, DefeatScreen;
@@ -17,31 +20,44 @@ public class GameManager : MonoBehaviour
 
     //public List<GameObject> enemies = new List<GameObject>();
 
+    public static Vector3 _spawnPos;
+    public static bool _pastCheckpoint = false;
+
     private void Awake()
     {
         instance = this;
+        if (!_pastCheckpoint)
+            _spawnPos = _start.position;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         //Quick reload of the scene
-        if (Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(0);
-
-        if (!Player.instance.gameObject.activeSelf)
+        if (Input.GetKeyDown(KeyCode.R) || !Player.instance.gameObject.activeSelf)
         {
+            if (_pastCheckpoint)
+                _spawnPos = _checkpoint.position;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            _pastCheckpoint = false;
+            SceneManager.LoadScene(0);
+        }
+
+
+        //if (!Player.instance.gameObject.activeSelf)
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //}
 
         //If protagonist is dead timer stops and shows defeat screen
         
@@ -57,6 +73,8 @@ public class GameManager : MonoBehaviour
         //else
         //    startTime += Time.deltaTime;
     }
+
+
 
     //Win function
     //public void Win()

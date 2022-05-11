@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if (BossController.instance && (BossController.instance.health <= BossController.instance.maxHealth/2))
+        if (BossController.instance.isActiveAndEnabled && (BossController.instance.health <= BossController.instance.maxHealth/2))
         {
             timer += Time.deltaTime;
             if (timer >= cooldown)
