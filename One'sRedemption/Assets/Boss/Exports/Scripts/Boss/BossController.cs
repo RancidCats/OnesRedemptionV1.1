@@ -8,10 +8,11 @@ using UnityEngine.AI;
 public class BossController : Entity
 {
     [Header("Physics & Parts")]
-    public Rigidbody rb;
-    public Animator ani;
-    public Transform leftHand;
-    public Aoe AoeReference; //despues habria que hacer un namespace, por ahora esto cumple
+    
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Animator ani;
+    //[SerializeField] private Transform leftHand;
+    [SerializeField] private Aoe AoeReference; //despues habria que hacer un namespace, por ahora esto cumple
     public static BossController instance;
     private EnemyMove enemyMove;
 
@@ -22,49 +23,49 @@ public class BossController : Entity
 
     [Header("Animations")] //sin usar al 2/05
     public bool isAttacking;
-    public bool isMoving;
-    public bool isIdle;
+    //public bool isMoving;
+    //public bool isIdle;
 
 
 
-    [Header("Checks")]
-    public bool canAttack;
-    public bool canMove;
-    public bool invulnerable;
-    public bool playerAtCorrectAngle;
+    [Header("Checks")] //public para chequeos globales
+    private bool canAttack;
+    private bool canMove;
+    //public bool invulnerable;
+    public bool playerAtAttackAngle;
     public bool playerAtMoveRange; //usar con Physics.checksphere
     public float bossPhase;
-    public Transform PlayerTarget;
+    public Transform playerTarget;
 
     [Header("Spell checks")]
-    private float spell0timer;
+    //private float spell0timer;
     [SerializeField]
     private float spell1timer;
-    private float spell2timer;
-    private bool canUseSpell0; //360 attack
+    //private float spell2timer;
+    //private bool canUseSpell0; //360 attack
     [SerializeField]
     private bool canUseSpell1;//jumpattack
-    private bool canUseSpell2;
-    private bool isUsingSpell0;
+    //private bool canUseSpell2;
+    //private bool isUsingSpell0;
     [SerializeField]
-    private bool isUsingSpell1;
-    private bool isUsingSpell2;
+    public   bool isUsingSpell1;
+    //private bool isUsingSpell2;
     [SerializeField]
     private int range;
-    [SerializeField]
-    private LayerMask playerLayer;
+    //private LayerMask playerLayer;
 
     //spells
     [Header("Spells")]
-    public GameObject shockwave;
-    public GameObject fireball;
+    [SerializeField]
+    private GameObject shockwave;
+    //public GameObject fireball;
 
 
     void Awake()
     {
-        PlayerTarget = GameObject.Find("ybot").transform;
+        playerTarget = GameObject.Find("ybot").transform;
         instance = this;
-        enemyMove = new EnemyMove(PlayerTarget, GetComponent<NavMeshAgent>());
+        enemyMove = new EnemyMove(playerTarget, GetComponent<NavMeshAgent>());
     }
     private void Start()
     {
@@ -76,7 +77,7 @@ public class BossController : Entity
     }
     private void FixedUpdate()
     {
-        enemyMove.EnemyBehaviour(transform, canMove);
+        enemyMove.EnemyBehaviour(canMove);
         SpellBehaviour();
         Attack();
         HealthBehaviour();
@@ -97,7 +98,7 @@ public class BossController : Entity
         {
             isAttacking = false;
         }
-        if (Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) < 3f && !canUseSpell1 && playerAtCorrectAngle) //devuelve la posicion sin tener en cuenta el eje Y
+        if (Sistemas.GetDistanceXZ(playerTarget.position, transform.position) < 3f && !canUseSpell1 && playerAtAttackAngle) //devuelve la posicion sin tener en cuenta el eje Y
         {
             canAttack = true;
         }
@@ -130,22 +131,22 @@ public class BossController : Entity
         //{
         //   transform.Translate(Vector3.forward * walkSpeed * Time.deltaTime); //movimiento a reemplazar por navmeshagent             
         //}    
-        Vector3 lookPos = PlayerTarget.transform.position - transform.position; //sacar vector de direccion
+        Vector3 lookPos = playerTarget.transform.position - transform.position; //sacar vector de direccion
         lookPos.y = 0; //remover y
         Quaternion rotation = Quaternion.LookRotation(lookPos); //crear una rotacion que mire a ese vector
         if (transform.rotation == rotation)
         {
-            playerAtCorrectAngle = true;
+            playerAtAttackAngle = true;
         }
         else 
         {
-            playerAtCorrectAngle = false;
+            playerAtAttackAngle = false;
         }
-        if(!playerAtCorrectAngle && canMove) transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
+        if(!playerAtAttackAngle && canMove) transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
 
         if (isAttacking || Sistemas.IsAnimationPlaying(ani, "BossJumpStart") ||
             Sistemas.IsAnimationPlaying(ani, "BossJumpIdle") || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") || 
-            Sistemas.GetDistanceXZ(PlayerTarget.position, transform.position) > range) // si se esta ejecutando alguna de estas animaciones, que no se pueda mover
+            Sistemas.GetDistanceXZ(playerTarget.position, transform.position) > range) // si se esta ejecutando alguna de estas animaciones, que no se pueda mover
         {
             canMove = false;
         }
@@ -189,7 +190,7 @@ public class BossController : Entity
         }
         if (!isAttacking)
         {
-            if (Sistemas.GetDistanceXZ(transform.position, PlayerTarget.position) < 10f && canUseSpell1)
+            if (Sistemas.GetDistanceXZ(transform.position, playerTarget.position) < 10f && canUseSpell1)
             {
                 print("so joda");
                 Spells(1); //si esta a 10 metros de distancia, saltar hacia el player
@@ -206,14 +207,14 @@ public class BossController : Entity
     {
         switch (spellType)
         {
-            case 0:
-                if (canUseSpell0) //ataque que gira
-                {
-                    canUseSpell0 = false;
-                    ani.SetTrigger("360Attack");
-                    isUsingSpell0 = true;
-                }
-                break;
+            //case 0:
+            //    if (canUseSpell0) //ataque que gira
+            //    {
+            //        canUseSpell0 = false;
+            //        ani.SetTrigger("360Attack");
+            //        //isUsingSpell0 = true;
+            //    }
+            //    break;
             case 1:
                 if (canUseSpell1)
                 {
@@ -227,10 +228,10 @@ public class BossController : Entity
 
     IEnumerator JumpAttack()
     {
-        transform.LookAt(PlayerTarget);
-        Vector3 targetPos = PlayerTarget.position; //posicion instantanea del player
+        transform.LookAt(playerTarget);
+        Vector3 targetPos = playerTarget.position; //posicion instantanea del player
         float timer = 0;
-        Vector3 attackPos = AoeReference.GetYPointFromTransform(PlayerTarget); 
+        Vector3 attackPos = AoeReference.GetYPointFromTransform(playerTarget); 
         GameObject go = AoeReference.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
         
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse); //dar impulso para sensacion de salto
@@ -282,17 +283,6 @@ public class BossController : Entity
         Destroy(go2);
     }
 
-    IEnumerator FireballSpell()//ignorar
-    {
-        
-        for (int i = 0; i < 10; i++)
-        {
-            GameObject fireballGO = Instantiate(fireball, leftHand);
-            fireballGO.GetComponent<Fireball>().target = PlayerTarget;
-            fireballGO.GetComponent<Fireball>().damage = Random.Range(10, 16);
-            yield return new WaitForSecondsRealtime(0.7f);
-        }
-    }
 
     void HealthBehaviour()
     {

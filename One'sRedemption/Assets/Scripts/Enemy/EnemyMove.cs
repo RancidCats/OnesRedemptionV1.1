@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class EnemyMove
 {
     protected NavMeshAgent agent;
-    protected bool vision;
     protected Transform target;
     protected LayerMask layer;
 
@@ -17,7 +16,7 @@ public class EnemyMove
         this.agent = agent;
     }
 
-    public void EnemyBehaviour(Transform entityTransform, bool canMove)
+    public void EnemyBehaviour(bool canMove)
     {
         if (canMove)
         {
