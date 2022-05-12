@@ -1335,17 +1335,9 @@ PrefabInstance:
       value: BossModel
       objectReference: {fileID: 0}
     - target: {fileID: 7813065378128172583, guid: 91262617d66e2714abf724a7a7a327cb, type: 3}
-      propertyPath: range
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813065378128172583, guid: 91262617d66e2714abf724a7a7a327cb, type: 3}
       propertyPath: _hpBar
       value: 
       objectReference: {fileID: 788725837}
-    - target: {fileID: 7813065378128172583, guid: 91262617d66e2714abf724a7a7a327cb, type: 3}
-      propertyPath: PlayerTarget
-      value: 
-      objectReference: {fileID: 6251381}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91262617d66e2714abf724a7a7a327cb, type: 3}
 --- !u!1001 &209040243
@@ -2134,62 +2126,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 475094099, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 475094099, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 475094100, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 788725836, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 788725836, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 788725836, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -200
-      objectReference: {fileID: 0}
-    - target: {fileID: 788725837, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 788725838}
-    - target: {fileID: 788725838, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 788725838, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_HandleRect
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 788725838, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_Transition
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 788725838, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1415890181, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1415890182, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1415890182, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1932070864, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2197,18 +2133,6 @@ PrefabInstance:
     - target: {fileID: 1932070864, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1932070864, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1932070864, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1932070865, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
-      propertyPath: m_Type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 160014062717712001, guid: b81cc5cf772e0c448bc817ab388afee7, type: 3}
       propertyPath: m_Name
