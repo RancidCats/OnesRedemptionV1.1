@@ -1,22 +1,20 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Linq;
 using UnityEngine.AI;
-
+using System;
+using Utilidades;
 public class BossController : Entity
 {
     [Header("Physics & Parts")]
-    
+
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator ani;
     //[SerializeField] private Transform leftHand;
-    [SerializeField] private Aoe AoeReference; //despues habria que hacer un namespace, por ahora esto cumple
+    [SerializeField]
     public static BossController instance;
     private EnemyMove enemyMove;
 
-    
+
     [Header("Stats")]
     public int damage;
     public int walkSpeed;
@@ -34,31 +32,36 @@ public class BossController : Entity
     //public bool invulnerable;
     public bool playerAtAttackAngle;
     public bool playerAtMoveRange; //usar con Physics.checksphere
-    public float bossPhase;
+
+    private static BossStages currentStage;
+    public enum BossStages
+    {
+        Stage_1,
+        Stage_2,
+        Stage_3
+    }
+
     public Transform playerTarget;
 
     [Header("Spell checks")]
     //private float spell0timer;
-    [SerializeField]
-    private float spell1timer;
-    //private float spell2timer;
-    //private bool canUseSpell0; //360 attack
-    [SerializeField]
-    private bool canUseSpell1;//jumpattack
-    //private bool canUseSpell2;
-    //private bool isUsingSpell0;
-    [SerializeField]
-    public   bool isUsingSpell1;
-    //private bool isUsingSpell2;
-    [SerializeField]
-    private int range;
+    [SerializeField] private int range;
     //private LayerMask playerLayer;
+    private bool[] canUseSpell = new bool[3];
+    private bool[] isUsingSpell = new bool[3];
+    private float[] spellTimer = new float[3];
 
     //spells
     [Header("Spells")]
     [SerializeField]
     private GameObject shockwave;
     //public GameObject fireball;
+
+    //stages
+
+
+
+
 
 
     void Awake()
@@ -70,10 +73,8 @@ public class BossController : Entity
     private void Start()
     {
         _maxHp = 1500;
-        
         _currHp = _maxHp;
-        canUseSpell1 = true;
-        AoeReference = new Aoe();
+        canUseSpell[1] = true;
     }
     private void FixedUpdate()
     {
@@ -84,7 +85,7 @@ public class BossController : Entity
         MoveBehaviour();
 
     }
-    
+
 
 
     //------ATAQUES--------//
@@ -98,7 +99,7 @@ public class BossController : Entity
         {
             isAttacking = false;
         }
-        if (Sistemas.GetDistanceXZ(playerTarget.position, transform.position) < 3f && !canUseSpell1 && playerAtAttackAngle) //devuelve la posicion sin tener en cuenta el eje Y
+        if (Sistemas.GetDistanceXZ(playerTarget.position, transform.position) < 3f && !canUseSpell[1] && playerAtAttackAngle) //devuelve la posicion sin tener en cuenta el eje Y
         {
             canAttack = true;
         }
@@ -110,8 +111,8 @@ public class BossController : Entity
         }
         else ani.ResetTrigger("Attack"); // para que no quede colgado algun trigger
 
-        
-            
+
+
     }
 
     //-----MOVIMIENTO------//
@@ -138,14 +139,14 @@ public class BossController : Entity
         {
             playerAtAttackAngle = true;
         }
-        else 
+        else
         {
             playerAtAttackAngle = false;
         }
-        if(!playerAtAttackAngle && canMove) transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
+        if (!playerAtAttackAngle && canMove) transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
 
         if (isAttacking || Sistemas.IsAnimationPlaying(ani, "BossJumpStart") ||
-            Sistemas.IsAnimationPlaying(ani, "BossJumpIdle") || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") || 
+            Sistemas.IsAnimationPlaying(ani, "BossJumpIdle") || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") ||
             Sistemas.GetDistanceXZ(playerTarget.position, transform.position) > range) // si se esta ejecutando alguna de estas animaciones, que no se pueda mover
         {
             canMove = false;
@@ -154,7 +155,7 @@ public class BossController : Entity
         {
             canMove = true;
         }
-        
+
 
         if (canMove)
         {
@@ -166,44 +167,59 @@ public class BossController : Entity
         {
             ani.SetBool("Walk", false);
         }
-        
+
+    }
+
+    void BossPhases()
+    {
+        switch (currentStage)
+        {
+            case (BossStages)1:
+
+                break;
+
+            case (BossStages)2:
+                break;
+
+            case (BossStages)3:
+                break;
+        }
     }
 
     void SpellBehaviour() // falta incorporar uso de fases
     {
         if (_currHp <= 1500 && _currHp > 1000)
         {
-            bossPhase = 0;
+            currentStage = BossStages.Stage_1;
         }
         else if (_currHp < 1000 && _currHp > 500)
         {
-            bossPhase = 1;
+            currentStage = BossStages.Stage_2;
         }
         else
         {
-            bossPhase = 2;
+            currentStage = BossStages.Stage_3;
         }
-        if (!canUseSpell1 && spell1timer <= 7 && !Sistemas.IsAnimationPlaying(ani, "BossJumpStart") &&
+        if (!canUseSpell[1] && spellTimer[1] <= 7 && !Sistemas.IsAnimationPlaying(ani, "BossJumpStart") &&
             !Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") && !Sistemas.IsAnimationPlaying(ani, "BossJumpIdle")) //si no se esta ejecutando alguna de estas animaciones, que empiece el timer
         {
-            spell1timer += Time.deltaTime;
+            spellTimer[1] += Time.deltaTime;
         }
         if (!isAttacking)
         {
-            if (Sistemas.GetDistanceXZ(transform.position, playerTarget.position) < 10f && canUseSpell1)
+            if (Sistemas.GetDistanceXZ(transform.position, playerTarget.position) < 10f && canUseSpell[1])
             {
-                print("so joda");
                 Spells(1); //si esta a 10 metros de distancia, saltar hacia el player
             }
         }
-        if (spell1timer >= 7) //resetear el timer
+        if (spellTimer[1] >= 7) //resetear el timer
         {
-            canUseSpell1 = true;
-            spell1timer = 0;
+            canUseSpell[1] = true;
+            spellTimer[1] = 0;
         }
     }
 
-    void Spells(int spellType) 
+    void Spells(int spellType)
     {
         switch (spellType)
         {
@@ -216,11 +232,10 @@ public class BossController : Entity
             //    }
             //    break;
             case 1:
-                if (canUseSpell1)
+                if (canUseSpell[1])
                 {
-                    canUseSpell1 = false;
+                    canUseSpell[1] = false;
                     ani.SetTrigger("JumpAttack"); //ataque de salto
-                    isUsingSpell1 = true;
                 }
                 break;
         }
@@ -228,21 +243,22 @@ public class BossController : Entity
 
     IEnumerator JumpAttack()
     {
+        isUsingSpell[1] = true;
         transform.LookAt(playerTarget);
         Vector3 targetPos = playerTarget.position; //posicion instantanea del player
         float timer = 0;
-        Vector3 attackPos = AoeReference.GetYPointFromTransform(playerTarget); 
-        GameObject go = AoeReference.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
-        
+        Vector3 attackPos = Aoe.GetYPointFromTransform(playerTarget);
+        GameObject go = Aoe.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
+
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse); //dar impulso para sensacion de salto
-        if(Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.2f) //si no esta cerca
+        if (Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.2f) //si no esta cerca
         {
             while (Sistemas.GetDistanceXZ(transform.position, targetPos) >= 1.2f)
             {
                 timer += Time.fixedDeltaTime;
                 transform.position = Vector3.Lerp(transform.position, targetPos, timer / 10); //mover linealmente desde la posicion actual del player hacia la posicion del target, dividido por 10 porque es rapidisimo sino
 
-                if(Sistemas.GetDistanceXZ(transform.position, targetPos) < 1.2f && !ani.GetBool("JumpAttackFinish"))
+                if (Sistemas.GetDistanceXZ(transform.position, targetPos) < 1.2f && !ani.GetBool("JumpAttackFinish"))
                 {
                     ani.SetTrigger("JumpAttackFinish");
                 }
@@ -262,12 +278,12 @@ public class BossController : Entity
         }
         //ani.SetTrigger("JumpAttackFinish");
         Destroy(go);
-        GameObject go2 = AoeReference.CreateAoeCollider(attackPos, 2); //crear area de efecto con collider en la posicion del player
+        GameObject go2 = Aoe.CreateAoeCollider(attackPos, 2); //crear area de efecto con collider en la posicion del player
         GameObject shockwave = Instantiate(this.shockwave, go.transform.position + Vector3.up * 0.3f, Quaternion.identity); //particle system de shockwave
-        yield return new WaitForSecondsRealtime(0.25f); 
+        yield return new WaitForSecondsRealtime(0.25f);
         Destroy(go2);
         Destroy(shockwave, 0.8f);
-        isUsingSpell1 = false;
+        isUsingSpell[1] = false;
     }
 
     IEnumerator BasicAttack(int attackType)
@@ -275,10 +291,10 @@ public class BossController : Entity
         Vector3 attackPos = transform.position + transform.forward * 3.5f; //a ojo, posicion del area de efecto del ataque, si no le agrego transform.forward * 3 se instancia justo abajo del boss
         transform.LookAt(attackPos);
         Quaternion attackRota = transform.rotation;
-        GameObject go = AoeReference.CreateAreaOfEffect(attackPos, attackType, attackRota); // creo la area de efecto (sin collider) en tal posicion
+        GameObject go = Aoe.CreateAreaOfEffect(attackPos, attackType, attackRota); // creo la area de efecto (sin collider) en tal posicion
         yield return new WaitForSecondsRealtime(1.36f); // 1 segundo, 30 frames ==> 11 frames = 0.36
         Destroy(go);
-        GameObject go2 = AoeReference.CreateAoeCollider(attackPos, attackType, attackRota); // creo la area de efecto con collider en tal posicion
+        GameObject go2 = Aoe.CreateAoeCollider(attackPos, attackType, attackRota); // creo la area de efecto con collider en tal posicion
         yield return new WaitForSecondsRealtime(0.3f);
         Destroy(go2);
     }
@@ -294,7 +310,12 @@ public class BossController : Entity
         {
             _currHp = _maxHp;
         }
-       // hpBar.fillAmount = currentHp / maxHp;
+    }
+
+    void StageChange()
+    {
 
     }
 }
+
+    
