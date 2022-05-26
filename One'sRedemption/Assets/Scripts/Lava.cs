@@ -9,7 +9,7 @@ public class Lava : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerFeets"))
         {
-            Player.instance.ModifyHealth(0, 1500);
+            Player.instance.DecreaseHealth(1500);
         }
     }
 }

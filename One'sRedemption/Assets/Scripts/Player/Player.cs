@@ -111,7 +111,7 @@ public class Player : Entity
             if (rest <= 0.01f)
             {
 
-                ModifyHealth(0, 1) ;
+                DecreaseHealth(1);
 
             }
         }
@@ -136,7 +136,7 @@ public class Player : Entity
         if (other.CompareTag("BossAttackCollider"))
         {
 
-             ModifyHealth(0,BossController.instance.damage);
+             DecreaseHealth(BossController.instance.damage);
         }           
     }  
 }

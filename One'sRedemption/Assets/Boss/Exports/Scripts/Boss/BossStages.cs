@@ -5,19 +5,11 @@ using System;
 
 public class EventHandler : MonoBehaviour
 {
+    public delegate void BossStageChanged(ref BossController.BossStages stage);
+    public static event BossStageChanged onBossStageChanged;
 
-
-    public static Action<BossController.BossStages> OnBossStageChanged;
-
-    public static void BossStageChanged(BossController.BossStages stage)
+    public static void BossStageChange(ref BossController.BossStages stage)
     {
-        OnBossStageChanged(stage);
+        onBossStageChanged(ref stage);
     }
-
-
-    
-
-
-
-
 }

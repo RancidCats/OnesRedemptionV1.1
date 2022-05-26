@@ -29,16 +29,16 @@ public class BossController : Entity
     [Header("Checks")] //public para chequeos globales
     private bool canAttack;
     private bool canMove;
-    //public bool invulnerable;
+    public bool invulnerable;
     public bool playerAtAttackAngle;
     public bool playerAtMoveRange; //usar con Physics.checksphere
 
     private static BossStages currentStage;
     public enum BossStages
     {
-        Stage_1,
-        Stage_2,
-        Stage_3
+        Stage_1 = 0,
+        Stage_2 = 1,
+        Stage_3 = 2
     }
 
     public Transform playerTarget;
@@ -75,13 +75,18 @@ public class BossController : Entity
         _maxHp = 1500;
         _currHp = _maxHp;
         canUseSpell[1] = true;
+        EventHandler.onBossStageChanged += ChangeStage;
+    }
+
+    void asd(int item)
+    {
+        
     }
     private void FixedUpdate()
     {
         enemyMove.EnemyBehaviour(canMove);
         SpellBehaviour();
         Attack();
-        HealthBehaviour();
         MoveBehaviour();
 
     }
@@ -302,19 +307,39 @@ public class BossController : Entity
 
     void HealthBehaviour()
     {
-        if (_currHp <= 0)
+        if (_currHp <= 950 && _currHp >= 450) EventHandler.BossStageChange(ref currentStage);
+        if (_currHp < 450) EventHandler.BossStageChange(ref currentStage);
+
+    }
+
+
+    public void ChangeStage(ref BossStages stage)
+    {
+        stage++;
+        switch (stage)
         {
-            transform.gameObject.SetActive(false);
-        }
-        if (_currHp > _maxHp)
-        {
-            _currHp = _maxHp;
+            case (BossStages) 1:
+                //empiecen a caer estalactitas
+                //habilitar ataque 360
+                //dar mas feedback, cambiar colores
+                break;
+            case (BossStages) 2:
+                //habilitar caniones de fuego
+                //habilitar pelea cercana
+                break;
         }
     }
 
-    void StageChange()
+    public override void DecreaseHealth(int value)
     {
-
+        _currHp -= value;
+        _hpBar.RefreshBar(_currHp, _maxHp);
+        HealthBehaviour();
+        if (_currHp <= 0)
+        {
+            _currHp = 0;
+            Death();
+        }
     }
 }
 

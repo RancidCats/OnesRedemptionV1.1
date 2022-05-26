@@ -6,11 +6,11 @@ public class MakeDamage : MonoBehaviour
 {
     public void OnTriggerEnter(Collider other)
     {
-        //Tag = Enemy, CAMBIAR PROPIEDAD DECREASE HEALT X METODO MAKEDAMAGE
-        if (other.CompareTag("Enemy"))
-        {
-            other.GetComponent<Enemy>().decreaseHealth = Player.instance.damage;
-        }
+        ///Tag = Enemy, CAMBIAR PROPIEDAD DECREASE HEALT X METODO MAKEDAMAGE
+        //if (other.CompareTag("Enemy"))
+        //{
+        //    other.GetComponent<Enemy>().decreaseHealth = Player.instance.damage;
+        //}
 
         //Tag = Obstacles
         if (other.CompareTag("Obstacles"))
@@ -21,7 +21,7 @@ public class MakeDamage : MonoBehaviour
         //Tag = Boss
         if (other.CompareTag("Boss"))
         { 
-            other.GetComponentInParent<BossController>().ModifyHealth(0 ,(int) Player.instance.damage);
+            other.GetComponentInParent<BossController>().DecreaseHealth((int) Player.instance.damage);
         }
     }
 }

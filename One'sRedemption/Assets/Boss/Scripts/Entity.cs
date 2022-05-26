@@ -27,27 +27,31 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public void ModifyHealth(int type, int value)
+
+    public virtual void IncreaseHealth(int value)
     {
-        switch (type)
+        _currHp += value;
+        _hpBar.RefreshBar(_currHp, _maxHp);
+        if (_currHp > _maxHp)
         {
-            case 0:
-                _currHp -= value;
-                _hpBar.RefreshBar(_currHp, _maxHp);
-                if (_currHp <= 0)
-                {
-                    gameObject.SetActive(false);
-                    //play sounds etc
-                }
-                break;
-            case 1:
-                _currHp += value;
-                _hpBar.RefreshBar(_currHp, _maxHp);
-                if (_currHp > _maxHp)
-                {
-                    _currHp = _maxHp;
-                }
-                break;
+            _currHp = _maxHp;
         }
+    }
+
+    public virtual void DecreaseHealth(int value)
+    {
+        _currHp -= value;
+        _hpBar.RefreshBar(_currHp, _maxHp);
+        if (_currHp <= 0)
+        {
+            _currHp = 0;
+            Death();
+        }
+    }
+
+    public virtual void Death()
+    {
+        gameObject.SetActive(false);
+        //play sounds etc
     }
 }
