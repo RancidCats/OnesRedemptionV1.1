@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
         if (!_pastCheckpoint)
             _spawnPos = _start.position;
     }
+    public void Start()
+    {
+        if (Player.instance!=null)
+            Player.instance.transform.position = GameManager._spawnPos;
+
+    }
 
     // Update is called once per frame
     void Update()

@@ -24,7 +24,6 @@ public class Control
         _inputVector.z = Input.GetAxis("Vertical");
         _movement.RotatePlayer(_inputVector);
         //Movimiento
-
         if (Player.instance.canMove)
         {          
             _movement.MovePlayer(_inputVector);
@@ -37,16 +36,19 @@ public class Control
        //
        // }
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {           
             _movement.Attack();
             _animations.Attack();
         }       
-        if (Input.GetKeyDown(KeyCode.LeftShift) && Player.instance.canDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Player.instance.canDash && Player.instance.isGrounded)
         {
             _animations.Dash();
             _movement.Dash();
         }
+        //Reset Coyote Jump Test Position. (PlayerTestingScene)
+        //if (Input.GetKeyDown(KeyCode.C))
+          //  Player.instance.transform.position = new Vector3(120, 71, 105);
     }
     
 }

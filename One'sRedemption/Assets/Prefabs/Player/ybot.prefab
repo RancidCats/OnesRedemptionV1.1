@@ -5242,6 +5242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729ace71eec4adc42be0f2ed683dddd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _contactCount: 0
+  _coyoteStart: 0
+  _coyoteTime: 1
+  _coyoteCounter: 0
 --- !u!54 &1721599417974046836
 Rigidbody:
   m_ObjectHideFlags: 0

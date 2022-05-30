@@ -46,7 +46,6 @@ public class Player : Entity
     }
     void Start()
     {
-        transform.position = GameManager._spawnPos;
         _firstDamage = damage;
         _currHp = _maxHp;
         _animations = new AnimationsManager(anim);
