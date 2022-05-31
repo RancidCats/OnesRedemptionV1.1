@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6287736016949449471}
   - component: {fileID: 1566915817995950380}
   - component: {fileID: 5025753382113008338}
+  - component: {fileID: 6037385888738822640}
   m_Layer: 0
   m_Name: Gargola
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6037385888738822640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205988862738981217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.700736, y: 4.6947947, z: 4.6053147}
+  m_Center: {x: -0.29498696, y: 2.9295645, z: -0.22}
 --- !u!1 &1627301426310516801
 GameObject:
   m_ObjectHideFlags: 0
