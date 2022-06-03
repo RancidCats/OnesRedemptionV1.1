@@ -27,7 +27,14 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         if (!_pastCheckpoint)
+        {
             _spawnPos = _start.position;
+
+        }
+        else
+        {
+            _spawnPos = _checkpoint.position;
+        }
     }
     public void Start()
     {

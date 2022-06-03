@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour , IDamageable
 {
     //CODIGO EXACTAMENTE IGUAL AL DE ENTITY PERO QUITANDO LAS BARRAS DE VIDA
 
     [SerializeField] int _maxHp;
     [SerializeField] int _currHp;
+
+    private void Start()
+    {
+        _currHp = _maxHp;
+    }
+
 
     public int Health
     {
@@ -24,30 +30,19 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        _currHp = _maxHp;
-    }
-
-    public void ModifyHealth(int type, int value)
-    {
-        switch (type)
+   public void DecreaseHealth(int value)
+   {
+        Debug.Log("DustParticles");
+        _currHp -= value;
+        if (_currHp <= 0)
         {
-            case 0:
-                _currHp -= value;
-                if (_currHp <= 0)
-                {
-                    gameObject.SetActive(false);
-                    //play sounds etc
-                }
-                break;
-            case 1:
-                _currHp += value;
-                if (_currHp > _maxHp)
-                {
-                    _currHp = _maxHp;
-                }
-                break;
+            Debug.Log("destroyParticles");
+
+            gameObject.SetActive(false);
         }
-    }
+   }
+   public void IncreaseHealth(int value)
+   {
+
+   }
 }
