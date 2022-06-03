@@ -6,10 +6,10 @@ using System;
 public class EventHandler : MonoBehaviour
 {
     public delegate void BossStageChanged(ref BossController.BossStages stage);
-    public static event BossStageChanged onBossStageChanged;
+    public static event BossStageChanged OnBossStageChanged;
 
     public static void BossStageChange(ref BossController.BossStages stage)
     {
-        onBossStageChanged(ref stage);
+        OnBossStageChanged(ref stage);
     }
 }

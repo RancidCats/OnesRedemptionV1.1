@@ -129,7 +129,7 @@ public class Player : Entity
     {
         AudioManager.instance.Play("Sword_Attack_1");
     }
-    public void OnTriggerEnter(Collider other)
+    sealed protected override void OnTriggerEnter(Collider other)
     {
      
         if (other.CompareTag("BossAttackCollider"))

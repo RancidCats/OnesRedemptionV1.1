@@ -9,14 +9,14 @@ public class Obstacle : MonoBehaviour
     [SerializeField] int _maxHp;
     [SerializeField] int _currHp;
 
-    public int health
+    public int Health
     {
         get
         {
             return _currHp;
         }
     }
-    public int maxHealth
+    public int MaxHealth
     {
         get
         {

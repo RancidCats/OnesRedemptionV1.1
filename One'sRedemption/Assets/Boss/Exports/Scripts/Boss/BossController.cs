@@ -10,7 +10,6 @@ public class BossController : Entity
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator ani;
     //[SerializeField] private Transform leftHand;
-    [SerializeField]
     public static BossController instance;
     private EnemyMove enemyMove;
 
@@ -75,12 +74,7 @@ public class BossController : Entity
         _maxHp = 1500;
         _currHp = _maxHp;
         canUseSpell[1] = true;
-        EventHandler.onBossStageChanged += ChangeStage;
-    }
-
-    void asd(int item)
-    {
-        
+        EventHandler.OnBossStageChanged += ChangeStage;
     }
     private void FixedUpdate()
     {
@@ -160,51 +154,16 @@ public class BossController : Entity
         {
             canMove = true;
         }
-
-
         if (canMove)
         {
             ani.SetBool("Walk", true);
-
             //play sonido de caminar boss
         }
-        else
-        {
-            ani.SetBool("Walk", false);
-        }
-
-    }
-
-    void BossPhases()
-    {
-        switch (currentStage)
-        {
-            case (BossStages)1:
-
-                break;
-
-            case (BossStages)2:
-                break;
-
-            case (BossStages)3:
-                break;
-        }
+        else ani.SetBool("Walk", false);
     }
 
     void SpellBehaviour() // falta incorporar uso de fases
     {
-        if (_currHp <= 1500 && _currHp > 1000)
-        {
-            currentStage = BossStages.Stage_1;
-        }
-        else if (_currHp < 1000 && _currHp > 500)
-        {
-            currentStage = BossStages.Stage_2;
-        }
-        else
-        {
-            currentStage = BossStages.Stage_3;
-        }
         if (!canUseSpell[1] && spellTimer[1] <= 7 && !Sistemas.IsAnimationPlaying(ani, "BossJumpStart") &&
             !Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") && !Sistemas.IsAnimationPlaying(ani, "BossJumpIdle")) //si no se esta ejecutando alguna de estas animaciones, que empiece el timer
         {
@@ -305,11 +264,10 @@ public class BossController : Entity
     }
 
 
-    void HealthBehaviour()
+    void StageBehaviour()
     {
         if (_currHp <= 950 && _currHp >= 450) EventHandler.BossStageChange(ref currentStage);
         if (_currHp < 450) EventHandler.BossStageChange(ref currentStage);
-
     }
 
 
@@ -334,7 +292,7 @@ public class BossController : Entity
     {
         _currHp -= value;
         _hpBar.RefreshBar(_currHp, _maxHp);
-        HealthBehaviour();
+        StageBehaviour();
         if (_currHp <= 0)
         {
             _currHp = 0;

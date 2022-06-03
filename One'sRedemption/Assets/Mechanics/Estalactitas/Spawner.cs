@@ -12,7 +12,12 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if (BossController.instance.isActiveAndEnabled && (BossController.instance.health <= BossController.instance.maxHealth/2))
+        SpawningRoutine();
+    }
+
+    void SpawningRoutine()
+    {
+        if (BossController.instance.isActiveAndEnabled && (BossController.instance.Health <= BossController.instance.MaxHealth / 2))
         {
             timer += Time.deltaTime;
             if (timer >= cooldown)
@@ -20,9 +25,8 @@ public class Spawner : MonoBehaviour
                 SpawnCubes();
                 timer = 0;
             }
-        }   
+        }
     }
-
     void SpawnCubes()
     {
         for (int x = 0; x < cantEstalactitas; x++)

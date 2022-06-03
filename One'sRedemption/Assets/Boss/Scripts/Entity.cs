@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Entity : MonoBehaviour
+public class Entity : MonoBehaviour, IDamageable
 {
     [SerializeField]
     protected int   _currHp;
@@ -12,14 +12,14 @@ public class Entity : MonoBehaviour
     [Header("UI")]
     [SerializeField]
     protected SlideBar _hpBar;
-    public int health
+    public int Health
     {
         get
         {
             return _currHp;
         }
     }
-    public int maxHealth
+    public int MaxHealth
     {
         get
         {
@@ -53,5 +53,10 @@ public class Entity : MonoBehaviour
     {
         gameObject.SetActive(false);
         //play sounds etc
+    }
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        
     }
 }
