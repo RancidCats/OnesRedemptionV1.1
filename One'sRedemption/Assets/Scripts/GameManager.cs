@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] Transform _start;
-    [SerializeField] Transform _checkpoint;
+    [SerializeField] Transform _checkpoint_1;
+    [SerializeField] Transform _checkpoint_2;
 
     //public GameObject protagonist;
     //
@@ -21,20 +22,29 @@ public class GameManager : MonoBehaviour
     //public List<GameObject> enemies = new List<GameObject>();
 
     public static Vector3 _spawnPos;
-    public static bool _pastCheckpoint = false;
+    public static bool _pastCheckpoint_1 = false;
+    public static bool _pastCheckpoint_2 = false;
 
     private void Awake()
     {
         instance = this;
-        if (!_pastCheckpoint)
+        if (!_pastCheckpoint_1 && !_pastCheckpoint_2)
         {
             _spawnPos = _start.position;
 
         }
         else
         {
-            _spawnPos = _checkpoint.position;
+            if (_pastCheckpoint_1 && !_pastCheckpoint_2)
+            {
+                _spawnPos = _checkpoint_1.position;
+            }
+            else
+            {
+                _spawnPos = _checkpoint_2.position;
+            }
         }
+        
     }
     public void Start()
     {
@@ -49,14 +59,25 @@ public class GameManager : MonoBehaviour
         //Quick reload of the scene
         if (Input.GetKeyDown(KeyCode.R) || !Player.instance.gameObject.activeSelf)
         {
-            if (_pastCheckpoint)
-                _spawnPos = _checkpoint.position;
+            if (_pastCheckpoint_1)
+            {
+                _spawnPos = _checkpoint_1.position;
+                Debug.Log("Entro 1");
+            }
+
+            if (_pastCheckpoint_2)
+            {
+                _spawnPos = _checkpoint_2.position;
+                Debug.Log("Entro 2");
+            }
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            _pastCheckpoint = false;
+            _pastCheckpoint_1 = false;
+            _pastCheckpoint_2 = false;
             SceneManager.LoadScene(0);
         }
 
