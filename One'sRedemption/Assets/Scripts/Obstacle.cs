@@ -8,6 +8,8 @@ public class Obstacle : MonoBehaviour , IDamageable
 
     [SerializeField] int _maxHp;
     [SerializeField] int _currHp;
+    [SerializeField] ParticleSystem _boxHitted;
+    [SerializeField] ParticleSystem _boxDeath;
 
     private void Start()
     {
@@ -32,13 +34,30 @@ public class Obstacle : MonoBehaviour , IDamageable
 
    public void DecreaseHealth(int value)
    {
-        Debug.Log("DustParticles");
+       
+        if (!_boxHitted.isPlaying)
+        {
+            _boxHitted.Play();
+        }
+        else
+        {
+            _boxHitted.Stop();
+            _boxHitted.Play();
+
+        }
         _currHp -= value;
         if (_currHp <= 0)
         {
-            Debug.Log("destroyParticles");
+            Instantiate(_boxDeath, new Vector3(1.08f, 0.56f, 0), transform.rotation);
 
-            gameObject.SetActive(false);
+            if (_boxHitted.isPlaying)
+            {
+                _boxHitted.Stop();
+            }
+            _boxDeath.Play();
+
+
+                gameObject.SetActive(false);
         }
    }
    public void IncreaseHealth(int value)

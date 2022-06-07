@@ -12,15 +12,11 @@ public class Movement
           _jumpForce;                
 
     bool _walkPlaying;
-    float _smoothVelocity;
-    float _smoothTime;
     public Movement(Transform t, Rigidbody rb, float s,LayerMask _layerMask)
     {
         _transform = t;
         _rb = rb;
         _moveSpeed = s;
-        _smoothVelocity = 45;
-        _smoothTime = 0.05f;
 
 
     }
@@ -31,7 +27,6 @@ public class Movement
             
             Vector3 dir = new Vector3(_inputVector.x, 0, _inputVector.z).normalized;
             float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
-            float angle= Mathf.SmoothDampAngle(_transform.eulerAngles.y, targetAngle, ref _smoothVelocity, _smoothTime);
             _transform.rotation = Quaternion.Euler(0, targetAngle, 0);
 
         }

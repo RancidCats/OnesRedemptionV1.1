@@ -9,7 +9,7 @@ public class Sword : MonoBehaviour
       
        if (other.GetComponentInParent<IDamageable>() != null && !other.CompareTag("Player"))//Pregunto por el player porque sino le hace daño
        {
-           Debug.Log(other.gameObject.name);
+           
            other.GetComponentInParent<IDamageable>().DecreaseHealth((int)Player.instance.damage);
        }
 
