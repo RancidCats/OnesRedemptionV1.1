@@ -168,10 +168,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwordParticles
       objectReference: {fileID: 0}
-    - target: {fileID: 4882885357828006878, guid: 41316731d3a23104bb4c100c217ea3fb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8433543742496738494, guid: 41316731d3a23104bb4c100c217ea3fb, type: 3}
       propertyPath: m_RootOrder
       value: 1

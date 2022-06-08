@@ -65,7 +65,7 @@ public class BossController : Entity
 
     void Awake()
     {
-        playerTarget = GameObject.Find("ybot").transform;
+        playerTarget = Player.instance.transform;
         instance = this;
         enemyMove = new EnemyMove(playerTarget, GetComponent<NavMeshAgent>());
     }
