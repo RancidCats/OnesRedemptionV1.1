@@ -127,13 +127,13 @@ public class Player : Entity
         AudioManager.instance.Play("Sword_Attack_1");
     }
 
-   // sealed protected override void OnTriggerEnter(Collider other)
-   // {
-   //  
-   //     if (other.CompareTag("BossAttackCollider"))
-   //     {
-   //
-   //          DecreaseHealth(BossController.instance.damage);
-   //     }           
-   // }  
+    sealed protected override void OnTriggerEnter(Collider other)
+    {
+     
+        if (other.CompareTag("BossAttackCollider"))
+        {
+    
+             DecreaseHealth(BossController.instance.damage);
+        }           
+    }  
 }
