@@ -65,7 +65,10 @@ public class BossController : Entity
 
     void Awake()
     {
-        playerTarget = Player.instance.transform;
+        if (Player.instance != null)
+        {
+            playerTarget = Player.instance.transform;
+        }
         instance = this;
         enemyMove = new EnemyMove(playerTarget, GetComponent<NavMeshAgent>());
     }

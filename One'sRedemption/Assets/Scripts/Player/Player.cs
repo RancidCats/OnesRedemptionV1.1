@@ -5,7 +5,7 @@ public class Player : Entity
 {
     public static Player instance;
 
-    [Header("Guarda la layer en la que trabaja el RayCast")]
+    [Header("Guarda la layer en la que trabaja el RayCast del dash")]
     public LayerMask layerMask;
 
     public Rigidbody rb;
