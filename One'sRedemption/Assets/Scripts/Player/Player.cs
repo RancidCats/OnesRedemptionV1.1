@@ -41,8 +41,11 @@ public class Player : Entity
     float                 _burningTimer;               
     public void Awake()
     {
+       
 
-        instance = this;
+            instance = this;
+
+        
     }
     void Start()
     {

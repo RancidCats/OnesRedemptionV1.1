@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8433543742496738494}
   - component: {fileID: 96044930997939772}
   - component: {fileID: 2311016250571374793}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: SwordParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
