@@ -2296,13 +2296,10 @@ MonoBehaviour:
   damage: 25
   walkSpeed: 5
   isAttacking: 0
+  invulnerable: 0
   playerAtAttackAngle: 0
   playerAtMoveRange: 0
-  bossPhase: 0
   playerTarget: {fileID: 0}
-  spell1timer: 0
-  canUseSpell1: 0
-  isUsingSpell1: 0
   range: 25
   shockwave: {fileID: 3938817009890637471, guid: 6457b2799337b3944aca66cd606704ab, type: 3}
 --- !u!195 &1815586081
