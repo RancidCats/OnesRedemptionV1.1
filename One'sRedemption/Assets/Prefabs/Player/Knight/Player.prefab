@@ -1058,9 +1058,6 @@ MonoBehaviour:
   _currHp: 0
   _maxHp: 100
   _hpBar: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 8
   rb: {fileID: 442221682}
   anim: {fileID: 442221684}
   damage: 20
@@ -1077,6 +1074,10 @@ MonoBehaviour:
   isGrounded: 0
   canCombo: 0
   canMove: 1
+  _dashCoolDownImage: {fileID: 0}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 8
   _hitCounter: 0
   _burningCD: 0
   _burningTimer: 0

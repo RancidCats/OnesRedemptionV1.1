@@ -1,12 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : Entity
 {
     public static Player instance;
 
     [Header("Guarda la layer en la que trabaja el RayCast del dash")]
-    public LayerMask layerMask;
 
     public Rigidbody rb;
     public Animator anim;
@@ -28,17 +28,15 @@ public class Player : Entity
                              canMove;
 
     //------------------------------------------------------------------------------------------------------------------------------------// 
-
-    [SerializeField]
-    int                   _hitCounter;
-    float                 _firstDamage;
-    AnimationsManager     _animations;
-    Movement              _movement;
-    Control               _control;
-    [SerializeField ]
-    float                 _burningCD;
-    [SerializeField]
-    float                 _burningTimer;               
+    [SerializeField] Image _dashCoolDownImage;
+    [SerializeField] LayerMask _layerMask;
+    [SerializeField] int   _hitCounter;
+    float                  _firstDamage;
+    AnimationsManager      _animations;
+    Movement               _movement;
+    Control                _control;
+    [SerializeField] float _burningCD;
+    [SerializeField] float _burningTimer;               
     public void Awake()
     {
        
@@ -52,9 +50,9 @@ public class Player : Entity
         _firstDamage = damage;
         _currHp = _maxHp;
         _animations = new AnimationsManager(anim);
-        _movement = new Movement(transform, rb, moveSpeed,layerMask);
+        _movement = new Movement(transform, rb, moveSpeed,_layerMask);
         _control = new Control(_movement, _animations);
-   
+        
 
         canMove = true;
     }
@@ -92,12 +90,17 @@ public class Player : Entity
     private void DashTimer()
     {
         dashTimer += Time.deltaTime;
+
         if (dashTimer <= dashDeadTime)
         {
+            
+            _dashCoolDownImage.fillAmount = 1 - dashTimer/dashDeadTime;
             canDash = false;
         }
         else
         {
+
+            _dashCoolDownImage.fillAmount = 0;
             canDash = true;
             dashTimer = 0;
             startDashCD = false;

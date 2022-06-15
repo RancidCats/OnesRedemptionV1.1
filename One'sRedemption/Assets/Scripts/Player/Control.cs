@@ -29,26 +29,19 @@ public class Control
             _movement.MovePlayer(_inputVector);
         }
        
-        //Salto
-       // if (Input.GetKeyDown(KeyCode.Space) &&  Player.instance.isGrounded && Player.instance.canJump)
-       // {
-       //     _movement.Jump();
-       //
-       // }
-
+      
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {           
             _movement.Attack();
             _animations.Attack();
         }       
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && Player.instance.canDash && Player.instance.isGrounded)
         {
             _animations.Dash();
             _movement.Dash();
         }
-        //Reset Coyote Jump Test Position. (PlayerTestingScene)
-        //if (Input.GetKeyDown(KeyCode.C))
-          //  Player.instance.transform.position = new Vector3(120, 71, 105);
+          
     }
     
 }
