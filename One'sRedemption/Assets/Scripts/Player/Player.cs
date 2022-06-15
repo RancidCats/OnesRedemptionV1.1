@@ -29,7 +29,6 @@ public class Player : Entity
 
     //------------------------------------------------------------------------------------------------------------------------------------// 
     [SerializeField] Image _dashCoolDownImage;
-    [SerializeField] LayerMask _layerMask;
     [SerializeField] int   _hitCounter;
     float                  _firstDamage;
     AnimationsManager      _animations;
