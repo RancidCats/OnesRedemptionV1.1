@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    [SerializeField] private bool debug;
 
     [SerializeField] Transform _start;
     [SerializeField] Transform _checkpoint_1;
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour
         if (Player.instance!=null)
             Player.instance.transform.position = GameManager._spawnPos;
 
+        print(_spawnPos);
+
     }
 
     // Update is called once per frame
@@ -81,6 +84,16 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
+        if (Input.GetKeyDown(KeyCode.U) && debug) // bossDebug
+        {
+            Player.instance.transform.position = _checkpoint_1.position;
+            Debug.Log("Entro 1");
+        }
+        if (Input.GetKeyDown(KeyCode.I) && debug)
+        {
+            Player.instance.transform.position = _checkpoint_2.position;
+            Debug.Log("Entro 2");
+        }
 
         //if (!Player.instance.gameObject.activeSelf)
         //{

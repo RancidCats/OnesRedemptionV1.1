@@ -83,7 +83,7 @@ public class BossController : Entity
     {
         enemyMove.EnemyBehaviour(canMove);
         SpellBehaviour();
-        Attack();
+        AttackBehaviour();
         MoveBehaviour();
 
     }
@@ -91,7 +91,7 @@ public class BossController : Entity
 
 
     //------ATAQUES--------//
-    void Attack()
+    void AttackBehaviour()
     {
         if (Sistemas.IsAnimationPlaying(ani, "BossSwipe2"))
         {

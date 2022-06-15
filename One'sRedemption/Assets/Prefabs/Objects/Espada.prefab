@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3411835571260654795}
   - component: {fileID: 6458304060955504912}
   - component: {fileID: 7981974479793660816}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3793775858989325995}
   - component: {fileID: 1047741211966812616}
   - component: {fileID: 4425068757239049464}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Espada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,6 +167,10 @@ PrefabInstance:
     - target: {fileID: 4882885357828006878, guid: 41316731d3a23104bb4c100c217ea3fb, type: 3}
       propertyPath: m_Name
       value: SwordParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882885357828006878, guid: 41316731d3a23104bb4c100c217ea3fb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8433543742496738494, guid: 41316731d3a23104bb4c100c217ea3fb, type: 3}
       propertyPath: m_RootOrder
