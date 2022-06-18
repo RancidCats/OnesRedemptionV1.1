@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public static Spawner instance;
     public GameObject cubePrefab;
     public float alturaIndicator;
     public float timer;
     public float cooldown;
     public float cantEstalactitas;
+    public bool isEnabled;
+
+    private void Awake()
+    {
+        if (instance != null) Destroy(gameObject);
+    }
+    private void Start()
+    {
+        enabled = false;
+    }
 
     void Update()
     {

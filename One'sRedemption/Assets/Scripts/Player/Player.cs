@@ -35,7 +35,10 @@ public class Player : Entity
     Movement               _movement;
     Control                _control;
     [SerializeField] float _burningCD;
-    [SerializeField] float _burningTimer;               
+    [SerializeField] float _burningTimer;
+    [SerializeField] LayerMask _layerMask;/// <summary>
+                                          /// //////////...........      PUEDEN HABER BUGS PORQUE NO SE SETEO BIEN LAYERMASK, SOLO SE CREO (para mati);;
+                                          /// </summary>
     public void Awake()
     {
        

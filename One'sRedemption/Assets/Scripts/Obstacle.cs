@@ -8,8 +8,8 @@ public class Obstacle : MonoBehaviour , IDamageable
 
     [SerializeField] int _maxHp;
     [SerializeField] int _currHp;
-    [SerializeField] ParticleSystem _boxHitted;
-    [SerializeField] GameObject     _boxDeath;
+    [SerializeField] ParticleSystem _boxHitParticles;
+    [SerializeField] GameObject     _boxDeathParticles;
 
     private void Start()
     {
@@ -39,23 +39,23 @@ public class Obstacle : MonoBehaviour , IDamageable
         {
 
 
-            if (_boxHitted.isPlaying)
+            if (_boxHitParticles.isPlaying)
             {
-                _boxHitted.Stop();
+                _boxHitParticles.Stop();
             }
-            var deathParticles = Instantiate(_boxDeath);
+            var deathParticles = Instantiate(_boxDeathParticles);
             deathParticles.transform.position = transform.position + new Vector3 (1,1,0);
             
             gameObject.SetActive(false);
         }
-        if (!_boxHitted.isPlaying)
+        if (!_boxHitParticles.isPlaying)
         {
-            _boxHitted.Play();
+            _boxHitParticles.Play();
         }
         else
         {
-            _boxHitted.Stop();
-            _boxHitted.Play();
+            _boxHitParticles.Stop();
+            _boxHitParticles.Play();
 
         }
        

@@ -136,7 +136,7 @@ namespace Utilidades
             }
             else return false;
         }
-        public static bool IsAnimationPlaying(Animator ani, string stateName, int time)
+        public static bool IsAnimationPlaying(Animator ani, string stateName, float time)
         {
             if (ani.GetCurrentAnimatorStateInfo(0).IsName(stateName) && ani.GetCurrentAnimatorStateInfo(0).normalizedTime > time) //si el estado tiene este nombre, y si paso este tiempo (normalizado) devolver verdadero, y viceversa
             {
