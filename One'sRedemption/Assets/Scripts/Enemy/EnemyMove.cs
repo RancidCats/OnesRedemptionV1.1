@@ -29,6 +29,5 @@ public class EnemyMove
         {
             agent.SetDestination(target.position);
         }
-        else Debug.Log("asd");
     }
 }

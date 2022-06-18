@@ -11,6 +11,7 @@ public class EventHandler : MonoBehaviour
     public static void BossStageChange()
     {
         OnBossStageChanged();
+        Debug.Log("Boss stage changed!");
     }
 
 }

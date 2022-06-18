@@ -35,12 +35,12 @@ public class BossController : Entity
 
     [Header("Checks")] //public para chequeos globales
     #region
-    private bool[] canAttack = new bool[3];
+    [SerializeField] private bool[] canAttack = new bool[2];
     [SerializeField] private bool[] canUseAttack = new bool[2];
     private float attack2timer;
-    private bool canMove;
+    [SerializeField] private bool canMove;
     public bool invulnerable;
-    private bool[] playerAtAttackAngle = new bool[2];
+    [SerializeField] private bool[] playerAtAttackAngle = new bool[2];
     public Transform playerTarget;
     #endregion
 
@@ -54,7 +54,7 @@ public class BossController : Entity
     [Header("Spell checks")]
     #region
     [SerializeField] private int range;
-    private bool[] canUseSpell = new bool[2];
+    [SerializeField] private bool[] canUseSpell = new bool[2];
     private bool[] isUsingSpell = new bool[2];
     private float spellTimer;
 
@@ -78,7 +78,7 @@ public class BossController : Entity
         }
         _maxHp = 1500;
         _currHp = _maxHp;
-        canUseSpell[1] = true;
+        canUseSpell[0] = true;
         EventHandler.OnBossStageChanged += ChangeStage;
         canUseAttack[0] = false;
     }
@@ -95,42 +95,42 @@ public class BossController : Entity
     //------ATAQUES--------//
     void AttackBehaviour()
     {
-        #region attack1
-        if (Sistemas.IsAnimationPlaying(ani, "BossSwipe2") || Sistemas.IsAnimationPlaying(ani, "Boss270Attack"))
+        if (Sistemas.IsAnimationPlaying(ani, "BossSwipe2") || Sistemas.IsAnimationPlaying(ani, "BossAttack270"))
             isAttacking = true;
         else
             isAttacking = false;
-        if (Sistemas.GetDistanceXZ(playerTarget.position, transform.position) < 3f && !canUseSpell[0] 
+        #region attack1
+
+        if (Sistemas.GetDistanceXZ(playerTarget.position, transform.position) < 3f && !canAttack[1] && !canUseSpell[0] && !isJumping
             && playerAtAttackAngle[0] && !invulnerable) //Sistemas.GetDistanceXZ() devuelve la distancia sin tener en cuenta el eje Y
             canAttack[0] = true;
-        else if (invulnerable) canAttack[0] = false;
-        if (canAttack[0])
-            ani.SetTrigger("Attack");
-        else if (ani.GetBool("Attack")) ani.ResetTrigger("Attack");
+        else canAttack[0] = false;
+        if (!canAttack[0])
+            ani.ResetTrigger("Attack");
+        else ani.SetTrigger("Attack");
         #endregion
 
         #region attack 2 (ataque 270 grados)
         if (canUseAttack[0])
         {
             Vector3 direction = (playerTarget.position - transform.position).normalized;
-            if (attack2timer >= 5 && Sistemas.IsAnimationPlaying(ani, "Boss270Attack", 0.5f))
+            if (attack2timer >= 5 && Sistemas.IsAnimationPlaying(ani, "BossSwipe2", 0.5f))
             {
-                attack2timer = 0;
                 if (Vector3.Dot(direction, transform.forward) <= 0)
                     playerAtAttackAngle[1] = true;
             }
-            if (Sistemas.IsAnimationPlaying(ani, "BossSwipe2", 0.5f) && !canUseSpell[0] && !invulnerable && !canAttack[1])
+            if (!invulnerable && playerAtAttackAngle[1] && Sistemas.IsAnimationPlaying(ani, "BossSwipe2", 0.5f))
                 canAttack[1] = true;
             else canAttack[1] = false;
             if (canAttack[1])
             {
-                transform.LookAt(playerTarget);
+                attack2timer = 0;
                 ani.SetTrigger("270Attack");
             }
             else
             {
                 attack2timer += Time.fixedDeltaTime;
-                if (ani.GetBool("270Attack")) ani.ResetTrigger("270Attack");
+                ani.ResetTrigger("270Attack");
             }
         }
         #endregion
@@ -163,11 +163,11 @@ public class BossController : Entity
             playerAtAttackAngle[0] = true;
         else
             playerAtAttackAngle[0] = false;
-            
-        if (!playerAtAttackAngle[0] && canMove) 
+
+        if (!playerAtAttackAngle[0] && canMove)
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
 
-        if (isAttacking || invulnerable || isJumping ||
+        if (isAttacking || invulnerable || isJumping || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") || 
             Sistemas.GetDistanceXZ(playerTarget.position, transform.position) > range) // si esta haciendo algo, que no se pueda mover
             canMove = false;
         else
@@ -190,7 +190,7 @@ public class BossController : Entity
         }
         if (!isAttacking && !invulnerable)
         {
-            if (Sistemas.GetDistanceXZ(transform.position, playerTarget.position) < 11f && canUseSpell[1])
+            if (Sistemas.GetDistanceXZ(transform.position, playerTarget.position) < 12f && canUseSpell[0])
             {
                 Spells(0); //si esta a 10 metros de distancia, saltar hacia el player
             }
@@ -224,27 +224,31 @@ public class BossController : Entity
         switch (currentStage)
         {
             case (BossStages)1:
-                if(Sistemas.IsAnimationPlaying(ani, "Wounded", 0.8f))
-                {
-                    Spawner.instance.isEnabled = true;
-                    canUseAttack[0] = true;
-                    ani.SetTrigger("Stomp");
-                    //cambiar
-                    yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossStomp"));
-                    invulnerable = false;
-                }
+                yield return new WaitForSeconds(2);
+                ani.SetTrigger("Stand");
+                yield return new WaitForSeconds(0.1f);
+                yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossCrouchToStand"));
+                ani.SetTrigger("Stomp");
+                yield return new WaitForSeconds(0.1f);
+                yield return new WaitUntil(() => Sistemas.IsAnimationPlaying(ani, "BossStomp", 0.8f));
+                var spawner = FindObjectOfType<Spawner>();
+                spawner.isEnabled = true;
+                canUseAttack[0] = true;
+                invulnerable = false;
                 break;
             case (BossStages)2:
-                if(!Sistemas.IsAnimationPlaying(ani, "Wounded"))
-                {
-                    Spells(1);
-                    yield return new WaitUntil(() => Sistemas.IsAnimationPlaying(ani, "BossRoaring",0.35f)); //duracion animacion a esperar para spawnear los caniones
-                    CannonManager.instance.SpawnCannons();
-                    yield return new WaitUntil(() => Sistemas.IsAnimationPlaying(ani, "BossRoaring", 0.85f));
-                    CannonManager.instance.isEnabled = true;
-                    yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossRoaring"));
-                    invulnerable = false;
-                }
+                
+                Spells(1);
+                yield return new WaitForSeconds(0.1f);
+                yield return new WaitUntil(() => Sistemas.IsAnimationPlaying(ani, "BossRoaring",0.35f)); //duracion animacion a esperar para spawnear los caniones
+                CannonManager.instance.SpawnCannons();
+                yield return new WaitForSeconds(0.1f);
+                yield return new WaitUntil(() => Sistemas.IsAnimationPlaying(ani, "BossRoaring", 0.85f));
+                CannonManager.instance.isEnabled = true;
+                yield return new WaitForSeconds(0.1f);
+                yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossRoaring"));
+                invulnerable = false;
+                
                 break;
         }
     }
@@ -280,8 +284,7 @@ public class BossController : Entity
         }
         else // si no esta cerca, esperar sin mover
         {
-            yield return new WaitForSecondsRealtime(0.7f); //duracion de la animacion en la que deberia c
-
+            yield return new WaitForSeconds(0.7f); //duracion de la animacion en la que deberia c
             ani.SetTrigger("JumpAttackFinish");
         }
         //ani.SetTrigger("JumpAttackFinish");
@@ -290,30 +293,35 @@ public class BossController : Entity
         GameObject shockwave = Instantiate(this.shockwave, go2.transform.position + Vector3.up * 0.3f, Quaternion.identity); //particle system de shockwave
         attackObjects.Add(go2);
         attackObjects.Add(shockwave);
-        isJumping = false;
-        yield return new WaitForSecondsRealtime(0.2f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(go2);
         Destroy(shockwave, 0.6f);
+        yield return new WaitForSeconds(1.7f);
         isUsingSpell[1] = false;
-        
+        isJumping = false;
     }
 
     IEnumerator BasicAttack(int attackType)
     {
+        Vector3 attackPos = new Vector3();
+        if (attackType == 0)
+        {
+            attackPos = transform.position + transform.forward * 3.5f;
+            transform.LookAt(attackPos);
+        }
+        else attackPos = transform.position + transform.forward;//a ojo, posicion del area de efecto del ataque, si no le agrego transform.forward * 3 se instancia justo abajo del boss
         
-        Vector3 attackPos = transform.position + transform.forward * 3.5f; //a ojo, posicion del area de efecto del ataque, si no le agrego transform.forward * 3 se instancia justo abajo del boss
-        transform.LookAt(attackPos);
         
         Quaternion attackRota = transform.rotation;
         GameObject go = Aoe.CreateAreaOfEffect(attackPos, attackType, attackRota); // creo la area de efecto (sin collider) en tal posicion
         attackObjects.Add(go);
         if (attackType == 0)
-            yield return new WaitForSecondsRealtime(1.36f); // 1 segundo, 30 frames ==> 11 frames = 0.36
-        else yield return new WaitForSecondsRealtime(1.0666f);
+            yield return new WaitForSeconds(1.36f); // 1 segundo, 30 frames ==> 11 frames = 0.36
+        else yield return new WaitForSeconds(0.76666f);
         Destroy(go);
         GameObject go2 = Aoe.CreateAoeCollider(attackPos, attackType, attackRota); // creo la area de efecto con collider en tal posicion
         attackObjects.Add(go2);
-        yield return new WaitForSecondsRealtime(0.3f);
+        yield return new WaitForSeconds(0.3f);
         Destroy(go2);
     }
 
@@ -338,7 +346,7 @@ public class BossController : Entity
         currentStage++;
         ani.SetTrigger("Wounded");
         StopAttacks();
-        invulnerable = false;
+        invulnerable = true;
         StartCoroutine(IntroStage());
     }
 
@@ -363,6 +371,8 @@ public class BossController : Entity
         {
             Destroy(attack);
         }
+        StopAllCoroutines();
+        isJumping = false;
     }
     public override void Death()
     {

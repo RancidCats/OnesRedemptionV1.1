@@ -18,24 +18,23 @@ public class Spawner : MonoBehaviour
     }
     private void Start()
     {
-        enabled = false;
+        isEnabled = false;
     }
 
     void Update()
     {
+        if(isEnabled)
         SpawningRoutine();
     }
 
     void SpawningRoutine()
     {
-        if (BossController.instance.isActiveAndEnabled && (BossController.instance.Health <= BossController.instance.MaxHealth / 2))
+        
+        timer += Time.deltaTime;
+        if (timer >= cooldown)
         {
-            timer += Time.deltaTime;
-            if (timer >= cooldown)
-            {
-                SpawnCubes();
-                timer = 0;
-            }
+            SpawnCubes();
+            timer = 0;
         }
     }
     void SpawnCubes()

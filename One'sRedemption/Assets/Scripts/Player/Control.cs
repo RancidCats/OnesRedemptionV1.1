@@ -32,7 +32,6 @@ public class Control
       
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {           
-            _movement.Attack();
             _animations.Attack();
         }       
 

@@ -57,20 +57,10 @@ public class Movement
         }
 
     }
-   
-   //public void Jump()
-   //{                                 
-   //    _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);                  
-   //}
-    public void Attack()
-    {
-
-    }
    public void Dash()
     {
         new Dash(_rb,_transform);
         Player.instance.startDashCD = true;
-
     }
 
 }

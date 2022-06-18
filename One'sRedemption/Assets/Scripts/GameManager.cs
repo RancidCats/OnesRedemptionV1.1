@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform _start;
     [SerializeField] Transform _checkpoint_1;
     [SerializeField] Transform _checkpoint_2;
+    [SerializeField] Transform _checkpoint_3;
 
     //public GameObject protagonist;
     //
@@ -94,6 +95,11 @@ public class GameManager : MonoBehaviour
             Player.instance.transform.position = _checkpoint_2.position;
             Debug.Log("Entro 2");
         }
+        if (Input.GetKeyDown(KeyCode.O) && debug)
+        {
+            Player.instance.transform.position = _checkpoint_3.position;
+            Debug.Log("Entro 3");
+        }
 
         //if (!Player.instance.gameObject.activeSelf)
         //{
@@ -101,14 +107,14 @@ public class GameManager : MonoBehaviour
         //}
 
         //If protagonist is dead timer stops and shows defeat screen
-        
+
         //if (Player.instance)
         //    timer -= Time.deltaTime;
         //else
         //    DefeatScreen.SetActive(true);
 
         //This is just to delay the win function until all the enemies are added to the list
-        
+
         //if (startTime >= 2)
         //    Win();
         //else
