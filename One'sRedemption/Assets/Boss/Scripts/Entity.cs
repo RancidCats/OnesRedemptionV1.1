@@ -54,9 +54,4 @@ public class Entity : MonoBehaviour, IDamageable
         gameObject.SetActive(false);
         //play sounds etc
     }
-
-    protected virtual void OnTriggerEnter(Collider other)
-    {
-        
-    }
 }

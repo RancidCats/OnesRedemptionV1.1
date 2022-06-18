@@ -21,6 +21,10 @@ public class CannonManager : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
     }
+    private void Start()
+    {
+        rotateCannons = true;
+    }
     private void FixedUpdate()
     {
         if (isEnabled)
@@ -36,22 +40,23 @@ public class CannonManager : MonoBehaviour
             cannon.target = playerTarget;
             cannons.Add(i, cannon);
             go.name = $"Cannon{i+1}";
+            print($"Cannon{i}Spawned");
         }
     }
 
     void CannonRotationBehaviour()
     {
-        if (timer >= 7)
-        {
-            timer = 0;
-            rotateCannons = true;
-        }
         if (rotateCannons)
         {
             rotateCannons = false;
             RandomizeCannons();
         }
         else timer += Time.fixedDeltaTime;
+        if (timer >= 7)
+        {
+            timer = 0;
+            rotateCannons = true;
+        }
     }
     
     void RandomizeCannons()

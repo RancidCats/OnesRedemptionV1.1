@@ -1075,12 +1075,12 @@ MonoBehaviour:
   canCombo: 0
   canMove: 1
   _dashCoolDownImage: {fileID: 0}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 8
   _hitCounter: 0
   _burningCD: 0
   _burningTimer: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &5447034736138551666
 GameObject:
   m_ObjectHideFlags: 0

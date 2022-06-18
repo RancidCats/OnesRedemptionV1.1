@@ -99,7 +99,6 @@ namespace Utilidades
             }
             var asset = Resources.Load(path); //Resources es una carpeta dentro de Assets, load lo carga en memoria sin instanciarlo en la escena, para posterior uso.
             GameObject aoeObject = GameObject.Instantiate(asset as GameObject, position, rotation); // rotacion relativa al parent
-                                                                                                    // aoeObject.tag = "BossAttackCollider"; // para el ontriggerenter del player
             return aoeObject;
         }
         public static GameObject CreateAoeCollider(Vector3 position, int type) // crear una area de efecto con collider en base a una posicion y un tipo.

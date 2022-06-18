@@ -36,6 +36,11 @@ public class CannonScript : MonoBehaviour
         }
     }
     // Update is called once per frame
+    private void Start()
+    {
+        target = Player.instance.transform;
+        GetComponent<SphereCollider>().enabled = true;
+    }
     void FixedUpdate()
     {
         Behaviour();

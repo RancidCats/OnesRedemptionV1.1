@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5322045924215497011}
   - component: {fileID: 1704992512}
   - component: {fileID: 751949760317710514}
-  - component: {fileID: 2134370848403477107}
+  - component: {fileID: 6236281179891656422}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -44,7 +44,7 @@ SphereCollider:
   m_GameObject: {fileID: 5322045924215497013}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 17.9
   m_Center: {x: 0, y: 0, z: 0}
@@ -64,7 +64,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2134370848403477107
+--- !u!114 &6236281179891656422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,18 +73,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5322045924215497013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291bbbad68365434c94532fcb0264097, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c576c8d6bae05a43bf3a46e874c68ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannonBall: {fileID: 2608114288172771765, guid: b31fc07a597dced4a8cf4b3c8d3febed, type: 3}
+  cannonBall: {fileID: 2608114288172771765, guid: edebdf3e5d0d7074fa144611b1ba0a85, type: 3}
   cannonSpawn: {fileID: 5322045924348314093}
-  fire: 0
-  playerInRange: 0
-  startCd: 0
-  timer: 0
   target: {fileID: 0}
-  height: 0
-  gravity: 0
+  height: 3
+  gravity: -29.43
+  isEnabled: 0
 --- !u!1 &5322045924348314092
 GameObject:
   m_ObjectHideFlags: 0
