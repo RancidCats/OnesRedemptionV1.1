@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5838697670839493829}
   - component: {fileID: 8984255986905652500}
   - component: {fileID: 8779049726605622127}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Brasero
   m_TagString: Untagged
   m_Icon: {fileID: 0}

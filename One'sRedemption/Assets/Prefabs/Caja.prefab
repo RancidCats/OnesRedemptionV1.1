@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 9206242698677750778}
   - component: {fileID: 1507316427412077904}
   - component: {fileID: 9046324531474777942}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Caja
   m_TagString: Obstacles
   m_Icon: {fileID: 0}

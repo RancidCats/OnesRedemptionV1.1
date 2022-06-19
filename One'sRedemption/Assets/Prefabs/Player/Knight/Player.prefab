@@ -1065,7 +1065,7 @@ MonoBehaviour:
   dashSpeed: 1
   dashLenght: 6
   dashTimer: 0
-  dashDeadTime: 1.5
+  dashDeadTime: 2.5
   burningOn: 0
   moving: 0
   canDash: 1
