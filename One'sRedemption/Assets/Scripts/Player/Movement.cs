@@ -7,12 +7,11 @@ public class Movement
 {
     Transform _transform;
     Rigidbody _rb;
-    LayerMask _layerMask;
     float _moveSpeed,
           _jumpForce;                
 
     bool _walkPlaying;
-    public Movement(Transform t, Rigidbody rb, float s,LayerMask _layerMask)
+    public Movement(Transform t, Rigidbody rb, float s)
     {
         _transform = t;
         _rb = rb;
@@ -32,30 +31,9 @@ public class Movement
         }
     }
     public void MovePlayer(Vector3 _inputVector)
-    {
-        if (_inputVector.x !=0 || _inputVector.z != 0)
-        {
-            Player.instance.moving = true; //Pj en movimiento
-            Vector3 dir = new Vector3(_inputVector.x, 0, _inputVector.z).normalized;
-            _rb.MovePosition(_rb.position + dir * _moveSpeed * Time.deltaTime);
-        }
-        else
-        {
-            Player.instance.moving = false;
-        }
-
-        if (Player.instance.moving && !_walkPlaying)
-        {
-            AudioManager.instance.Play("Player_Step_1");
-
-            _walkPlaying = true;
-        }
-        else if (!Player.instance.moving && _walkPlaying)
-        {
-            AudioManager.instance.Stop("Player_Step_1");
-            _walkPlaying = false;
-        }
-
+    {         
+        Vector3 dir = new Vector3(_inputVector.x, 0, _inputVector.z).normalized;
+        _rb.MovePosition(_rb.position + dir * _moveSpeed * Time.deltaTime);         
     }
    public void Dash()
     {

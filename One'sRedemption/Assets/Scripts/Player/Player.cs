@@ -6,12 +6,11 @@ public class Player : Entity
 {
     public static Player instance;
 
-    [Header("Guarda la layer en la que trabaja el RayCast del dash")]
-
+    public Sword mySword;
     public Rigidbody rb;
     public Animator anim;
 
-    public float             damage,                            
+    public float                           
                              moveSpeed,
                              dashSpeed,
                              dashLenght,
@@ -29,30 +28,24 @@ public class Player : Entity
 
     //------------------------------------------------------------------------------------------------------------------------------------// 
     [SerializeField] Image _dashCoolDownImage;
-    [SerializeField] int   _hitCounter;
-    float                  _firstDamage;
     AnimationsManager      _animations;
     Movement               _movement;
     Control                _control;
     [SerializeField] float _burningCD;
     [SerializeField] float _burningTimer;
-    [SerializeField] LayerMask _layerMask;/// <summary>
-                                          /// //////////...........      PUEDEN HABER BUGS PORQUE NO SE SETEO BIEN LAYERMASK, SOLO SE CREO (para mati);;
-                                          /// </summary>
     public void Awake()
     {
        
 
             instance = this;
-
+            
         
     }
     void Start()
     {
-        _firstDamage = damage;
         _currHp = _maxHp;
         _animations = new AnimationsManager(anim);
-        _movement = new Movement(transform, rb, moveSpeed,_layerMask);
+        _movement = new Movement(transform, rb, moveSpeed);
         _control = new Control(_movement, _animations);
         
 
@@ -75,19 +68,11 @@ public class Player : Entity
     }
     public void ResetHitCounter()
     {
-        _hitCounter = 0;
-        damage = _firstDamage;
+        mySword.ResetHitCounter();
     }
-    public int HitCounter()
+    public void HitCounter()
     {
-        _hitCounter++;
-        IncreaseDamage();
-        return _hitCounter;
-    }
-    public void IncreaseDamage()
-    {
-        damage = Mathf.Round(damage + (damage *_hitCounter * 0.125f)) ;
-      
+        mySword.HitCounter();
     }
     private void DashTimer()
     {

@@ -19,11 +19,13 @@ public class AnimationsManager
     }
     public void Attack()
     {
+        
         new AttackAnim(_anim);
         
     }
     public void Dash()
     {
+       
         _anim.SetTrigger("dash");
     }
 
