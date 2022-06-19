@@ -60,7 +60,7 @@ public class CannonScript : MonoBehaviour
             }
 
             if (startCd) timer += Time.fixedDeltaTime;
-            if (timer > 1.25f)
+            if (timer > 3)
             {
                 timer = 0;
                 startCd = false;
@@ -72,6 +72,9 @@ public class CannonScript : MonoBehaviour
     {
         GameObject cannonBall = Instantiate(this.cannonBall, cannonSpawn.position, Quaternion.identity);
         Rigidbody rb = cannonBall.GetComponent<Rigidbody>();
+        var sphere = cannonBall.GetComponent<CannonBall>();
+        sphere.damage = 15;
+
         rb.useGravity = true;
         rb.velocity = CalculateVelocity(target.position, cannonSpawn.position, gravity, height).intialVelocity;
     }
