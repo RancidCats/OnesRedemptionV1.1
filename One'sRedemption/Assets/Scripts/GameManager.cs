@@ -8,83 +8,72 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private bool debug;
 
-    [SerializeField] Transform _start;
+    [SerializeField] Transform _start;              //Posición del Spawn
     [SerializeField] Transform _checkpoint_1;
     [SerializeField] Transform _checkpoint_2;
-    [SerializeField] Transform _checkpoint_3;
+    [SerializeField] Transform _checkpoint_3;       //Posición previa al boss utilizada para debugear la fight
 
-    //public GameObject protagonist;
-    //
-    //public GameObject VictoryScreen, DefeatScreen;
-
-    //public float timer, startTime;
-
-    //public bool victoryflag = true;
-
-    //public List<GameObject> enemies = new List<GameObject>();
-
-    public static Vector3 _spawnPos;
-    public static bool _pastCheckpoint_1 = false;
-    public static bool _pastCheckpoint_2 = false;
+    public static Vector3 spawnPos;                 //Posición en la que va a spawnear el player
+    
+    private static bool aux = false;
 
     private void Awake()
     {
         instance = this;
-        if (!_pastCheckpoint_1 && !_pastCheckpoint_2)
-        {
-            _spawnPos = _start.position;
-
-        }
-        else
-        {
-            if (_pastCheckpoint_1 && !_pastCheckpoint_2)
-            {
-                _spawnPos = _checkpoint_1.position;
-            }
-            else
-            {
-                _spawnPos = _checkpoint_2.position;
-            }
-        }
         
+        //Utilizo una variable auxiliar para que en la primera carga del nivel la spawnPos se setee sin que luego afecte a los checkpoints
+        if (!aux)
+        {
+            spawnPos = _start.position;
+            aux = true;
+        }
     }
+
     public void Start()
     {
-        if (Player.instance!=null)
-            Player.instance.transform.position = GameManager._spawnPos;
+        if (Player.instance != null)
+            Player.instance.transform.position = GameManager.spawnPos;
 
-        print(_spawnPos);
-
+        print(spawnPos);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Quick reload of the scene
-        if (Input.GetKeyDown(KeyCode.R) || !Player.instance.gameObject.activeSelf)
+        RestartLevel();
+        BacktoLastCheckpoint();
+        BacktoMenu();
+        Debugeo();
+    }
+
+    public void RestartLevel()      //Resetea el level desde el principio
+    {
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if (_pastCheckpoint_1)
-            {
-                _spawnPos = _checkpoint_1.position;
-                Debug.Log("Entro 1");
-            }
-
-            if (_pastCheckpoint_2)
-            {
-                _spawnPos = _checkpoint_2.position;
-                Debug.Log("Entro 2");
-            }
-
+            spawnPos = _start.position;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
 
+    public void BacktoLastCheckpoint()      //Resetea el level hasta el último checkpoint
+    {
+        if (Input.GetKeyDown(KeyCode.L) || !Player.instance.gameObject.activeSelf)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    public void BacktoMenu()        //Volver al Menu Inicial
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            _pastCheckpoint_1 = false;
-            _pastCheckpoint_2 = false;
+            spawnPos = _start.position;
             SceneManager.LoadScene(0);
         }
+    }
 
+    public void Debugeo()       //Funcion para mover al player por el nivel para debugear
+    {
         if (Input.GetKeyDown(KeyCode.U) && debug) // bossDebug
         {
             Player.instance.transform.position = _checkpoint_1.position;
@@ -100,37 +89,6 @@ public class GameManager : MonoBehaviour
             Player.instance.transform.position = _checkpoint_3.position;
             Debug.Log("Entro 3");
         }
-
-        //if (!Player.instance.gameObject.activeSelf)
-        //{
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //}
-
-        //If protagonist is dead timer stops and shows defeat screen
-
-        //if (Player.instance)
-        //    timer -= Time.deltaTime;
-        //else
-        //    DefeatScreen.SetActive(true);
-
-        //This is just to delay the win function until all the enemies are added to the list
-
-        //if (startTime >= 2)
-        //    Win();
-        //else
-        //    startTime += Time.deltaTime;
     }
 
-
-
-    //Win function
-    //public void Win()
-    //{
-    //    if (enemies.Count == 0 && victoryflag)
-    //    {
-    //        VictoryScreen.SetActive(true);
-    //        print("YOU DEFEATED ALL THE ENEMIES, CONGRATULATIONS");
-    //        victoryflag = false;
-    //    }
-    //}
 }
