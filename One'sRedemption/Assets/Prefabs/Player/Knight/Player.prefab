@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514738922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.003861584, y: -4.1836756e-11, z: 5.744326e-11, w: 0.99999255}
+  m_LocalPosition: {x: 0.00018310547, y: 1.3929377, z: -0.02178955}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1441037258679712739}
-  m_Father: {fileID: 6811503727723137366}
-  m_RootOrder: 1
+  m_Father: {fileID: 5305880161885245113}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &1514738924
 TrailRenderer:
@@ -875,7 +875,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5421233307174533437}
-  - {fileID: 1514738923}
   m_Father: {fileID: 115667517819739582}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1095,7 +1094,7 @@ Transform:
   - {fileID: 4573272345562290450}
   - {fileID: 115667517819739582}
   m_Father: {fileID: 5305880161885245113}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4821549019648365571
 GameObject:
@@ -1128,6 +1127,7 @@ Transform:
   m_LocalPosition: {x: -126.68, y: 7.700001, z: -153.21489}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1514738923}
   - {fileID: 2254299115805179634}
   - {fileID: 428430381666545197}
   - {fileID: 4072987686650679802}
@@ -1900,7 +1900,7 @@ Transform:
   m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_Children: []
   m_Father: {fileID: 5305880161885245113}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3303112275964594551
 SkinnedMeshRenderer:
@@ -2417,7 +2417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4386523735743713362, guid: 0421206c568194e44a8fcd625c969c3e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4386523735743713362, guid: 0421206c568194e44a8fcd625c969c3e, type: 3}
       propertyPath: m_LocalPosition.x
