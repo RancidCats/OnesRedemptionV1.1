@@ -9,6 +9,7 @@ public class CannonScript : MonoBehaviour
     [SerializeField]
     private Transform cannonSpawn;
     private bool fire;
+    [SerializeField]
     private bool playerInRange;
     private bool startCd;
     private float timer;
@@ -74,7 +75,7 @@ public class CannonScript : MonoBehaviour
         Rigidbody rb = cannonBall.GetComponent<Rigidbody>();
         var sphere = cannonBall.GetComponent<CannonBall>();
         sphere.damage = 15;
-
+        print($"{gameObject.name} shot a ball!");
         rb.useGravity = true;
         rb.velocity = CalculateVelocity(target.position, cannonSpawn.position, gravity, height).intialVelocity;
     }

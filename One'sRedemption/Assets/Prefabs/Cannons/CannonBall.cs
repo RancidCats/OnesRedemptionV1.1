@@ -15,6 +15,7 @@ public class CannonBall : MonoBehaviour
         }
         //Vector3 spawnPos = this.gameObject.transform.position;
         //Instantiate(particlesPrefab, spawnPos, Quaternion.identity); //explosion
-        Destroy(gameObject);
+        if (!other.gameObject.CompareTag("Cannon")) 
+            Destroy(gameObject);
     }
 }

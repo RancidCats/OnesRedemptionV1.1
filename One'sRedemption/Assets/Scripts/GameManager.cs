@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L) || !Player.instance.gameObject.activeSelf)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            EventHandler.ResetEvents();
         }
     }
 

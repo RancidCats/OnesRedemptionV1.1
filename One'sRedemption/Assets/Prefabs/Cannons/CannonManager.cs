@@ -36,11 +36,12 @@ public class CannonManager : MonoBehaviour
         for(int i = 0; i < transforms.Length; i++)
         {
             GameObject go = Instantiate(cannonPrefab, transforms[i].position, transforms[i].rotation);
+            go.tag = "Cannon";  
             var cannon = go.GetComponent<CannonScript>();
             cannon.target = playerTarget;
             cannons.Add(i, cannon);
             go.name = $"Cannon{i+1}";
-            print($"Cannon{i}Spawned");
+            print($"Cannon{i} spawned");
         }
     }
 

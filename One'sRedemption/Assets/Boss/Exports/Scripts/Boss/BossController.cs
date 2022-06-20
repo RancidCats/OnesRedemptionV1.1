@@ -79,10 +79,10 @@ public class BossController : Entity
         }
         _maxHp = 1500;
         _currHp = _maxHp;
+        EventHandler.BossStageHandler += ChangeStage;
         canUseSpell[0] = true;
-        EventHandler.OnBossStageChanged += ChangeStage;
         canUseAttack[0] = false;
-        currentStage = BossStages.Stage_1;
+        currentStage = 0;
     }
     private void FixedUpdate()
     {
@@ -244,7 +244,7 @@ public class BossController : Entity
                 invulnerable = false;
                 break;
             case (BossStages)2:
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(4);
                 ani.SetTrigger("Stand");
                 yield return new WaitForSeconds(0.1f);
                 yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossCrouchToStand"));
@@ -289,10 +289,11 @@ public class BossController : Entity
             {
                 ani.SetTrigger("JumpAttackFinish");
             }
+            yield return new WaitWhile(() => Sistemas.GetDistanceXZ(transform.position, targetPos) == 0);
         }
         else // si no esta cerca, esperar sin mover
         {
-            yield return new WaitForSeconds(0.7f); //duracion de la animacion en la que deberia c
+            yield return new WaitForSeconds(0.6f); //duracion de la animacion en la que deberia c
             ani.SetTrigger("JumpAttackFinish");
         }
         //ani.SetTrigger("JumpAttackFinish");
@@ -399,20 +400,22 @@ public class BossController : Entity
     }
     public override void Death()
     {
+        invulnerable = true;
         StopAttacks();
         ani.SetTrigger("Death");
         //efectos piolas, sonidos
     }
     IEnumerator TurnTransparent()
     {
-        Material[] materials = transform.gameObject.GetComponents<Material>();
+        Material mat = transform.GetComponent<Material>();
         float timer = 0; 
-        foreach(var material in materials)
+        while(mat.color.a > 0)
         {
-            material.color = new Color(material.color.r, material.color.g, material.color.b, material.color.a - (5 * timer));
-            timer += Time.deltaTime * 3;
+            timer += Time.fixedDeltaTime * 10;
+            mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a - timer);
             yield return new WaitForFixedUpdate();
         }
+        gameObject.SetActive(false);
     }
 }
 

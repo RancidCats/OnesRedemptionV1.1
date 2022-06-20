@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7531200643720058084}
   - component: {fileID: 8329418995406180300}
   - component: {fileID: 4918518356008653006}
-  - component: {fileID: 3124165933415066324}
+  - component: {fileID: -1115903012929236102}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -4888,7 +4888,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &3124165933415066324
+--- !u!114 &-1115903012929236102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4897,6 +4897,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2608114288172771765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0599e9a1d6e3ae4581f139ff4e9ab9f, type: 3}
+  m_Script: {fileID: 11500000, guid: d997d4f7ad48f3842b7b7c55a8c0a646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
