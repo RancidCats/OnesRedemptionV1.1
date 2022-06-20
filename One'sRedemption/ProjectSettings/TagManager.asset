@@ -11,6 +11,7 @@ TagManager:
   - BossAttackCollider
   - Boss
   - Obstacles
+  - Cannon
   layers:
   - Default
   - TransparentFX
