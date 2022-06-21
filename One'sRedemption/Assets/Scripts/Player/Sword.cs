@@ -41,6 +41,7 @@ public class Sword : MonoBehaviour
         if (other.CompareTag("Boss"))
         {
             Instantiate(blood, transform.position, Quaternion.identity);
+            AudioManager.instance.Play("Sword_Attack_3");
         }
     }
 

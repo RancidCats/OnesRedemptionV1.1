@@ -142,3 +142,10 @@ MonoBehaviour:
     pitch: 1
     playOnAwake: 0
     loop: 0
+  - name: Dash
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 87a31eb37ce427546af6632d90197ae6, type: 3}
+    volume: 0.05
+    pitch: 1
+    playOnAwake: 0
+    loop: 0
