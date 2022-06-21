@@ -402,10 +402,13 @@ public class BossController : Entity
     public override void Death()
     {
         invulnerable = true;
+        _currHp = 0;
         StopAttacks();
         ani.SetTrigger("Death");
         Vector3 rotation = new Vector3(-90, 0, 0);
         Instantiate(bossDead, transform.position, Quaternion.Euler(rotation));
+        CannonManager.instance.isEnabled = false;
+        
         //efectos piolas, sonidos
     }
     //IEnumerator TurnTransparent()
