@@ -29,6 +29,7 @@ public class BossController : Entity
     [Header("Animations")]
     public bool isAttacking;
     public bool isJumping;
+    public GameObject bossDead;
     //public bool isMoving;
     //public bool isIdle;
     #endregion
@@ -403,6 +404,8 @@ public class BossController : Entity
         invulnerable = true;
         StopAttacks();
         ani.SetTrigger("Death");
+        Vector3 rotation = new Vector3(-90, 0, 0);
+        Instantiate(bossDead, transform.position, Quaternion.Euler(rotation));
         //efectos piolas, sonidos
     }
     IEnumerator TurnTransparent()
