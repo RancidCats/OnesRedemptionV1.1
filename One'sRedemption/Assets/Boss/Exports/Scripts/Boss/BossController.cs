@@ -408,18 +408,18 @@ public class BossController : Entity
         Instantiate(bossDead, transform.position, Quaternion.Euler(rotation));
         //efectos piolas, sonidos
     }
-    IEnumerator TurnTransparent()
-    {
-        Material mat = transform.GetComponent<Material>();
-        float timer = 0; 
-        while(mat.color.a > 0)
-        {
-            timer += Time.fixedDeltaTime * 10;
-            mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a - timer);
-            yield return new WaitForFixedUpdate();
-        }
-        gameObject.SetActive(false);
-    }
+    //IEnumerator TurnTransparent()
+    //{
+    //    //Material mat = transform.GetComponentInChildren<Material>();
+    //    //float timer = 0; 
+    //    //while(mat.color.a > 0)
+    //    //{
+    //    //    timer += Time.fixedDeltaTime * 10;
+    //    //    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a - timer);
+    //    //    yield return new WaitForFixedUpdate();
+    //    //}
+    //    //gameObject.SetActive(false);
+    //}
 }
 
     

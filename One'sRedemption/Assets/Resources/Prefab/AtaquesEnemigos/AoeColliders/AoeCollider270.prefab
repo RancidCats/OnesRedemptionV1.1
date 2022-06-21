@@ -5123,7 +5123,7 @@ GameObject:
   - component: {fileID: 6998676499338023677}
   m_Layer: 0
   m_Name: AoeCollider270
-  m_TagString: Untagged
+  m_TagString: AoeCollider270
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

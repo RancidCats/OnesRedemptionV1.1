@@ -12,6 +12,8 @@ TagManager:
   - Boss
   - Obstacles
   - Cannon
+  - PlayerWeapon
+  - AoeCollider270
   layers:
   - Default
   - TransparentFX

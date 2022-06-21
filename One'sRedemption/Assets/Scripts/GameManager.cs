@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         {
             spawnPos = _start.position;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            EventHandler.ResetEvents();
         }
     }
 
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
         {
             spawnPos = _start.position;
             SceneManager.LoadScene(0);
+            EventHandler.ResetEvents();
         }
     }
 
