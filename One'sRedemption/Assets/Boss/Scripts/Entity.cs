@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour, IDamageable
     [Header("UI")]
     [SerializeField]
     protected SlideBar _hpBar;
+
     public int Health
     {
         get

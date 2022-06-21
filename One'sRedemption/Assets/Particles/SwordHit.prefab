@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1782022714040863647}
   - component: {fileID: 1782022714040863646}
   - component: {fileID: 1782022714040863645}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SwordHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1782022714040863644}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -3.1268272, y: 4.2438445, z: 1.165097}
-  m_LocalScale: {x: 0.37578085, y: 0.37578085, z: 0.37578085}
+  m_LocalScale: {x: 0.545885, y: 0.545885, z: 0.545885}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +42,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 0.6
   simulationSpeed: 4.98
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.98132527, b: 0.8254717, a: 1}
+      maxColor: {r: 1, g: 0.9585954, b: 0.6273585, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

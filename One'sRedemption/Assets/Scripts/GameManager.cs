@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform _checkpoint_3;       //Posición previa al boss utilizada para debugear la fight
 
     public static Vector3 spawnPos;                 //Posición en la que va a spawnear el player
-    
+
     private static bool aux = false;
 
     private void Awake()

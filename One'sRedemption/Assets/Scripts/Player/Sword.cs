@@ -7,8 +7,9 @@ public class Sword : MonoBehaviour
     [SerializeField] int _baseDamage;
     [SerializeField] int _damage;
     int _hitCounter;
+    public GameObject blood;
+    public GameObject hit;
 
-  
     public void ResetHitCounter()
     {
         _hitCounter = 0;
@@ -27,14 +28,20 @@ public class Sword : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other)
-    {
-      
-       if (other.GetComponentInParent<IDamageable>() != null && !other.CompareTag("Player"))//Pregunto por el player porque sino le hace daño
-       {
+    {   
+        if (other.GetComponentInParent<IDamageable>() != null && !other.CompareTag("Player"))//Pregunto por el player porque sino le hace daño
+        {
             
            other.GetComponentInParent<IDamageable>().DecreaseHealth(_damage);
-       }
-
+        }
+        if (other.CompareTag("Untagged"))
+        {
+            Instantiate(hit, transform.position, Quaternion.identity);           
+        }
+        if (other.CompareTag("Boss"))
+        {
+            Instantiate(blood, transform.position, Quaternion.identity);
+        }
     }
 
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7183516096824475849}
   - component: {fileID: 4877754699780391530}
   - component: {fileID: 3602087347082551781}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BossDead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 5
   simulationSpeed: 2.15
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
