@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private bool debug;
 
-    [SerializeField] Transform _start;              //Posición del Spawn
+    [SerializeField] public Transform _start;              //Posición del Spawn del nivel 1
     [SerializeField] Transform _checkpoint_1;
     [SerializeField] Transform _checkpoint_2;
     [SerializeField] Transform _checkpoint_3;       //Posición previa al boss utilizada para debugear la fight
+
+    [SerializeField] Transform _startTesting;              //Posición del Spawn del nivel de Testing
 
     public static Vector3 spawnPos;                 //Posición en la que va a spawnear el player
 
@@ -20,19 +22,25 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        
-        //Utilizo una variable auxiliar para que en la primera carga del nivel la spawnPos se setee sin que luego afecte a los checkpoints
-        if (!aux)
+
+        if (SceneManager.GetActiveScene().buildIndex == 2 && !aux)
         {
             spawnPos = _start.position;
             aux = true;
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            spawnPos = _startTesting.position;
+        }
+
     }
 
     public void Start()
     {
         if (Player.instance != null)
             Player.instance.transform.position = GameManager.spawnPos;
+
 
         print(spawnPos);
     }
@@ -46,11 +54,27 @@ public class GameManager : MonoBehaviour
         Debugeo();
     }
 
+    void LoadCheckpoints()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+
+        }
+    }
+
     public void RestartLevel()      //Resetea el level desde el principio
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            spawnPos = _start.position;
+            if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                spawnPos = _start.position;
+            }
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                spawnPos = _startTesting.position;
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             EventHandler.ResetEvents();
         }
@@ -69,7 +93,15 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            spawnPos = _start.position;
+            if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                spawnPos = _start.position;
+            }
+
+            if (SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                spawnPos = _startTesting.position;
+            }
             SceneManager.LoadScene(0);
             EventHandler.ResetEvents();
         }
