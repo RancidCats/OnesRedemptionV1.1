@@ -59,7 +59,7 @@ public class BossController : Entity
     [SerializeField] private bool[] canUseSpell = new bool[2];
     private bool[] isUsingSpell = new bool[2];
     private float spellTimer;
-
+    private Vector3 playerPos;
     [SerializeField]private GameObject shockwave;
     #endregion
 
@@ -239,6 +239,7 @@ public class BossController : Entity
                 yield return new WaitForSeconds(0.1f);
                 yield return new WaitUntil(() => Sistemas.IsAnimationPlaying(ani, "BossStomp", 0.442f)); //27 frames de 61 = 0.442 de 1 (normalizado)
                 var spawner = FindObjectOfType<Spawner>();
+                CameraFollowPlayer.instance.CameraShake(1.25f, 0.5f);
                 spawner.isEnabled = true;
                 canUseAttack[0] = true;
                 yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossStomp"));
@@ -268,8 +269,8 @@ public class BossController : Entity
         damage = 50;
         Vector3 targetPos = playerTarget.position; //posicion instantanea del player
         float timer = 0;
-        Vector3 attackPos = Aoe.GetYPointFromTransform(playerTarget);
-        GameObject go = Aoe.CreateAreaOfEffect(attackPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
+        playerPos = Aoe.GetYPointFromTransform(playerTarget);
+        GameObject go = Aoe.CreateAreaOfEffect(playerPos, 2); //crear area de efecto en base a la posicion del player, ver definiciones para entender
         attackObjects.Add(go);
         rb.AddForce(Vector3.up * 6, ForceMode.Impulse); //dar impulso para sensacion de salto
         if (Sistemas.GetDistanceXZ(transform.position, targetPos) > 1.2f) //si no esta cerca
@@ -298,9 +299,14 @@ public class BossController : Entity
             ani.SetTrigger("JumpAttackFinish");
         }
         //ani.SetTrigger("JumpAttackFinish");
+        yield return new WaitForSeconds(0.38f);
         Destroy(go);
-        GameObject go2 = Aoe.CreateAoeCollider(attackPos, 2); //crear area de efecto con collider en la posicion del player
-        GameObject shockwave = Instantiate(this.shockwave, go2.transform.position + Vector3.up * 0.3f, Quaternion.identity); //particle system de shockwave
+        
+    }
+    IEnumerator JumpAttackFinish()
+    {
+        GameObject go2 = Aoe.CreateAoeCollider(playerPos, 2); //crear area de efecto con collider en la posicion del player
+        GameObject shockwave = Instantiate(this.shockwave, playerPos + Vector3.up * 0.3f, Quaternion.identity); //particle system de shockwave
         attackObjects.Add(go2);
         attackObjects.Add(shockwave);
         yield return new WaitForSeconds(0.2f);
@@ -311,7 +317,6 @@ public class BossController : Entity
         isUsingSpell[1] = false;
         isJumping = false;
     }
-
     IEnumerator BasicAttack(int attackType)
     {
         Vector3 attackPos;

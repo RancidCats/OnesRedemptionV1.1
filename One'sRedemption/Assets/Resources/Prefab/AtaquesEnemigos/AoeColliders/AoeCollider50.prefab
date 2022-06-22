@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1938264713401861643}
   - component: {fileID: 6270965271187932810}
   - component: {fileID: 177001492272840840}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arch50
   m_TagString: BossAttackCollider
   m_Icon: {fileID: 0}
@@ -2566,7 +2566,7 @@ GameObject:
   - component: {fileID: 7333576461654983957}
   - component: {fileID: -1303691089491493929}
   - component: {fileID: 7106304039825254140}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AoeCollider50
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -29,7 +29,7 @@ public class Sword : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {   
-        if (other.GetComponentInParent<IDamageable>() != null && !other.CompareTag("Player"))//Pregunto por el player porque sino le hace daño
+        if (other.GetComponentInParent<IDamageable>() != null)//Pregunto por el player porque sino le hace daño
         {
             
            other.GetComponentInParent<IDamageable>().DecreaseHealth(_damage);

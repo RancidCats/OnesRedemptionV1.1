@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6789076416832251879}
   - component: {fileID: 8158399890636538379}
   - component: {fileID: 6595125340675926150}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arch (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,7 +2566,7 @@ GameObject:
   - component: {fileID: 6551114827309890044}
   - component: {fileID: 7357623131187272764}
   - component: {fileID: 7934690819844521252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arch270
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5121,7 +5121,7 @@ GameObject:
   - component: {fileID: 6517895101261828483}
   - component: {fileID: 301250094158140078}
   - component: {fileID: 6998676499338023677}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AoeCollider270
   m_TagString: AoeCollider270
   m_Icon: {fileID: 0}
@@ -5233,7 +5233,7 @@ GameObject:
   - component: {fileID: 3699557361261417640}
   - component: {fileID: 2784425940541148341}
   - component: {fileID: 8770624695235592571}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

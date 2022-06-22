@@ -11,7 +11,7 @@ public class AoeCollider : MonoBehaviour
         {
             col.GetComponent<IDamageable>().DecreaseHealth(BossController.instance.damage);
             print("toque al player");
-            if(gameObject.tag == "AoeCollider270")
+            if(gameObject.CompareTag("AoeCollider270"))
             {
                 MeshCollider[] colliders = GetComponentsInChildren<MeshCollider>();
                 foreach(var collider in colliders)

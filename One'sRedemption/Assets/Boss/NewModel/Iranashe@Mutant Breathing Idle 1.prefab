@@ -1066,7 +1066,6 @@ GameObject:
   - component: {fileID: 8013145915237089902}
   - component: {fileID: 1699270253678578705}
   - component: {fileID: 3121077338718501755}
-  - component: {fileID: 2116338412}
   m_Layer: 2
   m_Name: Iranashe@Mutant Breathing Idle 1
   m_TagString: Boss
@@ -1182,20 +1181,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!136 &2116338412
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7684417702798745687}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.62
-  m_Height: 4.67
-  m_Direction: 1
-  m_Center: {x: -0.12723923, y: 1.85, z: 0.41}
 --- !u!1 &8348705111863144893
 GameObject:
   m_ObjectHideFlags: 0
