@@ -38,7 +38,7 @@ public class BossController : Entity
     #region
     [SerializeField] private bool[] canAttack = new bool[2];
     [SerializeField] private bool[] canUseAttack = new bool[2];
-    [SerializeField ] private bool[] isUsingAttack = new bool[2];
+    [SerializeField] private bool[] isUsingAttack = new bool[2];
     private float attack2timer;
     [SerializeField] private bool canMove;
     public bool invulnerable;
@@ -60,7 +60,7 @@ public class BossController : Entity
     private bool[] isUsingSpell = new bool[2];
     private float spellTimer;
     private Vector3 playerPos;
-    [SerializeField]private GameObject shockwave;
+    [SerializeField] private GameObject shockwave;
     #endregion
 
     void Awake()
@@ -146,6 +146,9 @@ public class BossController : Entity
         #endregion
     }
     //-----MOVIMIENTO------//
+    /// <summary>
+    /// controla el movimiento, cuando se puede mover, y chequea angulos de rotacion de ataque para habilitar los ataques.
+    /// </summary>
     void MoveBehaviour()
     {
         #region movimiento viejo
@@ -174,11 +177,11 @@ public class BossController : Entity
         else
             playerAtAttackAngle[0] = false;
 
-        if (!playerAtAttackAngle[0] && canMove )
+        if (!playerAtAttackAngle[0] && canMove)
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 10);
-        
 
-        if (isAttacking || invulnerable || isJumping || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") || 
+
+        if (isAttacking || invulnerable || isJumping || Sistemas.IsAnimationPlaying(ani, "BossJumpFinish") ||
             Sistemas.GetDistanceXZ(playerTarget.position, transform.position) > range) // si esta haciendo algo, que no se pueda mover
             canMove = false;
         else
@@ -189,13 +192,13 @@ public class BossController : Entity
             ani.SetBool("Walk", true);
             //play sonido de caminar boss
         }
-        else 
+        else
             ani.SetBool("Walk", false);
     }
 
-    void SpellBehaviour() // falta incorporar uso de fases
+    void SpellBehaviour() 
     {
-        if (!canUseSpell[0] && spellTimer <= 7 && !isJumping) 
+        if (!canUseSpell[0] && spellTimer <= 7 && !isJumping)
         {
             spellTimer += Time.deltaTime;
         }
@@ -226,6 +229,13 @@ public class BossController : Entity
                 break;
         }
     }
+    /// <summary>
+    /// IntroStage()
+    /// Utiliza la variable currentStage(tipo BossStages) dentro de un switch.
+    /// Dependiendo de la fase actual, hace el "pisoton", activa el spawner de las estalactitas, y habilita el ataque que rota hacia la espalda.
+    /// En esta corrutina y las siguientes, se utiliza la clase "WaitWhile" y "WaitUntil" con una funcion anonima como parametro.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator IntroStage()
     {
         switch (currentStage)
@@ -261,6 +271,14 @@ public class BossController : Entity
                 break;
         }
     }
+
+    /// <summary>
+    /// JumpAttack y JumpAttackFinish
+    /// Activa "IsJumping" para desactivar movimientos/ataques de otras fuentes, y controla parametros del animator para realizar la animacion deseada.
+    /// Tambien crea el indicador amarillo (area de efecto), y mueve al boss a la posicion instantanea del player.
+    /// La segunda corrutina finaliza la animacion, creando un indicador rojo con collider que hace daño al player, e instancia una onda expansiva.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator JumpAttack()
     {
         isJumping = true;
@@ -301,7 +319,7 @@ public class BossController : Entity
         //ani.SetTrigger("JumpAttackFinish");
         yield return new WaitForSeconds(0.38f);
         Destroy(go);
-        
+
     }
     IEnumerator JumpAttackFinish()
     {
@@ -317,6 +335,14 @@ public class BossController : Entity
         isUsingSpell[1] = false;
         isJumping = false;
     }
+    /// <summary>
+    /// BasicAttack
+    /// Pide como parametro el tipo de ataque basico a realizar
+    /// Si es 1, crea un indicador de 50 grados de una circumferencia enfrente suyo, y luego crea un indicador rojo (c/collider).
+    /// Si es 2, rota rapido hacia la posicion del player e instancia un indicador de 270. Mismo funcionamiento que el anterior.
+    /// </summary>
+    /// <param name="attackType"></param>
+    /// <returns></returns>
     IEnumerator BasicAttack(int attackType)
     {
         Vector3 attackPos;
@@ -330,18 +356,18 @@ public class BossController : Entity
             Vector3 dir = playerTarget.position - transform.position;
             dir.y = 0;
             var rota = Quaternion.LookRotation(dir);
-            while(transform.rotation != rota)
+            while (transform.rotation != rota)
             {
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rota, 30);
-                if (!Sistemas.IsAnimationPlaying(ani, "BossAttack270")) continue;
+                //if (!Sistemas.IsAnimationPlaying(ani, "BossAttack270")) continue;
                 yield return new WaitForFixedUpdate();
             }
             attackPos = new Vector3(transform.position.x, 7.8f, transform.position.z) + transform.forward;
             print($"Aoe position: {attackPos}");
         }
-            
-        
-        
+
+
+
         Quaternion attackRota = transform.rotation;
         GameObject go = Aoe.CreateAreaOfEffect(attackPos, attackType, attackRota); // creo la area de efecto (sin collider) en tal posicion
         attackObjects.Add(go);
@@ -355,10 +381,13 @@ public class BossController : Entity
         Destroy(go2);
     }
 
-
+    /// <summary>
+    /// Controlador de las fases del boss.
+    /// Ejecuta el evento cuando se cumplen condiciones relacionadas con la vida.
+    /// </summary>
     void StageBehaviour()
     {
-        if (_currHp <= 950 && !bossStage1passed )
+        if (_currHp <= 950 && !bossStage1passed)
         {
             EventHandler.BossStageChange();
             bossStage1passed = true;
@@ -369,8 +398,11 @@ public class BossController : Entity
             bossStage2passed = true;
         }
     }
-
-
+    /// <summary>
+    /// Esta funcion esta suscrita al evento BossStageHandler.
+    /// Modifica la fase actual, setea un trigger en el animator, frena todas las corrutinas y ataques, activa "invulnerable" y controla el comienzo 
+    /// del cambio de fase.
+    /// </summary>
     public void ChangeStage()
     {
         currentStage++;
@@ -380,6 +412,10 @@ public class BossController : Entity
         StartCoroutine(IntroStage());
     }
 
+    /// <summary>
+    /// mismo que base.DecreaseHealth pero con la adicion de StageBehaviour()
+    /// </summary>
+    /// <param name="value"
     public override void DecreaseHealth(int value)
     {
         if (!invulnerable)
@@ -395,9 +431,12 @@ public class BossController : Entity
         }
     }
 
+    /// <summary>
+    /// destruye los indicadores, y frena todas las corrutinas
+    /// </summary>
     void StopAttacks()
     {
-        foreach(var attack in attackObjects)
+        foreach (var attack in attackObjects)
         {
             Destroy(attack);
         }
@@ -413,7 +452,7 @@ public class BossController : Entity
         Vector3 rotation = new Vector3(-90, 0, 0);
         Instantiate(bossDead, transform.position, Quaternion.Euler(rotation));
         CannonManager.instance.isEnabled = false;
-        
+
         //efectos piolas, sonidos
     }
     //IEnumerator TurnTransparent()
@@ -430,4 +469,4 @@ public class BossController : Entity
     //}
 }
 
-    
+

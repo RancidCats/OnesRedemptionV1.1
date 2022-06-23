@@ -80,6 +80,16 @@ public class CannonScript : MonoBehaviour
         rb.velocity = CalculateVelocity(target.position, cannonSpawn.position, gravity, height).intialVelocity;
     }
 
+    /// <summary>
+    /// CalculateVelocity
+    /// Calcula la velocidad necesaria en X y en Y para que impacte en el player de forma parabolica.
+    /// </summary>
+    /// <param name="targetPos"></param>
+    /// <param name="zeroReference"></param>
+    /// <param name="gravityValue"></param>
+    /// <param name="targetHeight"></param>
+    /// <returns></returns>
+
     LaunchData CalculateVelocity(Vector3 targetPos, Vector3 zeroReference, float gravityValue, float targetHeight)
     {
         float yDisplacement = targetPos.y - zeroReference.y;
@@ -93,6 +103,10 @@ public class CannonScript : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// struct utilizado para guardar los datos de la velocidad y el tiempo sin que sean modificables.
+    /// El proposito de este struct es separar la informacion en un grupo que se puedan leer sus variables pero no escribir/sobreescribir.
+    /// </summary>
     struct LaunchData
     {
         
