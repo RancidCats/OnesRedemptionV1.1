@@ -1,173 +1,123 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19043) 64bit Professional' Language: 'es' Physical Memory: 8116 MB
+OS: 'Windows 10  (10.0.19043) 64bit ProfessionalN' Language: 'es' Physical Memory: 16276 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Editor\2020.3.25f1\Editor\Unity.exe
+C:\Program Files\Unity 2020.3.25f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption
+C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55290
-Successfully changed project path to: D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption
-D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption
+51237
+Successfully changed project path to: C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
+C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 45.15 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 38.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/DaVinci/Diseño y producción de videojuegos/OnesRedemptionV1.1/One'sRedemption/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Speed/Desktop/TODO/OnesRedemptionV1.1/One'sRedemption/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
+    Renderer: NVIDIA GeForce RTX 2060 SUPER (ID=0x1f06)
     Vendor:   
-    VRAM:     8079 MB
+    VRAM:     8031 MB
     Driver:   30.0.15.1179
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+Mono path[0] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity 2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002377 seconds.
+Register platform support module: C:/Program Files/Unity 2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001005 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.12 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 32.66 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.610 seconds
+- Completed reload, in  0.440 seconds
 Domain Reload Profiling:
-	ReloadAssembly (610ms)
-		BeginReloadAssembly (62ms)
+	ReloadAssembly (440ms)
+		BeginReloadAssembly (37ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (470ms)
-			LoadAssemblies (59ms)
+		EndReloadAssembly (351ms)
+			LoadAssemblies (36ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (154ms)
+			SetupTypeCache (117ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (177ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (136ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (43ms)
-				BeforeProcessingInitializeOnLoad (17ms)
-				ProcessInitializeOnLoadAttributes (84ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				RefreshPlugins (33ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (65ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003024 seconds.
+Registered in 0.001772 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001EC7F40D050 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7F3739C0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB15020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB15020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EC382A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB7B010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7F3739C0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC48481B0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB15020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB90220 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3D1B020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB90220 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3D1B020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB90220 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EFB6070 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB90220 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC349E020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC349E020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7F3739C0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC349E020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3F1B230 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3D58040 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC373E020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD5D0BDF0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC43C3010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.190 seconds
+- Completed reload, in  0.789 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1191ms)
-		BeginReloadAssembly (157ms)
+	ReloadAssembly (790ms)
+		BeginReloadAssembly (105ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (960ms)
-			LoadAssemblies (108ms)
+			CreateAndSetChildDomain (14ms)
+		EndReloadAssembly (638ms)
+			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (391ms)
+			SetupTypeCache (212ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (331ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (247ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (220ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (164ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1957 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.6 MB.
-System memory in use after: 104.7 MB.
+System memory in use before: 103.9 MB.
+System memory in use after: 104.0 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2420.
-Total: 2.756700 ms (FindLiveObjects: 0.155600 ms CreateObjectMapping: 0.065000 ms MarkObjects: 2.398700 ms  DeleteObjects: 0.136300 ms)
+Total: 2.192600 ms (FindLiveObjects: 0.127500 ms CreateObjectMapping: 0.063200 ms MarkObjects: 1.882200 ms  DeleteObjects: 0.119200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -181,122 +131,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/Player/Player.cs
-  artifactKey: Guid(16355ec9abb8c824f95ed7a6a7cf7fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/Player.cs using Guid(16355ec9abb8c824f95ed7a6a7cf7fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42abc23f04febc101ef0b03349b68733') in 0.031700 seconds 
-  Import took 0.034467 seconds .
+  path: Assets/Scripts/Player/Sword.cs
+  artifactKey: Guid(537de05ba22db7642a885d5ee9d7ab89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Sword.cs using Guid(537de05ba22db7642a885d5ee9d7ab89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d1310bd57516527e12ef5cda6a3af7c') in 0.016165 seconds 
+  Import took 0.018699 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 154.333614 seconds.
-  path: Assets/Prefabs/Objects/Espada.obj
-  artifactKey: Guid(c13fca24a8e41ac479837a6ff7c94532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Objects/Espada.obj using Guid(c13fca24a8e41ac479837a6ff7c94532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ad82a0cb5932d187cdf7c05c268bc10') in 0.315970 seconds 
-  Import took 0.327103 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/Prefabs/Objects/Espada.prefab
-  artifactKey: Guid(9f6c0ff9a165abb4082faa0eb2e4304c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Objects/Espada.prefab using Guid(9f6c0ff9a165abb4082faa0eb2e4304c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba44b529b7b42bb037cfd6dea9cc939') in 0.066858 seconds 
-  Import took 0.070567 seconds .
+  Time since last request: 5.954401 seconds.
+  path: Assets/Scripts/Player/Sword.cs
+  artifactKey: Guid(537de05ba22db7642a885d5ee9d7ab89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Sword.cs using Guid(537de05ba22db7642a885d5ee9d7ab89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ffa272dae417336f42e36d980a4de76') in 0.001488 seconds 
+  Import took 0.003754 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002895 seconds.
+Registered in 0.001573 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001EAC4E446C0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC74CB040 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC37CF830 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EDA46C0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3C725D0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC734E070 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3B5A010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC9BA63A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3FA7020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4745020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC32B0080 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC734E070 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3378020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4745020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4194670 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC485A010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EB7B010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC32B0080 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7C52A40 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC32B0080 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC74CB040 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC74CB040 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7E94E070 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8FE9820 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3FA7020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.947 seconds
+- Completed reload, in  0.703 seconds
 Domain Reload Profiling:
-	ReloadAssembly (948ms)
-		BeginReloadAssembly (112ms)
+	ReloadAssembly (704ms)
+		BeginReloadAssembly (83ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (775ms)
-			LoadAssemblies (92ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (577ms)
+			LoadAssemblies (59ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (266ms)
+			SetupTypeCache (204ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (289ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (215ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (76ms)
-				ProcessInitializeOnLoadAttributes (191ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (56ms)
+				ProcessInitializeOnLoadAttributes (145ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1909 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.7 MB.
-System memory in use after: 103.9 MB.
+System memory in use before: 99.5 MB.
+System memory in use after: 99.6 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2466.
-Total: 2.605700 ms (FindLiveObjects: 0.147300 ms CreateObjectMapping: 0.066400 ms MarkObjects: 2.359100 ms  DeleteObjects: 0.032000 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2422.
+Total: 1.920700 ms (FindLiveObjects: 0.121000 ms CreateObjectMapping: 0.059400 ms MarkObjects: 1.730100 ms  DeleteObjects: 0.009500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -309,564 +201,50 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 67.783963 seconds.
-  path: Assets/Scripts/GameManager.cs
-  artifactKey: Guid(9526fb151c485ec428e9da546e8b8efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameManager.cs using Guid(9526fb151c485ec428e9da546e8b8efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4cf6d0f705adf6acbf9249757949d7') in 0.011512 seconds 
-  Import took 0.015031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.379035 seconds.
-  path: Assets/Scripts/GameManager.cs
-  artifactKey: Guid(9526fb151c485ec428e9da546e8b8efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameManager.cs using Guid(9526fb151c485ec428e9da546e8b8efc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f79365542ec47c1f599f992e9cb13d') in 0.004959 seconds 
-  Import took 0.008300 seconds .
-
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002830 seconds.
+Registered in 0.001747 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001EC7EF176B0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC74CB040 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC458E390 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC458E390 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EE751A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC373E020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC346CC40 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF0577F0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC458E390 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4745020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6B14F60 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC734E070 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA725760 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC770A050 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EE751A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC34BE030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF85AA20 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EE77AF0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7C52A40 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EE77AF0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA74DD70 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA74DD70 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA8D1010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD5D0C510 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7F00C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.979 seconds
+- Completed reload, in  0.700 seconds
 Domain Reload Profiling:
-	ReloadAssembly (979ms)
-		BeginReloadAssembly (114ms)
+	ReloadAssembly (700ms)
+		BeginReloadAssembly (89ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (802ms)
-			LoadAssemblies (92ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (569ms)
+			LoadAssemblies (59ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (282ms)
+			SetupTypeCache (194ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (296ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (215ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (194ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				BeforeProcessingInitializeOnLoad (56ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1909 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.8 MB.
-System memory in use after: 103.9 MB.
+System memory in use before: 99.6 MB.
+System memory in use after: 99.7 MB.
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2468.
-Total: 3.114200 ms (FindLiveObjects: 0.188500 ms CreateObjectMapping: 0.089600 ms MarkObjects: 2.816200 ms  DeleteObjects: 0.018800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002840 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001EAC4F2AA90 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7530010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC75DFE50 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC75DFE50 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4695020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC380A020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC43A7020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD1758BE0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC43C7020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC73A2010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC712F030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC734E070 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4D85030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC73A2010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4695020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA83B030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EE77AF0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA725760 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7C52A40 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6B14F60 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7530010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7530010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA3C7020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC33B8B30 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7F00C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.984 seconds
-Domain Reload Profiling:
-	ReloadAssembly (984ms)
-		BeginReloadAssembly (118ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (804ms)
-			LoadAssemblies (93ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (269ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (310ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (86ms)
-				ProcessInitializeOnLoadAttributes (202ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1909 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.8 MB.
-System memory in use after: 103.9 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2470.
-Total: 3.209300 ms (FindLiveObjects: 0.181900 ms CreateObjectMapping: 0.127400 ms MarkObjects: 2.884100 ms  DeleteObjects: 0.014600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 146.862363 seconds.
-  path: Assets/Particles/Fire/Fire_MAT.mat
-  artifactKey: Guid(5ff17af6a0f81954da7cdc2bb965f797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Particles/Fire/Fire_MAT.mat using Guid(5ff17af6a0f81954da7cdc2bb965f797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e10b45bf0c10e74b58e6b09b0e2a695') in 0.089072 seconds 
-  Import took 0.092531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.821362 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(2e4d6520ccc63f2429c4413b47e6b5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(2e4d6520ccc63f2429c4413b47e6b5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb91bdb2a8be7b63fe6eea4d81d77a7') in 0.003669 seconds 
-  Import took 0.007089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.936249 seconds.
-  path: Assets/Scenes/FirstLevel.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/FirstLevel.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bcefeba927218953f8e05b10732fb46') in 0.010002 seconds 
-  Import took 0.013427 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002972 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001EAC97E0E70 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7FED560 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC420F010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7EDA46C0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC432F8A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4F37020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6C7D520 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACA916710 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6B02030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6EA1C10 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8595D60 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC74C7030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4D85030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC418A840 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4278A30 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF052C10 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF2549D0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC86BB330 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF24A7A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3FFF020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD1992960 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF04D830 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7346060 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ECA0B038C0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF87C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.942 seconds
-Domain Reload Profiling:
-	ReloadAssembly (943ms)
-		BeginReloadAssembly (116ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (765ms)
-			LoadAssemblies (90ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (258ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (289ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (190ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1909 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.8 MB.
-System memory in use after: 103.9 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2473.
-Total: 3.335400 ms (FindLiveObjects: 0.164600 ms CreateObjectMapping: 0.073700 ms MarkObjects: 3.079400 ms  DeleteObjects: 0.016600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002863 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001EAC906A110 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7FED560 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC38B85D0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC38B85D0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC86B9890 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC50FB020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF04C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC9BAA1F0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6B02030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6EA1C10 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD1BB9CA0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD0730050 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACE877010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC418A840 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC904F030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACAB6C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACDBF3010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8D31010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF24A7A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3FFF020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC917F020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD0B50700 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EC7E94E070 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ECA0B03D80 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF87C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.992 seconds
-Domain Reload Profiling:
-	ReloadAssembly (993ms)
-		BeginReloadAssembly (117ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (813ms)
-			LoadAssemblies (94ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (285ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (301ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (199ms)
-				ProcessInitializeOnLoadMethodAttributes (10ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1909 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.8 MB.
-System memory in use after: 103.9 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2475.
-Total: 2.665000 ms (FindLiveObjects: 0.146700 ms CreateObjectMapping: 0.062400 ms MarkObjects: 2.442200 ms  DeleteObjects: 0.012900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002891 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000001EC7ED1F8A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC9E07860 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC32EE9B0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC32EE9B0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC515DAD0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC37C2040 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF04C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001ECA1380240 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACFF14020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Settings.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC6EA1C10 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8F02C90 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAD0730050 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8562010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC418A840 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC3ABA030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACAB6C010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8562010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8D31010 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF24A7A0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC4CC7020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC9E07860 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACF039020 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC7C3E030 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EAC8FE9CE0 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProGrids.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001EACE7DA730 doesn't match image D:\DaVinci\Diseño y producción de videojuegos\OnesRedemptionV1.1\One'sRedemption\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.020 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1020ms)
-		BeginReloadAssembly (112ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (847ms)
-			LoadAssemblies (87ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (290ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (305ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (76ms)
-				ProcessInitializeOnLoadAttributes (204ms)
-				ProcessInitializeOnLoadMethodAttributes (10ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1909 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.8 MB.
-System memory in use after: 103.9 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2477.
-Total: 2.775200 ms (FindLiveObjects: 0.167600 ms CreateObjectMapping: 0.077200 ms MarkObjects: 2.513900 ms  DeleteObjects: 0.015600 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2424.
+Total: 1.991300 ms (FindLiveObjects: 0.123900 ms CreateObjectMapping: 0.063300 ms MarkObjects: 1.792800 ms  DeleteObjects: 0.010500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

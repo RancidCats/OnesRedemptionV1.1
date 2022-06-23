@@ -34,11 +34,11 @@ public class Sword : MonoBehaviour
             
            other.GetComponentInParent<IDamageable>().DecreaseHealth(_damage);
         }
-        if (other.CompareTag("Untagged"))
+        if (other.CompareTag("Untagged") && !GetComponentInChildren<CapsuleCollider>())
         {
             Instantiate(hit, transform.position, Quaternion.identity);           
         }
-        if (other.CompareTag("Boss"))
+        if (other.GetComponentInChildren<CapsuleCollider>())
         {
             Instantiate(blood, transform.position, Quaternion.identity);
             AudioManager.instance.Play("Sword_Attack_3");
