@@ -63,6 +63,9 @@ public class BossController : Entity
     [SerializeField] private GameObject shockwave;
     #endregion
 
+    public GameObject particles_FaseChange;
+    public bool SpawnerOff = true;
+
     void Awake()
     {
         if (Player.instance != null)
@@ -254,6 +257,7 @@ public class BossController : Entity
                 canUseAttack[0] = true;
                 yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossStomp"));
                 invulnerable = false;
+                particles_FaseChange.SetActive(false);
                 break;
             case (BossStages)2:
                 yield return new WaitForSeconds(4);
@@ -268,6 +272,7 @@ public class BossController : Entity
                 yield return new WaitForSeconds(0.1f);
                 yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossCannonWarcry"));
                 invulnerable = false;
+                particles_FaseChange.SetActive(false);
                 break;
         }
     }
@@ -316,6 +321,7 @@ public class BossController : Entity
             yield return new WaitForSeconds(0.6f); //duracion de la animacion en la que deberia c
             ani.SetTrigger("JumpAttackFinish");
         }
+        AudioManager.instance.Play("Boss_Stomp");
         //ani.SetTrigger("JumpAttackFinish");
         yield return new WaitForSeconds(0.38f);
         Destroy(go);
@@ -452,6 +458,9 @@ public class BossController : Entity
         Vector3 rotation = new Vector3(-90, 0, 0);
         Instantiate(bossDead, transform.position, Quaternion.Euler(rotation));
         CannonManager.instance.isEnabled = false;
+        SpawnerOff = false;
+        AudioManager.instance.Stop("Level_1_Main_Theme");
+        AudioManager.instance.Play("Level_1_Passed");
 
         //efectos piolas, sonidos
     }

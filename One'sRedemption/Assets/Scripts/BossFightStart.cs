@@ -17,6 +17,7 @@ public class BossFightStart : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerFeets"))
         {
+            AudioManager.instance.Play("Boss_Minotaur_Scream");
             _bossBar.gameObject.SetActive(true);
         }
     }

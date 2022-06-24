@@ -23,8 +23,9 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        if(isEnabled)
-        SpawningRoutine();
+        if(BossController.instance.SpawnerOff == true)
+            if(isEnabled)
+                SpawningRoutine();
     }
 
     void SpawningRoutine()

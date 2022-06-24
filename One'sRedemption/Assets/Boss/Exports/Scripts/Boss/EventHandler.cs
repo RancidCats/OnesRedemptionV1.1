@@ -13,6 +13,12 @@ public class EventHandler : MonoBehaviour
     public static event BossStageChanged BossStageHandler;
     public static void BossStageChange()
     {
+        if(GameManager.instance.vamo_newells)
+            AudioManager.instance.Play("Vamo_Newells");
+        else
+            AudioManager.instance.Play("Boss_Minotaur_Scream");
+
+        BossController.instance.particles_FaseChange.SetActive(true);
         BossStageHandler();
         Debug.Log("Boss stage changed!");
     }

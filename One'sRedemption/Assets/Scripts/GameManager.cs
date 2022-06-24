@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     private static bool aux = false;
 
+    public bool vamo_newells = false;
+
     private void Awake()
     {
         instance = this;
@@ -52,14 +54,19 @@ public class GameManager : MonoBehaviour
         BacktoLastCheckpoint();
         BacktoMenu();
         Debugeo();
+        Newells();
     }
 
-    void LoadCheckpoints()
+    void Newells()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (Input.GetKeyDown(KeyCode.N))
         {
-
+            if (vamo_newells)
+                vamo_newells = false;
+            else
+                vamo_newells = true;
         }
+            
     }
 
     public void RestartLevel()      //Resetea el level desde el principio
