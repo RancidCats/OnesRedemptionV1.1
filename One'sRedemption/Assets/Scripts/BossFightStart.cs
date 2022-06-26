@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BossFightStart : MonoBehaviour
 {
     [SerializeField] Slider _bossBar;
+    bool _fightstarted = false;
 
     private void Awake()
     {
@@ -17,8 +18,13 @@ public class BossFightStart : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerFeets"))
         {
-            AudioManager.instance.Play("Boss_Minotaur_Scream");
-            _bossBar.gameObject.SetActive(true);
+            if (!_fightstarted)
+            {
+                AudioManager.instance.Play("Boss_Minotaur_Scream");
+                _bossBar.gameObject.SetActive(true);
+                _fightstarted = true;
+            }
+
         }
     }
 

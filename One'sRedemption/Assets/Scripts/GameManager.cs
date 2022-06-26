@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public static Vector3 spawnPos;                 //Posición en la que va a spawnear el player
 
+    [SerializeField] GameObject _victoryScreen;
+
     private static bool aux = false;
 
     public bool vamo_newells = false;
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        _victoryScreen.SetActive(false);
 
         if (SceneManager.GetActiveScene().buildIndex == 2 && !aux)
         {
@@ -35,7 +38,6 @@ public class GameManager : MonoBehaviour
         {
             spawnPos = _startTesting.position;
         }
-
     }
 
     public void Start()
@@ -55,6 +57,17 @@ public class GameManager : MonoBehaviour
         BacktoMenu();
         Debugeo();
         Newells();
+    }
+
+    public void ActivateVictoryScreen()
+    {
+        float timer = 0.0f;
+        while (timer<=11.0f)
+        {
+            if(timer>=10.0f)
+                _victoryScreen.SetActive(true);
+            timer += Time.deltaTime;
+        }
     }
 
     void Newells()

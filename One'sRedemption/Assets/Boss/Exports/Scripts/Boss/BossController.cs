@@ -461,9 +461,10 @@ public class BossController : Entity
         SpawnerOff = false;
         AudioManager.instance.Stop("Level_1_Main_Theme");
         AudioManager.instance.Play("Level_1_Passed");
-
+        GameManager.instance.ActivateVictoryScreen();
         //efectos piolas, sonidos
     }
+
     //IEnumerator TurnTransparent()
     //{
     //    //Material mat = transform.GetComponentInChildren<Material>();

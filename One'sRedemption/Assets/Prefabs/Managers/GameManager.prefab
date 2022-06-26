@@ -43,3 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9526fb151c485ec428e9da546e8b8efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug: 1
+  _start: {fileID: 0}
+  _checkpoint_1: {fileID: 0}
+  _checkpoint_2: {fileID: 0}
+  _checkpoint_3: {fileID: 0}
+  _startTesting: {fileID: 0}
+  _victoryScreen: {fileID: 0}
+  vamo_newells: 0
