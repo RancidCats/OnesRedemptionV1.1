@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6661085348062422448}
   - component: {fileID: 6661085348062422450}
   - component: {fileID: 6661085348062422451}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: shatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6661085348062422449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.0096, z: 0.0023}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 150, y: 150, z: 150}
   m_Children: []
   m_Father: {fileID: 7468497589029187652}
   m_RootOrder: 0
@@ -4876,7 +4876,7 @@ GameObject:
   - component: {fileID: 6927134754035895966}
   - component: {fileID: 2890455696724057789}
   - component: {fileID: 3306196105948313072}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: estalactita 1
   m_TagString: estalactita
   m_Icon: {fileID: 0}
@@ -4955,7 +4955,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849420452924648190}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -4989,5 +4989,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 160219887827413373, guid: d1102f639d2b09d45ac3fc9eaaf37aa7, type: 3}
-  damage: 5
+  damage: 20
   maxLenghtRay: 200

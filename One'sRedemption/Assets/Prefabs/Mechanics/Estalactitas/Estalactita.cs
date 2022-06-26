@@ -27,6 +27,11 @@ public class Estalactita : MonoBehaviour
   
     public void FixedUpdate()
     {
+        StartCoroutine(WaitForDrawIndicator());
+    }
+    IEnumerator WaitForDrawIndicator()
+    {
+        yield return new WaitForSeconds(1);
         if (!indicatorFlag)
         {
             DrawIndicator();
@@ -41,21 +46,21 @@ public class Estalactita : MonoBehaviour
             Destroy(newindicator);
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.GetComponent<IDamageable>() != null)
         {
-            Player.instance.DecreaseHealth((int)damage);
+            collision.gameObject.GetComponent<IDamageable>().DecreaseHealth((int)damage);
         }
-        StartCoroutine(Break());
+            StartCoroutine(Break());
     }
 
     private IEnumerator Break()
     {
         particle.Play();
+        Destroy(newindicator);
         mr.enabled = false;
         bc.enabled = false;
 
         yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
-        Destroy(newindicator);
         Destroy(gameObject);
         
     }

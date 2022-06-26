@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class BossFightStart : MonoBehaviour
 {
-    [SerializeField] Slider _bossBar;
+    [SerializeField] GameObject _bossBar;
     bool _fightstarted = false;
 
     private void Awake()
     {
-        _bossBar.gameObject.SetActive(false);
+        _bossBar.SetActive(false);
     }
 
     //Cuando triggerea la barra del boss se vuelve visible

@@ -427,7 +427,7 @@ public class BossController : Entity
         if (!invulnerable)
         {
             _currHp -= value;
-            _hpBar.RefreshBar(_currHp, _maxHp);
+            _hpBar.RefreshImage(_currHp, _maxHp);
             StageBehaviour();
             if (_currHp <= 0)
             {
