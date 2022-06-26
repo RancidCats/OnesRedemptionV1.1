@@ -13,6 +13,7 @@ public class Checkpoint : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GameManager.spawnPos = transform.position;
+            AudioManager.instance.Play("Sword_Unsheathe");
             _GargoyleEye1.intensity = 40;
             _GargoyleEye2.intensity = 40; 
         }

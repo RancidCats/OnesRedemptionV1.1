@@ -455,14 +455,21 @@ public class BossController : Entity
         _currHp = 0;
         StopAttacks();
         ani.SetTrigger("Death");
+        AudioManager.instance.Play("Boss_Minotaur_Death");
         Vector3 rotation = new Vector3(-90, 0, 0);
         Instantiate(bossDead, transform.position, Quaternion.Euler(rotation));
         CannonManager.instance.isEnabled = false;
         SpawnerOff = false;
+        
         AudioManager.instance.Stop("Level_1_Main_Theme");
         AudioManager.instance.Play("Level_1_Passed");
-        GameManager.instance.ActivateVictoryScreen();
+        //GameManager.instance.ActivateVictoryScreen();
         //efectos piolas, sonidos
+    }
+
+    public void ActivateVictoryScreen()
+    {
+        GameManager.instance.victoryScreen.SetActive(true);
     }
 
     //IEnumerator TurnTransparent()

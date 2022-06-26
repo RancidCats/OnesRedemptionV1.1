@@ -33071,6 +33071,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1892202048}
     - target: {fileID: 4436162998884582114, guid: 577a806937098954d8d3ba7ab8c34345, type: 3}
+      propertyPath: victoryScreen
+      value: 
+      objectReference: {fileID: 314482326}
+    - target: {fileID: 4436162998884582114, guid: 577a806937098954d8d3ba7ab8c34345, type: 3}
       propertyPath: _victoryScreen
       value: 
       objectReference: {fileID: 314482326}
