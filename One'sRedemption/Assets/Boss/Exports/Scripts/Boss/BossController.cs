@@ -251,9 +251,9 @@ public class BossController : Entity
                 ani.SetTrigger("Stomp");
                 yield return new WaitForSeconds(0.1f);
                 yield return new WaitUntil(() => Sistemas.IsAnimationPlaying(ani, "BossStomp", 0.442f)); //27 frames de 61 = 0.442 de 1 (normalizado)
-                var spawner = FindObjectOfType<Spawner>();
+                var spawner = FindObjectOfType<AreaSelector>();
                 CameraFollowPlayer.instance.CameraShake(1.25f, 0.5f);
-                spawner.isEnabled = true;
+                spawner.Running();
                 canUseAttack[0] = true;
                 yield return new WaitWhile(() => Sistemas.IsAnimationPlaying(ani, "BossStomp"));
                 invulnerable = false;

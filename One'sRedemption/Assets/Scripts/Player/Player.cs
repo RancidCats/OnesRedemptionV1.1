@@ -9,7 +9,6 @@ public class Player : Entity
     public Sword mySword;
     public Rigidbody rb;
     public Animator anim;
-
     public float                           
                              moveSpeed,
                              dashSpeed,

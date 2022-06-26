@@ -13,6 +13,7 @@ public class Estalactita : MonoBehaviour
     public float maxLenghtRay;
     private GameObject newindicator;
     Vector3 hitfloor;
+    bool indicatorFlag;
     
 
     private void Awake()
@@ -20,14 +21,26 @@ public class Estalactita : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
         mr = GetComponent<MeshRenderer>();
         bc = GetComponent<BoxCollider>();
+        indicatorFlag = false;
     }
 
-    private void Start()
+  
+    public void FixedUpdate()
     {
-        DrawIndicator();
+        if (!indicatorFlag)
+        {
+            DrawIndicator();
+            indicatorFlag = true;
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("estalactita"))
+        {
+            Destroy(newindicator);
+            Destroy(gameObject);
+        }
         if (collision.gameObject.CompareTag("Player"))
         {
             Player.instance.DecreaseHealth((int)damage);
@@ -52,8 +65,9 @@ public class Estalactita : MonoBehaviour
         if (Physics.Raycast(transform.position, -transform.up, out hit , maxLenghtRay , 1 << LayerMask.NameToLayer("Platform")))
         {
             hitfloor = hit.point;
-            hitfloor.y = hit.point.y + 0.1f;
+            hitfloor.y = Player.instance.transform.position.y + 0.1f;
             newindicator = Instantiate(indicator, hitfloor, Quaternion.identity);
+            
           
         }
     }

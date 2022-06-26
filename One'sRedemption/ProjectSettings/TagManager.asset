@@ -14,6 +14,7 @@ TagManager:
   - Cannon
   - PlayerWeapon
   - AoeCollider270
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -27,8 +28,8 @@ TagManager:
   - FogStencil
   - PlayerSword
   - BossAoeObject
-  - 
-  - 
+  - Rocks
+  - Boxes
   - 
   - 
   - 
