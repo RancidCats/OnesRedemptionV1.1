@@ -328,12 +328,12 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'WASD <- Moverse
 
-    Enter <- Atacar
+    Left Click <- Atacar
 
     Shift <- Dash
 
-    R <- Resetear
-    Nivel
+    R <-
+    Resetear Nivel
 
     L <- Ultimo Checkpoint
 
