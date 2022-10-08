@@ -7,8 +7,8 @@ public class Movement
 {
     Transform _transform;
     Rigidbody _rb;
-    float _moveSpeed,
-          _jumpForce;                
+    float _moveSpeed,        
+          _jumpForce = 20;                
 
     bool _walkPlaying;
     public Movement(Transform t, Rigidbody rb, float s)
@@ -36,9 +36,12 @@ public class Movement
         _rb.MovePosition(_rb.position + dir * _moveSpeed * Time.deltaTime);         
     }
    public void Dash()
-    {
+   {
         new Dash(_rb,_transform);
         Player.instance.startDashCD = true;
-    }
-
+   }
+   public void Jump()
+   {     
+       _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);       
+   }
 }

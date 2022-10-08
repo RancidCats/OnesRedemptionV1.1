@@ -20,6 +20,6 @@ public class Dash
             _rb.MovePosition(_rb.position + (_transform.forward * Player.instance.dashLenght) * Player.instance.dashSpeed);
 
         }
-        AudioManager.instance.Play("Dash");
+        //AudioManager.instance.Play("Dash");
     }
 }

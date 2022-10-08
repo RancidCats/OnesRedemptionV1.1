@@ -32,6 +32,7 @@ public class FeetsLogic : MonoBehaviour
         else
         {
             Player.instance.isGrounded = false;
+            Player.instance.canJump = false;
             _coyoteStart = false;
         }
     }
@@ -41,6 +42,7 @@ public class FeetsLogic : MonoBehaviour
         if (_contactCount >= 2)
         {
             Player.instance.isGrounded = true;
+            Player.instance.canJump = true;
             _coyoteStart = false;
         }
 

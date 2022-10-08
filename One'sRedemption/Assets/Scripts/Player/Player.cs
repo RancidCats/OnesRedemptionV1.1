@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Player : Entity
 {
     public static Player instance;
-
+    
     public Sword mySword;
     public Rigidbody rb;
     public Animator anim;
@@ -23,6 +23,8 @@ public class Player : Entity
                              canAttack,
                              isGrounded,
                              canCombo,
+                             canJump,
+                             jumpHability,
                              canMove;
 
     //------------------------------------------------------------------------------------------------------------------------------------// 
@@ -34,11 +36,7 @@ public class Player : Entity
     [SerializeField] float _burningTimer;
     public void Awake()
     {
-       
-
-            instance = this;
-            
-        
+            instance = this;  
     }
     void Start()
     {
@@ -116,6 +114,6 @@ public class Player : Entity
     }      
     public void MakeASlashAudio()
     {
-        AudioManager.instance.Play("Sword_Attack_1");
+       //AudioManager.instance.Play("Sword_Attack_1");
     }
 }
