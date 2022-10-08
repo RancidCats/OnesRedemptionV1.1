@@ -42,6 +42,8 @@ public class Movement
    }
    public void Jump()
    {     
-       _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);       
-   }
+       _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse); 
+       Player.instance.canJump = false;
+
+    }
 }

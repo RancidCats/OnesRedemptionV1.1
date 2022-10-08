@@ -32,7 +32,6 @@ public class FeetsLogic : MonoBehaviour
         else
         {
             Player.instance.isGrounded = false;
-            Player.instance.canJump = false;
             _coyoteStart = false;
         }
     }

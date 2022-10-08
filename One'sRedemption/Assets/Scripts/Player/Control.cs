@@ -10,10 +10,8 @@ public class Control
     Vector3           _inputVector;
     Movement          _movement;
     AnimationsManager _animations;
-    bool _walkPlaying,
-         jumpTimerStart;
-    float jumpCd = 0.5f,
-          jumpTimer;
+    bool _walkPlaying;
+
 
 
    
@@ -75,33 +73,11 @@ public class Control
 
         if (Input.GetKeyDown(KeyCode.Space) && Player.instance.jumpHability && Player.instance.canJump)
         {
-            jumpTimerStart = true;
+            
             _movement.Jump();       
         }
-        if (jumpTimerStart)
-        {
-            JumpCounter();
-        }
-        else
-        {
-            if (Player.instance.isGrounded)
-            {
-                Player.instance.canJump = true;
-            }
-            jumpTimer = 0;
-        }
+      
     }
-    void JumpCounter()
-    {
-        if (jumpTimer <= jumpCd)
-        {
-            Player.instance.canJump = false;
-            jumpTimer += Time.deltaTime;
-        }
-        else
-        {
-            jumpTimerStart = false;
-        }
-    }
+  
 }
 
